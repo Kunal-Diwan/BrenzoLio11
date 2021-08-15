@@ -26,7 +26,7 @@
 
 > Install Git First (apt-instll git
 
-```$ git clone https://github.com/Jimiooooo/BrenzoLio```
+```$ git clone https://github.com/Kunal-Diwan/BrenzoLio```
 
 `$ cd BrenzoLio`
 
