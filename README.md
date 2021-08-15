@@ -68,12 +68,11 @@ And to all other [contributors](https://github.com/Kunal-Diwan/BrenzoLio/graphs/
 
          Copyright (C) 2021 by Kunal-Diwan ❤️️
 
-    Licence under the terms of the GPL-3.0 License           
+    Licence under the terms of the Apache-2.0 Licence           
 
 
-### Developers 👨‍💻 
+### Developer 👨‍💻 
 
-<a href="https://github.com/Kunal-Diwan" alt="Kunal-Diwan"> <img src="https://img.shields.io/badge/Kunal-Diwan-95B9C7?logo=github" /></a>
-<a href="https://github.com/Jimiooooo/" alt="Jimiooooo"> <img src="https://img.shields.io/badge/Jimiooooo-90302f?logo=github" /></a>
+[![Kunal Diwan](https://img.shields.io/badge/Kunal-Diwan-green?style=for-the-badge&logo=appveyor)](https://t.me/KunalDiwan) 
 
 ###### Powered By [@DevelopedBots](https://telegram.dog/DevelopedBots) 💖
