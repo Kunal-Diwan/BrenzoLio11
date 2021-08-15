@@ -1,7 +1,7 @@
 ## ⇝ Write new modules ⇜ 
 
 ```
-from Brenzo.decorator import register
+from Brenzo.app import app
 from Brenzo.module.mod import mod
 from Brenzo.modules.tr_engine.strings import tld 
 
