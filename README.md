@@ -66,7 +66,7 @@ And to all other [contributors](https://github.com/Kunal-Diwan/BrenzoLio/graphs/
 
 ### <b><u>© Copyright</u></b>
 
-         Copyright (C) 2021 by Kunal-Diwaj ❤️️
+         Copyright (C) 2021 by Kunal-Diwan ❤️️
 
     Licence under the terms of the GPL-3.0 License           
 
