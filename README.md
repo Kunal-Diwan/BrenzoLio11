@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/license/Jimiooooo/BrenzoLio?style=for-the-badge&logo=appveyor" alt="LICENSE">
-    <img src="https://img.shields.io/github/contributors/Jimiooooo/BrenzoLio?style=for-the-badge&logo=appveyor" alt="Contributors">
-    <img src="https://img.shields.io/github/stars/Jimiooooo/BrenzoLio?style=for-the-badge&logo=appveyor" alt="Stars">
-    <img src="https://img.shields.io/github/forks/Jimiooooo/BrenzoLio?style=for-the-badge&logo=appveyor" alt="Forks">
+    <img src="https://img.shields.io/github/license/Kunal-Diwan/BrenzoLio?style=for-the-badge&logo=appveyor" alt="LICENSE">
+    <img src="https://img.shields.io/github/contributors/Kunal-Diwan/BrenzoLio?style=for-the-badge&logo=appveyor" alt="Contributors">
+    <img src="https://img.shields.io/github/stars/Kunal-Diwan/BrenzoLio?style=for-the-badge&logo=appveyor" alt="Stars">
+    <img src="https://img.shields.io/github/forks/Kunal-Diwan/BrenzoLio?style=for-the-badge&logo=appveyor" alt="Forks">
     <img src="https://img.shields.io/badge/python-3.9-green?style=for-the-badge&logo=appveyor" alt="Python Version">
 </p>
 
@@ -45,7 +45,7 @@
 
 ### Deployment ⬇️
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Jimiooooo/BrenzoLio.git) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kunal-Diwan/BrenzoLio.git) 
 
 ### <b><u>🎙️Support🎙️</u></b>
 
@@ -57,7 +57,7 @@
 * [PaulSonOfLars](https://github.com/PaulSonOfLars) - Marie and Rose creator, inspired me to do many things.
 * [RealAkito](https://github.com/RealAkito) - Creator of Brenzo Lio base, Haruka  .
 * [MrYacha](https://github.com/MrYacha) - For helping in the development of Haruka .
-* [Kunal-Diwan](https://github.com/Kunal-Diwan) - Helps in development of BrenzoLio .
+* [Jimiooooo](https://github.com/Jimiooooo) - Helps in development of BrenzoLio .
 * [skittles9823](https://github.com/skittles9823) - For memes and sticker stuff.
 * [AyraHikari](https://github.com/AyraHikari) - Reworked welcome and other little things.
 * [nunopenim](https://github.com/nunopenim) - Creator of pyGithub_API / GitHub module .
@@ -73,7 +73,7 @@ And to all other [contributors](https://github.com/Kunal-Diwan/BrenzoLio/graphs/
 
 ### Developers 👨‍💻 
 
-<a href="https://github.com/Jimiooooo/" alt="Jimiooooo"> <img src="https://img.shields.io/badge/Jimiooooo-90302f?logo=github" /></a>
 <a href="https://github.com/Kunal-Diwan" alt="Kunal-Diwan"> <img src="https://img.shields.io/badge/Kunal-Diwan-95B9C7?logo=github" /></a>
+<a href="https://github.com/Jimiooooo/" alt="Jimiooooo"> <img src="https://img.shields.io/badge/Jimiooooo-90302f?logo=github" /></a>
 
 ###### Powered By [@DevelopedBots](https://telegram.dog/DevelopedBots) 💖
