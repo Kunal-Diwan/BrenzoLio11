@@ -123,6 +123,10 @@ def send_start(bot, update):
     text = tld(chat.id, 'main_start_pm')
 
     keyboard = [[
+        InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_tut'),
+                             callback_data="tutmanu_")
+    ]]
+    keyboard += [[
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_lang'),
                              callback_data="set_lang_"),
         InlineKeyboardButton(text=tld(chat.id, 'btn_help'),
@@ -130,7 +134,7 @@ def send_start(bot, update):
     ]]
     keyboard += [[
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_source'),
-                             url="https://github.com/Jimiooooo/BrenzoLio"),
+                             url="https://github.com/Kunal-Diwan/BrenzoLio"),
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_channel'),
                              url="https://t.me/BrenzoLio")
     ]]
@@ -245,6 +249,93 @@ def help_button(bot: Bot, update: Update):
 
 
 @run_async
+def Brenzo_tut_callback(bot: Bot, update: Update):
+    chat = update.effective_chat
+    first_name = update.effective_user.first_name
+    query = update.callback_query
+    if query.data == "tutmanu_":
+        update.effective_message.reply_text(
+            text = tld(chat.id, 'brenzo_tut_manu'),
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_add'),
+                             url="https://t.me/BrenzoLioBot?startgroup=true"),
+                    ],
+                    [InlineKeyboardButton(text=tld(chat.id, 'btn_done'), callback_data="tutmanu_howto")],
+                ]
+            ),
+        )
+    elif query.data == "tutmanu_howto":
+        update.effective_message.reply_text(
+            text = tld(chat.id, 'brenzo_tut_howto'),
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text=tld(chat.id, 'main_tut_btn_vid'),
+                            callback_data="tutmanu_video"
+                        ),
+                    ],
+                    [InlineKeyboardButton(text=tld(chat.id, 'btn_done'), callback_data="tutmanu_readytouse")],
+                ]
+            ),
+        )
+    elif query.data == "tutmanu_readytouse":
+        update.effective_message.reply_text(
+            text = tld(chat.id, 'brenzo_tut_readytouse'),
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text=tld(chat.id, 'btn_continue'), callback_data="tutmanu_cmds")]]
+            ),
+        )
+    elif query.data == "tutmanu_cmds":
+        update.effective_message.reply_text(
+            text = tld(chat.id, 'brenzo_tut_cmds'),
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text=tld(chat.id, 'main_tut_btn_vid'),
+                            callback_data="tutmanu_cmdsvideo"
+                        ),
+                    ],
+                    [InlineKeyboardButton(text=tld(chat.id, 'btn_continue'), callback_data="tutmanu_home")],
+                ]
+            ),
+        )
+    elif query.data == "tutmanu_home":
+        update.effective_message.reply_text(
+            text = tld(chat.id, 'brenzo_tut_home'),
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text=tld(chat.id, 'main_tut_btn_backtostart'), callback_data="bot_start")]]
+            ),
+        )
+    elif query.data == "tutmanu_cmdsvideo":
+        update.effective_message.reply_animation("https://telegra.ph/file/b8260e300bdc998e9c3db.mp4",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text=tld(chat.id, 'btn_continue'), callback_data="tutmanu_home")]]
+            ),
+        )
+    elif query.data == "tutmanu_video":
+        update.effective_message.reply_animation("https://telegra.ph/file/b8260e300bdc998e9c3db.mp4",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text=tld(chat.id, 'btn_done'), callback_data="tutmanu_readytouse")]]
+            ),
+        )
+
+
+@run_async
 def get_help(bot: Bot, update: Update):
     chat = update.effective_chat
     args = update.effective_message.text.split(None, 1)
@@ -323,14 +414,18 @@ def main():
     start_callback_handler = CallbackQueryHandler(send_start,
                                                   pattern=r"bot_start")
 
-    migrate_handler = MessageHandler(Filters.status_update.migrate,
-                                     migrate_chats)
+    tut_callback_handler = CallbackQueryHandler(
+        Brenzo_tut_callback, pattern=r"tutmanu_"
+    )
+
+    migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
 
     # dispatcher.add_handler(test_handler)
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(start_callback_handler)
     dispatcher.add_handler(help_handler)
     dispatcher.add_handler(help_callback_handler)
+    dispatcher.add_handler(tut_callback_handler)
     dispatcher.add_handler(migrate_handler)
     # dispatcher.add_error_handler(error_callback)
 
