@@ -20,6 +20,7 @@ main_start_btn_source: '📦 Source code'
 main_start_btn_channel: '📬 News channel'
 main_start_btn_add: '➕ Add me to your Chat ➕'
 main_start_btn_lang: '🇺🇸 Language'
+main_start_btn_tut: '🎥 Configuration Tutorial 🎥'
 #Common
 common_err_no_admin: You aren't an admin!
 common_err_no_user: You don't seem to be referring to a user.
@@ -31,6 +32,58 @@ common_cmd_pm_only: This command can only be used in PM, not a group.
 common_group_creator_only: Only the group creator can use this command!
 common_this_chat: This chat
 common_invalid_arg: Invalid argument! Please type `on`/`yes` or `off`/`no`!
+#Config
+brenzo_tut_manu: |
+  Hello, welcome to the Brenzo Lio configuration tutorial.
+
+  The first thing to do is to *add Brenzo Lio to your group*! For doing that, press the under button and select your group, then press "Done" to continue the tutorial.
+
+brenzo_tut_howto: |
+  Ok, well done!
+
+  Now for let me work correctly, you need to make me *Admin of your Group!*
+
+  To do that, follow this easy steps: 
+  ▫️ Go to your group
+  ▫️ Press the Group's name
+  ▫️ Press Modify
+  ▫️ Press on Administrator
+  ▫️ Press Add Administrator
+  ▫️ Press the Magnifying Glass
+  ▫️ Search @BrenzoLioBot
+  ▫️ Confirm
+
+brenzo_tut_readytouse: |
+  Excellent!
+  Now the Bot is ready to use!
+
+  Using the /help command you have at your disposal a series of things that can be modified how you prefer, as required for your group.
+
+brenzo_tut_cmds: |
+  To conclude, I explain you how to use the Bot's basic commands, for the basilar management of the group's users.
+
+  */ban* expels a user from the group without giving him the possibility to rejoin with the group's link
+
+  */mute* allows a user to read, but not to write messages in the group
+
+  */kick* expels a user of the group but with the possibility to rejoin with the group's link
+
+  */unban* used on a banned user, gives him the possibility to rejoin with the group's link
+
+  */info* shows all the infos yours or of choosed user
+
+  */antiarabic* this will help you to protect you are group from Arabic
+
+brenzo_tut_home: |
+  In conclusion I would point out the command */reload* that will update the group's Admin list.
+  For example if you add or remove an Admin, remember to use this command or the bot will not notice this change.
+
+  Thank for following the tutorial and have fun using the Bot!
+main_tut_btn_vid: '💾 Example Video 💾'
+main_tut_btn_backtostart: '🔙 Back to Start'
+btn_continue: '✅ Continue ✅'
+btn_done: '✅ Done ✅'
+
 #Admins
 modname_admin: Admin
 admin_no_promote_perm: "You don't have enough rights to promote/demote someone!"
