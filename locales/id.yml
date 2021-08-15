@@ -20,6 +20,7 @@ main_start_btn_source: '📦 Kode sumber'
 main_start_btn_channel: '📬 Saluran berita'
 main_start_btn_add: '➕ Tambahkan saya ke Obrolan Anda ➕'
 main_start_btn_lang: '🇮🇩 Bahasa'
+main_start_btn_tut: '🎥 Tutorial Konfigurasi 🎥'
 #Common
 common_err_no_admin: Anda bukan admin!
 common_err_no_user: Anda sepertinya tidak merujuk ke pengguna.
@@ -31,6 +32,59 @@ common_cmd_pm_only: Perintah ini hanya dapat digunakan dalam pesan pribadi, buka
 common_group_creator_only: Hanya pembuat grup yang dapat menggunakan perintah ini!
 common_this_chat: Obrolan ini
 common_invalid_arg: Argumen yang tidak valid! Silakan ketik `on`/`yes` atau `off`/`no`!
+#Config
+brenzo_tut_manu: |
+  Halo, selamat datang di tutorial konfigurasi Brenzo Lio.
+
+  Hal pertama yang harus dilakukan adalah *tambahkan Brenzo Lio ke grup anda!* Untuk melakukan itu, tekan tombol dibawah dan pilih grup ada, kemudian tekan "Selesai" untuk melanjutkan tutorial.
+
+brenzo_tut_howto: |
+  Baiklah, sudah dilakukan dengan baik!
+
+  Sekarang untuk saya bekerja dengan baik , anda harus menjadikan saya *Admin di Grup anda!*
+
+  Untuk melakukan itu, ikuti langkah-langkah mudah ini: 
+  ▫️ Pergi ke grup anda
+  ▫️ Tekan nama Grup
+  ▫️ Tekan Modifikasi atau ✏️
+  ▫️ Tekan pada Admin
+  ▫️ Tekan Tambah Admin
+  ▫️ Tekan Kaca Pembesar
+  ▫️ Cari @BrenzoLioBot
+  ▫️ Konfirmasi
+
+brenzo_tut_readytouse: |
+  Luar biasa!
+  Sekarang Bot siap digunakan!
+
+  
+Dengan menggunakan perintah /help, anda memiliki serangkaian fungsi yang dapat dimodifikasi sesuai keinginan anda, sesuai dengan kebutuhan grup Anda.
+
+brenzo_tut_cmds: |
+  Sebagai kesimpulan, saya menjelaskan cara menggunakan perintah dasar Bot, untuk pengelolaan dasar pengguna grup. 
+
+  */ban* menendang pengguna dari grup tanpa memberi mereka opsi untuk bergabung kembali
+
+  */mute* memungkinkan pengguna untuk membaca, tetapi tidak dapat menulis pesan ke grup
+
+  */kick* menendang pengguna dari grup tetapi dengan kemungkinan bergabung dengan grup lagi
+
+  */unban* digunakan pada pengguna yang diblokir, memberinya kemungkinan untuk bergabung dengan grup lagi
+
+  */info* menampilkan semua info dari pengguna yang dipilih
+
+  */antiarabic* ini akan membantu Anda melindungi grup Anda dari bahasa Arab
+
+brenzo_tut_home: |
+  Dengan kesimpulan ini saya akan menunjukkan perintah /reload yang akan memperbarui daftar Admin grup.
+  Misalnya jika anda menambah atau menghapus Admin, ingatlah untuk menggunakan perintah ini atau bot tidak akan melihat perubahan ini.
+
+  Terima kasih telah mengikuti tutorial dan selamat menyenangi menggunakan Bot
+main_tut_btn_vid: '💾 Contoh Video 💾'
+main_tut_btn_backtostart: 'Kembali ke awal'
+btn_continue: '✅ Melanjutkan ✅'
+btn_done: '✅ Selesai ✅'
+
 #Admins
 modname_admin: Admin
 admin_err_user_no_perm: Anda bukan admin yang dapat mengubah hak admin lain!
