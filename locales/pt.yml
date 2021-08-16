@@ -32,6 +32,59 @@ common_cmd_pm_only: Este comando pode ser usado apenas no PV, não em um grupo.
 common_group_creator_only: 'Somente o criador do grupo pode usar este comando!'
 common_this_chat: Este chat
 common_invalid_arg: 'Argumento inválido! Por favor use `on`/`yes` ou `off`/`no`!'
+main_start_btn_tut: '🎥 Tutorial de configuração 🎥'
+#Common
+brenzo_tut_manu: |
+  Olá, selamat datang di tutorial konfigurasi Brenzo Lio .
+
+  A primeira coisa a fazer é *adicionar Brenzo Lio ao seu grupo*! Para fazer isso, pressione o botão abaixo e selecione o seu grupo, então aperte "Feito" para continuar o tutorial.
+
+brenzo_tut_howto: |
+  Ok, bem feito!
+
+  Agora, para me deixar trabalhar corretamente, você precisa me tornar *Admin do seu grupo!*
+
+  Para fazer isso, siga estas etapas:
+ ▫️ Vá para o seu grupo
+ ▫️ Pressione o nome do grupo
+ ▫️ Pressione Gerenciar Grupo
+ ▫️ Pressione em Administradores
+ ▫️ Pressione Adicionar Administrador
+ ▫️ Pressione a barra de pesquisa
+ ▫️ Pesquise @BrenzoLioBot
+ ▫️ Confirme
+
+brenzo_tut_readytouse: |
+  Excelente!
+  Agora o Bot está pronto para uso!
+
+  Usando o comando /settings você tem a disposição uma série de coisas que pode ser modificada como você preferir , como requerida na seu grupo.
+
+brenzo_tut_cmds: |
+  Para concluir, eu vou explicar como usar os comandos básicos do Bot, para o gerenciamento básico dos usuários do grupo.
+
+  */ban* expulsa um usuário sem a possibilidade de entrar novamente usando o link do grupo
+
+  */mute* permite que um usuário leia, mas não pode escrever mensagens no grupo
+
+  */kick* expulsa um usuário com a possibilidade de entrar novamente usando o link do grupo 
+
+  */unban* usado para remover o banimento de um usuário, dando a possibilidade dele entrar novamente usando o link do grupo
+
+  */info* mostra as informações do usuário escolhido
+
+  */antiarabic* isso irá ajudá-lo a proteger seu grupo de árabe
+
+brenzo_tut_home: |
+  Para concluir, gostaria de apontar o comando /reload que atualizará a lista de administradores do grupo.
+  Por exemplo, se você adicionar ou remover um Admin, lembre-se de usar esse comando ou o bot não perceberá essa alteração.
+
+  Obrigado por seguir o tutorial e divirta-se usando o Bot!
+main_tut_btn_vid: '💾 Vídeo de exemplo 💾'
+main_tut_btn_backtostart: '🔙 Voltar ao início'
+btn_continue: '✅ Continuar ✅'
+btn_done: '✅ feita ✅'
+
 #Admins
 modname_admin: Admin
 admin_no_promote_perm: "Você não tem direitos suficientes para promover/rebaixar alguém!"
