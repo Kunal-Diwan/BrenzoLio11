@@ -326,7 +326,7 @@ def Brenzo_tut_callback(bot: Bot, update: Update):
             ),
         )
     elif query.data == "tutmanu_video":
-        update.effective_message.reply_animation("https://telegra.ph/file/b8260e300bdc998e9c3db.mp4",
+        update.effective_message.reply_animation("https://telegra.ph/file/66360ef1ee8eddd629460.mp4",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
