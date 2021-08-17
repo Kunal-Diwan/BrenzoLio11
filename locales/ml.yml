@@ -1186,7 +1186,7 @@ warns_help: |
   - /rmwarn <userhandle>: removes latest warn for a user. It also can be used as reply.
   - /unwarn <userhandle>: same as /rmwarn
 #OrangeFox
-fox_devices_title: "**OrangeFox me mmRecovery is currently avaible for:**"
+fox_devices_title: "**OrangeFox Recovery is currently avaible for:**"
 fox_get_release: You can get latest release by using `/orangefox (codename)`
 fox_device_not_found: Device is not found!
 fox_release_not_found: "Release is not found!"
@@ -1213,4 +1213,3 @@ helpers_user_not_in_db: |
 #string_handling
 helpers_string_handling_invalid_time_amount: Invalid time amount specified.
 helpers_string_handling_invalid_time_type: "Invalid time type specified. Expected m, h, d, got: {}."
-E r
