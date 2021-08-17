@@ -62,7 +62,7 @@ def locale_button(bot, update):
     chat = update.effective_chat
     user = update.effective_user
     query = update.callback_query
-    lang_match = re.findall(r"en-US|pt|id|ru", query.data)
+    lang_match = re.findall(r"en-US|pt|id|ru|ml", query.data)
     if lang_match:
         if lang_match[0]:
             switch_to_locale(chat.id, lang_match[0])
@@ -101,6 +101,8 @@ def locale_button(bot, update):
                                  callback_data="set_lang_en-US"),
             InlineKeyboardButton("Portuguese 🇧🇷",
                                  callback_data="set_lang_pt")
+        ]] + [[
+            InlineKeyboardButton("Malayalam 🇮🇳", callback_data="set_lang_ml")
         ]] + [[
             InlineKeyboardButton("Indonesian 🇮🇩", callback_data="set_lang_id"),
             InlineKeyboardButton("Russian 🇷🇺", callback_data="set_lang_ru")
