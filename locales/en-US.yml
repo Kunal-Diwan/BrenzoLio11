@@ -671,7 +671,7 @@ misc_info_swban1: "\n\n<b>This person is banned in SpamWatch!</b>"
 misc_info_swban2: "\nReason: <pre>{}</pre>"
 misc_info_swban3: "\nAppeal at @SpamWatchSupport"
 misc_md_list: |
-  Markdown is a very powerful formatting tool supported by telegram. Hitsuki has some enhancements, to make sure that \
+  Markdown is a very powerful formatting tool supported by telegram. Brenzo has some enhancements, to make sure that \
   saved messages are correctly parsed, and to allow you to create buttons.
   - <code>_italic_</code>: wrapping text with '_' will produce italic text
   - <code>*bold*</code>: wrapping text with '*' will produce bold text
