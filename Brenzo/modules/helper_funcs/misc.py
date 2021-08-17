@@ -47,10 +47,12 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
                                     callback_data="{}_module({})".format(prefix, x.__mod_name__.lower())) for x
              in module_dict.values()])
     else:
-        modules = sorted(
-            [EqInlineKeyboardButton(x.__mod_name__,
-                                    callback_data="{}_module({},{})".format(prefix, chat, x.__mod_name__.lower())) for x
-             in module_dict.values()])
+        modules = sorted([
+            EqInlineKeyboardButton(tld(chat_id, "modname_" + x),
+                                   callback_data="{}_module({},{})".format(
+                                       prefix, chat, x))
+            for x in module_dict.keys()
+        ])
 
 
 
