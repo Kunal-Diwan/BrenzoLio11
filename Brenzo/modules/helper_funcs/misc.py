@@ -1,8 +1,7 @@
-from functools import wraps
 from math import ceil
 from typing import List, Dict
 
-from telegram import MAX_MESSAGE_LENGTH, InlineKeyboardButton, Bot, ParseMode, Update
+from telegram import MAX_MESSAGE_LENGTH, InlineKeyboardButton, Bot, ParseMode
 from telegram.error import TelegramError
 
 from Brenzo import LOAD, NO_LOAD, OWNER_ID
@@ -81,19 +80,13 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
     return pairs
 
 
-def send_to_list(bot: Bot,
-                 send_to: list,
-                 message: str,
-                 markdown=False,
-                 html=False) -> None:
+def send_to_list(bot: Bot, send_to: list, message: str, markdown=False, html=False) -> None:
     if html and markdown:
         raise Exception("Can only send with either markdown or HTML!")
     for user_id in set(send_to):
         try:
             if markdown:
-                bot.send_message(user_id,
-                                 message,
-                                 parse_mode=ParseMode.MARKDOWN)
+                bot.send_message(user_id, message, parse_mode=ParseMode.MARKDOWN)
             elif html:
                 bot.send_message(user_id, message, parse_mode=ParseMode.HTML)
             else:
@@ -109,7 +102,6 @@ def build_keyboard(buttons):
             keyb[-1].append(InlineKeyboardButton(btn.name, url=btn.url))
         else:
             keyb.append([InlineKeyboardButton(btn.name, url=btn.url)])
-
     return keyb
 
 
@@ -122,7 +114,6 @@ def build_keyboard_parser(bot, chat_id, buttons):
             keyb[-1].append(InlineKeyboardButton(btn.name, url=btn.url))
         else:
             keyb.append([InlineKeyboardButton(btn.name, url=btn.url)])
-
     return keyb
 
 
@@ -139,15 +130,3 @@ def revert_buttons(buttons):
 
 def is_module_loaded(name):
     return (not LOAD or name in LOAD) and name not in NO_LOAD
-
-
-def user_bot_owner(func):
-    @wraps(func)
-    def is_user_bot_owner(bot: Bot, update: Update, *args, **kwargs):
-        user = update.effective_user
-        if user and user.id == OWNER_ID:
-            return func(bot, update, *args, **kwargs)
-        else:
-            pass
-
-    return is_user_bot_owner
