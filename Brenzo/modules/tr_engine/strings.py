@@ -4,7 +4,7 @@ from codecs import encode, decode
 from Brenzo import LOGGER
 from Brenzo.modules.sql.locales_sql import prev_locale
 
-LANGUAGES = ['en-US', 'id', 'ru', 'pt']
+LANGUAGES = ['en-US', 'id', 'ru', 'pt', 'ml']
 
 strings = {}
 
@@ -37,6 +37,11 @@ def tld(chat_id, t, show_none=True):
                 encode(strings['pt'][t], 'latin-1', 'backslashreplace'),
                 'unicode-escape')
             return result
+        elif LOCALE in ('ml') and t in strings['ml']:
+            result = decode(
+                encode(strings['ml'][t], 'latin-1', 'backslashreplace'),
+                'unicode-escape')
+            return result
 
     if t in strings['en-US']:
         result = decode(
@@ -62,6 +67,8 @@ def tld_list(chat_id, t):
             return strings['ru'][t]
         elif LOCALE in ('pt') and t in strings['pt']:
             return strings['pt'][t]
+        elif LOCALE in ('ml') and t in strings['ml']:
+            return strings['ml'][t]
 
     if t in strings['en-US']:
         return strings['en-US'][t]
@@ -90,6 +97,8 @@ def tld_list(chat_id, t):
 #             return TurkishStrings[t]
 #         elif LOCALE in ('id') and t in IndonesianStrings:
 #             return IndonesianStrings[t]
+#          elif LOCALE in ('ml') and t in MalayalamStrings:
+#             return MalayalamStrings[t]
 #         else:
 #             return False
 #     else:
