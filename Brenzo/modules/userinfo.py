@@ -1,17 +1,14 @@
 import html
 from typing import List
 
-from telegram import Update, Bot
-from telegram import ParseMode, MAX_MESSAGE_LENGTH
-from telegram.ext.dispatcher import run_async
-from telegram.utils.helpers import escape_markdown
-
 import Brenzo.modules.sql.userinfo_sql as sql
-from Brenzo import dispatcher, SUDO_USERS, OWNER_ID
+from Brenzo import OWNER_ID, SUDO_USERS, dispatcher
 from Brenzo.modules.disable import DisableAbleCommandHandler
 from Brenzo.modules.helper_funcs.extraction import extract_user
-
 from Brenzo.modules.tr_engine.strings import tld
+from telegram import MAX_MESSAGE_LENGTH, Bot, ParseMode, Update
+from telegram.ext.dispatcher import run_async
+from telegram.utils.helpers import escape_markdown
 
 
 @run_async
@@ -30,11 +27,11 @@ def about_me(bot: Bot, update: Update, args: List[str]):
     if info:
         update.effective_message.reply_text("*{}*:\n{}".format(
             user.first_name, escape_markdown(info)),
-                                            parse_mode=ParseMode.MARKDOWN)
+            parse_mode=ParseMode.MARKDOWN)
     elif message.reply_to_message:
         username = message.reply_to_message.from_user.first_name
         update.effective_message.reply_text(
-            tld(chat.id, 'userinfo_about_not_set').format(username))
+            tld(chat.id, 'userinfo_about_not_set_they').format(username))
     else:
         update.effective_message.reply_text(
             tld(chat.id, 'userinfo_about_not_set_you'))
@@ -45,6 +42,10 @@ def set_about_me(bot: Bot, update: Update):
     chat = update.effective_chat
     message = update.effective_message
     user_id = message.from_user.id
+    if user_id in (777000, 1087968824):
+        message.reply_text(tld(chat.id, 'userinfo_anonymous_about'))
+        return
+
     text = message.text
     info = text.split(
         None, 1
@@ -75,7 +76,7 @@ def about_bio(bot: Bot, update: Update, args: List[str]):
     if info:
         update.effective_message.reply_text("*{}*:\n{}".format(
             user.first_name, escape_markdown(info)),
-                                            parse_mode=ParseMode.MARKDOWN)
+            parse_mode=ParseMode.MARKDOWN)
     elif message.reply_to_message:
         username = user.first_name
         update.effective_message.reply_text(
@@ -93,6 +94,9 @@ def set_about_bio(bot: Bot, update: Update):
     if message.reply_to_message:
         repl_message = message.reply_to_message
         user_id = repl_message.from_user.id
+        if user_id in (777000, 1087968824):
+            message.reply_text(tld(chat.id, 'userinfo_anonymous_bio'))
+            return
         if user_id == message.from_user.id:
             message.reply_text(tld(chat.id, 'userinfo_bio_you_cant_set'))
             return
@@ -126,6 +130,10 @@ def set_about_bio(bot: Bot, update: Update):
 def __user_info__(user_id, chat_id):
     bio = html.escape(sql.get_user_bio(user_id) or "")
     me = html.escape(sql.get_user_me_info(user_id) or "")
+    if bio and len(bio) > 500:
+        bio = bio[:500]
+    if me and len(me) > 500:
+        me = me[:500]
     if bio and me:
         return tld(chat_id, "userinfo_what_i_and_other_say").format(me, bio)
     elif bio:
@@ -134,11 +142,6 @@ def __user_info__(user_id, chat_id):
         return tld(chat_id, "userinfo_what_i_say").format(me)
     else:
         return ""
-
-
-def __gdpr__(user_id):
-    sql.clear_user_info(user_id)
-    sql.clear_user_bio(user_id)
 
 
 __help__ = True
