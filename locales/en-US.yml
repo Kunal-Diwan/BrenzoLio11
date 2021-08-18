@@ -476,6 +476,7 @@ feds_notfadmin: "Only federation admins can do this!"
 feds_tg_bot: "Fool! You can't fban Telegram's bot!"
 feds_create_fail: Federation creation failed!
 feds_create_success: "*You have successfully created a new federation!*\nName: `{}`\nID: `{}`\n\nRun the command below in groups to add them to the federation:\n`/joinfed {}`"
+feds_create_success_logger: "Federation <b>{}</b> has been created with ID: <pre>{}</pre>"
 feds_err_no_args: Please write down the name of the federation.
 feds_delete_not_found: This federation is not found!
 feds_owner_only: Only federation owners can do this!
