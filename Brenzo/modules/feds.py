@@ -334,9 +334,9 @@ def fed_info(bot: Bot, update: Update, args: List[str]):
 	FEDADMIN.append(int(owner.id))
 	TotalAdminFed = len(FEDADMIN)
 
-	user = update.effective_user  # type: Optional[Chat]
-	chat = update.effective_chat  # type: Optional[Chat]
-	info = sql.get_fed_info(fed_id)
+    user = update.effective_user
+    chat = update.effective_chat
+    info = sql.get_fed_info(fed_id)
 
     getfban = sql.get_all_fban_users(fed_id)
     getfchat = sql.all_fed_chats(fed_id)
