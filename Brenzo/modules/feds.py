@@ -73,7 +73,8 @@ def new_fed(bot: Bot, update: Update):
 	message = update.effective_message
 	if chat.type != "private":
 		update.effective_message.reply_text(tld(chat.id, "common_cmd_pm_only"))
-                return
+        return
+
 	fednam = message.text.split(None, 1)[1]
 	if not fednam == '':
 		fed_id = str(uuid.uuid4())
