@@ -76,15 +76,15 @@ def new_fed(bot: Bot, update: Update):
 		return
 
 	fednam = args[0]
-    if not fednam == '':
-        fed_id = str(uuid.uuid4())
-        fed_name = fednam
-        LOGGER.info(fed_id)
-        if user.id == int(OWNER_ID):
-            fed_id = fed_name
+      if not fednam == '':
+		fed_id = str(uuid.uuid4())
+		fed_name = fednam
+		LOGGER.info(fed_id)
+		if user.id == int(OWNER_ID):
+			fed_id = fed_name
 
 
-		x = sql.new_fed(user.id, fed_name, fed_id)
+		x = sql.new_fed(user.id, f oked_name, fed_id)
 		if not x:
 			update.effective_message.reply_text(tld(chat.id, "feds_create_fail"))
 		return
