@@ -365,8 +365,6 @@ def fed_admin(bot: Bot, update: Update, args: List[str]):
 
 	text = tld(chat.id, "feds_admins").format(info['fname'])
 	text += "👑 Owner:\n"
-        owner = bot.get_chat(info['owner'])
-        text += "👑 Owner:\n"
 	owner = bot.get_chat(info['owner'])
 	try:
 		owner_name = owner.first_name + " " + owner.last_name
