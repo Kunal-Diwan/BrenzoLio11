@@ -92,7 +92,8 @@ def new_fed(bot: Bot, update: Update):
                                                 "feds_create_success").format(
                                                     fed_name, fed_id, fed_id),
                                             parse_mode=ParseMode.MARKDOWN)
-                try:
+
+		try:
 
 			bot.send_message(MESSAGE_DUMP,
 				tld(chat.id, "feds_create_success_logger").format(
