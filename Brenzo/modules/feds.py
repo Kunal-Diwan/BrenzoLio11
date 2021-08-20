@@ -147,8 +147,8 @@ def fed_chat(bot: Bot, update: Update, args: List[str]):
 		update.effective_message.reply_text("You must be an admin to execute this command")
 		return
 
-    if not fed_id:
-		update.effective_message.reply_text(tld(chat.id, "feds_group_not_in_fed"))
+	if not fed_id:
+		update.effective_message.reply_text(tld(chat.id, "feds_group_not_in_fed")
 		return
 
     chat = update.effective_chat
