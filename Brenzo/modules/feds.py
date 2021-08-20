@@ -148,9 +148,8 @@ def fed_chat(bot: Bot, update: Update, args: List[str]):
 		return
 
     if not fed_id:
-        update.effective_message.reply_text(
-            tld(chat.id, "feds_group_not_in_fed"))
-        return
+		update.effective_message.reply_text(tld(chat.id, "feds_group_not_in_fed"))
+		return
 
     chat = update.effective_chat
     info = sql.get_fed_info(fed_id)
