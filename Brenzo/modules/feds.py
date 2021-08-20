@@ -338,9 +338,8 @@ def fed_info(bot: Bot, update: Update, args: List[str]):
 	chat = update.effective_chat  # type: Optional[Chat]
 	info = sql.get_fed_info(fed_id)
 
-        getfban = sql.get_all_fban_users(fed_id)
-        getfchat = sql.all_fed_chats(fed_id)
-
+    getfban = sql.get_all_fban_users(fed_id)
+    getfchat = sql.all_fed_chats(fed_id)
 
 	text = tld(chat.id, "feds_info").format(fed_id, info['fname'],
                                             mention_html(owner.id, owner_name),
