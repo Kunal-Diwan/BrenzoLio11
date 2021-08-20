@@ -151,8 +151,9 @@ def fed_chat(bot: Bot, update: Update, args: List[str]):
 		update.effective_message.reply_text(tld(chat.id, "feds_group_not_in_fed"))
 		return
 
-    chat = update.effective_chat
-    info = sql.get_fed_info(fed_id)
+	user = update.effective_user  # type: Optional[Chat]
+	chat = update.effective_chat  # type: Optional[Chat]
+	info = sql.get_fed_info(fed_id)
 
     text = tld(chat.id, "feds_group_part_of_fed")
     text += "\n{} (ID: <code>{}</code>)".format(info['fname'], fed_id)
