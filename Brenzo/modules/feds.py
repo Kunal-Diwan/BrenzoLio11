@@ -364,7 +364,7 @@ def fed_admin(bot: Bot, update: Update, args: List[str]):
 	info = sql.get_fed_info(fed_id)
 
 	text = tld(chat.id, "feds_admins").format(info['fname'])
-        text += "👑 Owner:\n"
+	text += "👑 Owner:\n"
         owner = bot.get_chat(info['owner'])
         text += "👑 Owner:\n"
 	owner = bot.get_chat(info['owner'])
