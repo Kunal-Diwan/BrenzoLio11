@@ -312,41 +312,43 @@ def user_demote_fed(bot: Bot, update: Update, args: List[str]):
 
 @run_async
 def fed_info(bot: Bot, update: Update, args: List[str]):
-	chat = update.effective_chat  # type: Optional[Chat]
-	user = update.effective_user  # type: Optional[User]
-	fed_id = sql.get_fed_id(chat.id)
-	info = sql.get_fed_info(fed_id)
+    chat = update.effective_chat
+    user = update.effective_user
+    fed_id = sql.get_fed_id(chat.id)
+    info = sql.get_fed_info(fed_id)
 
-	if not fed_id:
-		update.effective_message.reply_text(tld(chat.id, "feds_group_not_in_fed"))
-		return
+    if not fed_id:
+        update.effective_message.reply_text(
+            tld(chat.id, "feds_group_not_in_fed"))
+        return
 
-	if is_user_fed_admin(fed_id, user.id) == False:
-		update.effective_message.reply_text(tld(chat.id, "feds_fedadmin_only"))
-		return
+    if is_user_fed_admin(fed_id, user.id) == False:
+        update.effective_message.reply_text(tld(chat.id, "feds_fedadmin_only"))
+        return
 
-	owner = bot.get_chat(info['owner'])
-	try:
-		owner_name = owner.first_name + " " + owner.last_name
-	except:
-		owner_name = owner.first_name
-	FEDADMIN = sql.all_fed_users(fed_id)
-	FEDADMIN.append(int(owner.id))
-	TotalAdminFed = len(FEDADMIN)
+    owner = bot.get_chat(info['owner'])
+    try:
+        owner_name = owner.first_name + " " + owner.last_name
+    except Exception:
+        owner_name = owner.first_name
+    FEDADMIN = sql.all_fed_users(fed_id)
+    FEDADMIN.append(int(owner.id))
+    TotalAdminFed = len(FEDADMIN)
 
-	chat = update.effective_chat  # type: Optional[Chat]
-	user = update.effective_user  # type: Optional[User]
-	fed_id = sql.get_fed_id(chat.id)
- 
-        getfban = sql.get_all_fban_users(fed_id)
-        getfchat = sql.all_fed_chats(fed_id)
+    user = update.effective_user
+    chat = update.effective_chat
+    info = sql.get_fed_info(fed_id)
 
-	text = tld(chat.id, "feds_info").format(fed_id, info['fname'],
+    getfban = sql.get_all_fban_users(fed_id)
+    getfchat = sql.all_fed_chats(fed_id)
+
+    text = tld(chat.id, "feds_info").format(fed_id, info['fname'],
                                             mention_html(owner.id, owner_name),
                                             TotalAdminFed, len(getfban),
                                             len(getfchat))
 
-	update.effective_message.reply_text(text, parse_mode=ParseMode.HTML)
+    update.effective_message.reply_text(text, parse_mode=ParseMode.HTML)
+
 
 @run_async
 def fed_admin(bot: Bot, update: Update, args: List[str]):
