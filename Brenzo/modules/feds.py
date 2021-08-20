@@ -74,7 +74,6 @@ def new_fed(bot: Bot, update: Update):
 	if chat.type != "private":
 		update.effective_message.reply_text(tld(chat.id, "common_cmd_pm_only"))
 		return
-
 	fednam = message.text.split(None, 1)[1]
 	if not fednam == '':
 		fed_name = fednam
@@ -82,11 +81,11 @@ def new_fed(bot: Bot, update: Update):
 		if user.id == int(OWNER_ID):
 			fed_id = fed_name
 
-
-		x = sql.new_fed(user.id, f oked_name, fed_id)
-		if not x:
-			update.effective_message.reply_text(tld(chat.id, "feds_create_fail"))
-		return
+        x = sql.new_fed(user.id, fed_name, fed_id)
+        if not x:
+            update.effective_message.reply_text(
+                tld(chat.id, "feds_create_fail"))
+            return
 
 		update.effective_message.reply_text(tld(chat.id,
                                                 "feds_create_success").format(
