@@ -343,7 +343,7 @@ def fed_info(bot: Bot, update: Update, args: List[str]):
                                             TotalAdminFed, len(getfban),
                                             len(getfchat))
 
-        update.effective_message.reply_text(text, parse_mode=ParseMode.HTML)
+	update.effective_message.reply_text(text, parse_mode=ParseMode.HTML)
 
 @run_async
 def fed_admin(bot: Bot, update: Update, args: List[str]):
