@@ -155,10 +155,10 @@ def fed_chat(bot: Bot, update: Update, args: List[str]):
 	chat = update.effective_chat  # type: Optional[Chat]
 	info = sql.get_fed_info(fed_id)
 
-    text = tld(chat.id, "feds_group_part_of_fed")
-    text += "\n{} (ID: <code>{}</code>)".format(info['fname'], fed_id)
+	text = tld(chat.id, "feds_group_part_of_fed")
+	text += "\n{} (ID: <code>{}</code>)".format(info['fname'], fed_id)
 
-    update.effective_message.reply_text(text, parse_mode=ParseMode.HTML)
+	update.effective_message.reply_text(text, parse_mode=ParseMode.HTML)
 
 
 def join_fed(bot: Bot, update: Update, args: List[str]):
