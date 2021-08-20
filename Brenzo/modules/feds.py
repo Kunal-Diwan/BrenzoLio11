@@ -75,9 +75,8 @@ def new_fed(bot: Bot, update: Update):
 		update.effective_message.reply_text(tld(chat.id, "common_cmd_pm_only"))
 		return
 
-	fednam = args[0]
-      if not fednam == '':
-		fed_id = str(uuid.uuid4())
+	fednam = message.text.split(None, 1)[1]
+	if not fednam == '':
 		fed_name = fednam
 		LOGGER.info(fed_id)
 		if user.id == int(OWNER_ID):
