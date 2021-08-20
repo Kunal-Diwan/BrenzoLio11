@@ -72,37 +72,33 @@ def new_fed(bot: Bot, update: Update):
 	user = update.effective_user  # type: Optional[User]
 	message = update.effective_message
 	if chat.type != "private":
-		update.effective_message.reply_text(tld(chat.id, "common_cmd_pm_only"))
+		update.effective_message.reply_text("Do it in PM?")
 		return
 	fednam = message.text.split(None, 1)[1]
 	if not fednam == '':
+		fed_id = str(uuid.uuid4())
 		fed_name = fednam
 		LOGGER.info(fed_id)
 		if user.id == int(OWNER_ID):
 			fed_id = fed_name
 
-        x = sql.new_fed(user.id, fed_name, fed_id)
-        if not x:
-            update.effective_message.reply_text(
-                tld(chat.id, "feds_create_fail"))
-            return
+		x = sql.new_fed(user.id, fed_name, fed_id)
+		if not x:
+			update.effective_message.reply_text("Federation creation failed! Keep in the mind that this rarely happened! Ask in @HarukaAyaGroup for help!")
+			return
 
-		update.effective_message.reply_text(tld(chat.id,
-                                                "feds_create_success").format(
-                                                    fed_name, fed_id, fed_id),
-                                            parse_mode=ParseMode.MARKDOWN)
-
+		update.effective_message.reply_text("*You have successfully created a new federation!*"\
+											"\nName: `{}`"\
+											"\nID: `{}`"
+											"\n\nUse the command below to join the federation:"
+											"\n`/joinfed {}`".format(fed_name, fed_id, fed_id), parse_mode=ParseMode.MARKDOWN)
 		try:
-
 			bot.send_message(MESSAGE_DUMP,
-				tld(chat.id, "feds_create_success_logger").format(
-                                 fed_name, fed_id),
-                             parse_mode=ParseMode.HTML)
-
+				"Federation <b>{}</b> have been created with ID: <pre>{}</pre>".format(fed_name, fed_id), parse_mode=ParseMode.HTML)
 		except:
 			LOGGER.warning("Cannot send a message to MESSAGE_DUMP")
 	else:
-		update.effective_message.reply_text(tld(chat.id, "feds_err_no_args"))
+		update.effective_message.reply_text("Please write down the name of the federation")
 
 @run_async
 def del_fed(bot: Bot, update: Update, args: List[str]):
