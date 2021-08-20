@@ -86,7 +86,7 @@ def new_fed(bot: Bot, update: Update):
 		x = sql.new_fed(user.id, fed_name, fed_id)
 		if not x:
 			update.effective_message.reply_text(tld(chat.id, "feds_create_fail"))
-                        return
+		return
 
 		update.effective_message.reply_text(tld(chat.id,
                                                 "feds_create_success").format(
