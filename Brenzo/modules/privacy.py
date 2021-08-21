@@ -20,7 +20,7 @@ PRIVACY_STRING = """Select one of the below options for more information about h
 CANCEL_STRING = """Privacy deletion request cancelled."""
 
 @run_async
-def privacy(update, context):
+def privacy(bot: Bot, update: Update):
     user = update.effective_message.from_user
     chat = update.effective_chat  # type: Optional[Chat]
     bot = context.bot
