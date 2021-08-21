@@ -252,7 +252,9 @@ def Brenzo_policy_callback(bot: Bot, update: Update):
         )
 
 @run_async
-def Brenzo_cancel_callback(update, context):
+def Brenzo_cancel_callback(bot: Bot, update: Update):
+    chat = update.effective_chat
+    first_name = update.effective_user.first_name
     query = update.callback_query
     if query.data == "cancel_": 
         query.message.edit_text(
