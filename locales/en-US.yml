@@ -761,7 +761,6 @@ jokes_help: |
   - /slap: slap a user, or get slapped if not a reply.
 
 #Misc
-
 modname_misc: Misc
 misc_get_id_1: The original sender, {}, has an ID of `{}`.\nThe forwarder, {}, has an ID of `{}`.
 misc_get_id_2: "{}'s id is `{}`."
