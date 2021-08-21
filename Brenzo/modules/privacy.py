@@ -65,9 +65,9 @@ def Brenzo_policy_callback(bot: Bot, update: Update):
     query = update.callback_query
     if query.data == "policy_":
         query.message.edit_text(
-            text=""" * Our contact details * \n*Name*: Greyson bot \n*Telegram*: https://t.me/GreysonChats 
+            text=""" * Our contact details * \n*Name*: Brenzo Lio \n*Telegram*: https://t.me/BrenzoGroup 
 \nThe bot has been made to *protect* and preserve *privacy* as best as possible. \nThe proper functioning of the bot is defined as the data required for all the commands in the /help to work as expected.
-\nOur privacy policy may change from time to time. If we make any material changes to our policies, we will place a prominent notice on https://t.me/GraysonNews.""",
+\nOur privacy policy may change from time to time. If we make any material changes to our policies, we will place a prominent notice on https://t.me/BrenzoLio.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
