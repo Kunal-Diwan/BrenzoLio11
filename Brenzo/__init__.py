@@ -105,6 +105,12 @@ else:
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     API_WEATHER = os.environ.get('API_WEATHER', None)
 
+# OpenWeather
+try:
+    WEATHER_API = os.environ.get('WEATHER_API')
+except ValueError:
+    raise Exception("Your 'WEATHER_API' variable is not a valid integer.")
+
 SUDO_USERS.add(OWNER_ID)
 SUDO_USERS.add(254318997) #paul's id
 
