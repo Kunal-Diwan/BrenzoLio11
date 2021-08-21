@@ -156,10 +156,10 @@ android_help: |
   - /evo <device>: ഒരു ഉപകരണത്തിനായി ഏറ്റവും പുതിയ പരിണാമം X ROM നേടുക
   - /los <device>: ഒരു ഉപകരണത്തിനായി ഏറ്റവും പുതിയ LineageOS ROM നേടുക
   - /bootleggers <device>: ഒരു ഉപകരണത്തിനായി ഏറ്റവും പുതിയ ബൂട്ട്ലെഗ്ഗറുകൾ റോം നേടുക\n
-  *GSI*
+  *ജി.എസ്.ഐ*
   - /phh: ഏറ്റവും പുതിയ PHH AOSP GSI- കൾ നേടുക
-  - /phhmagisk: Get the latest PHH Magisk\n
-  *Device firmware:*
+  - /phhmagisk: ഏറ്റവും പുതിയ PHH മാജിക് നേടുക\n
+  *ഉപകരണ ഫേംവെയർ:*
   - /samcheck <model> <csc>: Samsung only - shows the latest firmware info for the given device, taken from samsung servers.
   - /samget <model> <csc>: Samsung only - gets firmware download links from samfrew, sammobile and sfirmwares for the given device.
   - /miui <codename>: Xiaomi only - gets latest MIUI download links for the given device.
