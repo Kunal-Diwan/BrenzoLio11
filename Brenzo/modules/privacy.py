@@ -60,8 +60,8 @@ def privacy(bot: Bot, update: Update):
             )
 
 @run_async
-def Brenzo_policy_callback(update, context):
-    query = update.callback_query
+def Brenzo_policy_callback(bot: Bot, update: Update):
+    chat = update.effective_chat
     if query.data == "policy_":
         query.message.edit_text(
             text=""" * Our contact details * \n*Name*: Greyson bot \n*Telegram*: https://t.me/GreysonChats 
