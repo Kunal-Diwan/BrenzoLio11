@@ -11,7 +11,7 @@ btn_go_back: ⬅️ തിരികെ
 main_start_group: ഹായ്, എന്റെ പേര് *Brenzo Lio*. 
 
 main_start_pm: |
-  ഹായ്, എന്റെ പേര് *Brenzo Lio*.
+  ഹായ്, എന്റെ പേര് Brenzo Lio.
 
   ഉപയോഗപ്രദമായ സവിശേഷതകളോടെ നിങ്ങളുടെ ഗ്രൂപ്പുകളെ നിയന്ത്രിക്കാൻ എനിക്ക് സഹായിക്കാനാകും, നിങ്ങളുടെ ഗ്രൂപ്പുകളിൽ എന്നെ ചേർക്കാൻ മടിക്കേണ്ടതില്ല!
 
@@ -152,35 +152,26 @@ btn_dl: ഡൗൺലോഡ് ചെയ്യാൻ ഇവിടെ ക്ലി
 cmd_example: നിങ്ങളുടെ ഉപകരണം **കോഡിന്റെ പേര്** ടൈപ്പ് ചെയ്യുക!\nഉദാഹരണത്തിന്, `/{} tissot`
 android_help: |
   *ഒരു ഉപകരണത്തിനായുള്ള നിർദ്ദിഷ്ട റോം*
-  - /pixys <device>: ഒരു ഉപകരണത്തിനായി ഏറ്റവും പുതിയ PixysOS റോം നേടുക
-  - /evo <device>: ഒരു ഉപകരണത്തിനായി ഏറ്റവും പുതിയ പരിണാമം X ROM നേടുക
-  - /los <device>: ഒരു ഉപകരണത്തിനായി ഏറ്റവും പുതിയ LineageOS ROM നേടുക
-  - /bootleggers <device>: ഒരു ഉപകരണത്തിനായി ഏറ്റവും പുതിയ ബൂട്ട്ലെഗ്ഗറുകൾ റോം നേടുക\n
-  *ജി എസ്ഐ ഐ
+  - /pixys <ഉപകരണം>: ഒരു ഉപകരണത്തിനായി ഏറ്റവും പുതിയ PixysOS റോം നേടുക
+  - /evo <ഉപകരണം>: ഒരു ഉപകരണത്തിനായി ഏറ്റവും പുതിയ പരിണാമം X ROM നേടുക
+  - /los <ഉപകരണം>: ഒരു ഉപകരണത്തിനായി ഏറ്റവും പുതിയ LineageOS ROM നേടുക
+  - /bootleggers <ഉപകരണം>: ഒരു ഉപകരണത്തിനായി ഏറ്റവും പുതിയ ബൂട്ട്ലെഗ്ഗറുകൾ റോം നേടുക\n
+  *ജി എസ്ഐ ഐ:*
   - /phh: ഏറ്റവും പുതിയ PHH AOSP GSI- കൾ നേടുക
   - /phhmagisk: ഏറ്റവും പുതിയ PHH മാജിക് നേടുക\n
   *ഉപകരണ ഫേംവെയർ:*
-  - /samcheck <model> <csc>: Samsung only - shows the latest firmware info for the given device, taken from samsung servers.
-  - /samget <model> <csc>: Samsung only - gets firmware download links from samfrew, sammobile and sfirmwares for the given device.
-  - /miui <codename>: Xiaomi only - gets latest MIUI download links for the given device.
-  - /realmeui <codename>: Realme only - gets latest RealmeUI download links for the given device.\n
+  - /samcheck <മോഡൽ> <csc>: Samsung only - shows the latest firmware info for the given device, taken from samsung servers.
+  - /samget <മോഡൽ> <csc>: Samsung only - gets firmware download links from samfrew, sammobile and sfirmwares for the given device.
+  - /miui <രഹസ്യനാമം>: Xiaomi only - gets latest MIUI download links for the given device.
+  - /realmeui <രഹസ്യനാമം>: Realme only - gets latest RealmeUI download links for the given device.\n
   *Misc*
   - /magisk: Get latest Magisk releases.
-  - /twrp <codename>: Gets latest twrp for the android device using the codename.
+  - /twrp രഹസ്യനാമം>: Gets latest twrp for the android device using the codename.
   - /ofox: Gets the list of officially supported devices by the Orange Fox Recovery Project.
-  - /ofox <device>: Gets the download link and basic OFRP information to the specified device.
-  - /models <codename>: Search for Android device models using codename.
-  - /whatis <codename>: Find out which smartphone is using the codename.
-  - /samspec <codename>: Samsung Only - Find smartphone specifications trought sfirmware / gizmodo chine
-#DirectLinks
-modname_direct_links: Direct Links
-direct_links_help: |
-  This module allows you to generate direct links from websites.
-
-  - /direct <link>: paste a link(URL) to generate a direct download link.
-
-  List of supported sites (URLs):
-  SourceForge
+  - /ofox <ഉപകരണം>: Gets the download link and basic OFRP information to the specified device.
+  - /models <രഹസ്യനാമം>: Search for Android device models using codename.
+  - /whatis <രഹസ്യനാമം>: Find out which smartphone is using the codename.
+  - /samspec <രഹസ്യനാമം>: Samsung Only - Find smartphone specifications trought sfirmware / gizmodo chine
 #Antiflood
 modname_antiflood: Antiflood
 flood_mute: I would like to leave the flooding to natural disasters. But you, you were just a disappointment. *Muted*!
