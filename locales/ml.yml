@@ -208,24 +208,24 @@ antiflood_help: |
   - /flood: നിങ്ങൾക്ക് നിലവിലുള്ള മെസ്സേജ് നിയന്ത്രണം അറിയാൻ.
   - /setflood <number/off>: ഒരു ഉപയോക്താവിനെതിരെ നടപടിയെടുക്കേണ്ട സന്ദേശങ്ങളുടെ എണ്ണം സജ്ജമാക്കുന്നു.
 #Antispam
-modname_antispam: AntiSpam
-antispam_err_usr_sudo: I spy with my little eyes... a sudo user war! Why are you guys turning on each other?
-antispam_err_usr_support: OOOH, someone's trying to gban a support user! *grabs popcorn*
-antispam_err_usr_tg: 'Huh, why would I gban Telegram bots?'
-antispam_err_usr_bot: '-_- So funny, let me gban myself, why don''t I? Nice try.'
-antispam_err_not_usr: That's not a user!
-antispam_err_usr_deleted: That's a deleted account! Why even bother gbanning them?
-antispam_err_no_new_reason: This user is already gbanned; I'd change the reason, but you haven't given me one...
+modname_antispam: സംരക്ഷണം
+antispam_err_usr_sudo: ഞാൻ എന്റെ ചെറിയ കണ്ണുകളാൽ ചാരപ്പണി ചെയ്യുന്നു ... ഒരു സുഡോ ഉപയോക്തൃ യുദ്ധം! നിങ്ങൾ എന്തിനാണ് പരസ്പരം തിരിയുന്നത്?
+antispam_err_usr_support: ഓ, ആരെങ്കിലും ഒരു പിന്തുണാ ഉപയോക്താവിനെ നേടാൻ ശ്രമിക്കുന്നു! *പോപ്കോൺ പിടിക്കുന്നു*
+antispam_err_usr_tg: 'ഹു, ഞാൻ എന്തിനാണ് ടെലിഗ്രാം ബോട്ടുകൾ നൽകുന്നത്?'
+antispam_err_usr_bot: '-_- വളരെ രസകരമാണ്, ഞാൻ എന്നെത്തന്നെ നോക്കട്ടെ, എന്തുകൊണ്ട് ഞാൻ ചെയ്യരുത്? നല്ല ശ്രമം.'
+antispam_err_not_usr: അത് ഒരു ഉപയോക്താവല്ല!
+antispam_err_usr_deleted: അത് ഇല്ലാതാക്കിയ അക്കൗണ്ട് ആണ്! എന്തിനാണ് അവരെ വിഷമിപ്പിക്കുന്നത്?
+antispam_err_no_new_reason: ഈ ഉപയോക്താവ് ഇതിനകം gbanned ചെയ്തിരിക്കുന്നു; ഞാൻ കാരണം മാറ്റും, പക്ഷേ നിങ്ങൾ എനിക്ക് ഒന്നും നൽകിയില്ല ...
 antispam_logger_update_gban: |
-  <b>New Reason of Global Ban</b>
-  <b>Sudo Admin:</b> {}
-  <b>User:</b> {}
-  <b>ID:</b> <code>{}</code>
-  <b>Previous Reason:</b> {}
-  <b>New Reason:</b> {}
-antispam_reason_updated: "This user has already been gbanned. I have updated the reason.\nPrevious reason: <code>{}</code>\nNew reason: <code>{}</code>"
+  <b>ആഗോള നിരോധനത്തിന്റെ പുതിയ കാരണം</b>
+  <b>സുഡോ അഡ്മിൻ:</b> {}
+  <b>ഉപയോക്താവ്:</b> {}
+  <b>ഐഡി:</b> <code>{}</code>
+  <b>മുൻ കാരണം:</b> {}
+  <b>പുതിയ കാരണം:</b> {}
+antispam_reason_updated: "ഈ ഉപയോക്താവിനെ ഇതിനകം gbanned ചെയ്തിരിക്കുന്നു. ഞാൻ കാരണം പുതുക്കി.\nമുൻ കാരണം: <code>{}</code>\nപുതിയ കാരണം: <code>{}</code>"
 antispam_new_gban: |
-  <b>Initializing Global Ban</b>
+  <b>ആഗോള നിരോധനം ആരംഭിക്കുന്നു</b>
   <b>User:</b> {}
   <b>ID:</b> <code>{}</code>
   <b>Reason:</b> {}
