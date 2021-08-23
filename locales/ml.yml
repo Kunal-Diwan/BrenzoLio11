@@ -160,18 +160,18 @@ android_help: |
   - /phh: ഏറ്റവും പുതിയ PHH AOSP GSI- കൾ നേടുക
   - /phhmagisk: ഏറ്റവും പുതിയ PHH മാജിക് നേടുക\n
   *ഉപകരണ ഫേംവെയർ:*
-  - /samcheck <മോഡൽ> <csc>: Samsung only - shows the latest firmware info for the given device, taken from samsung servers.
-  - /samget <മോഡൽ> <csc>: Samsung only - gets firmware download links from samfrew, sammobile and sfirmwares for the given device.
-  - /miui <രഹസ്യനാമം>: Xiaomi only - gets latest MIUI download links for the given device.
-  - /realmeui <രഹസ്യനാമം>: Realme only - gets latest RealmeUI download links for the given device.\n
-  *Misc*
-  - /magisk: Get latest Magisk releases.
-  - /twrp രഹസ്യനാമം>: Gets latest twrp for the android device using the codename.
-  - /ofox: Gets the list of officially supported devices by the Orange Fox Recovery Project.
-  - /ofox <ഉപകരണം>: Gets the download link and basic OFRP information to the specified device.
-  - /models <രഹസ്യനാമം>: Search for Android device models using codename.
-  - /whatis <രഹസ്യനാമം>: Find out which smartphone is using the codename.
-  - /samspec <രഹസ്യനാമം>: Samsung Only - Find smartphone specifications trought sfirmware / gizmodo chine
+  - /samcheck <മോഡൽ> <csc>: സാംസങ് മാത്രം - സാംസങ് സെർവറുകളിൽ നിന്ന് എടുത്ത ഉപകരണത്തിനായുള്ള ഏറ്റവും പുതിയ ഫേംവെയർ വിവരങ്ങൾ കാണിക്കുന്നു.
+  - /samget <മോഡൽ> <csc>: സാംസങ് മാത്രം - തന്നിരിക്കുന്ന ഉപകരണത്തിന് samfrew, sammobile, sfirmwares എന്നിവയിൽ നിന്ന് ഫേംവെയർ ഡൗൺലോഡ് ലിങ്കുകൾ ലഭിക്കുന്നു.
+  - /miui <രഹസ്യനാമം>: Xiaomi മാത്രം - നൽകിയിരിക്കുന്ന ഉപകരണത്തിന് ഏറ്റവും പുതിയ MIUI ഡൗൺലോഡ് ലിങ്കുകൾ ലഭിക്കുന്നു.
+  - /realmeui <രഹസ്യനാമം>: റിയൽമി മാത്രം - നൽകിയിരിക്കുന്ന ഉപകരണത്തിന് ഏറ്റവും പുതിയ RealmeUI ഡൗൺലോഡ് ലിങ്കുകൾ ലഭിക്കുന്നു.\n
+  *അധിക*
+  - /magisk: ഏറ്റവും പുതിയ മാജിക് റിലീസുകൾ നേടുക.
+  - /twrp രഹസ്യനാമം>: രഹസ്യനാമം ഉപയോഗിച്ച് Android ഉപകരണത്തിന് ഏറ്റവും പുതിയ twrp ലഭിക്കുന്നു.
+  - /ofox: ഓറഞ്ച് ഫോക്സ് റിക്കവറി പ്രോജക്റ്റ് officiallyദ്യോഗികമായി പിന്തുണയ്ക്കുന്ന ഉപകരണങ്ങളുടെ പട്ടിക ലഭിക്കുന്നു.
+  - /ofox <ഉപകരണം>: നിർദ്ദിഷ്ട ഉപകരണത്തിലേക്ക് ഡൗൺലോഡ് ലിങ്കും അടിസ്ഥാന OFRP വിവരങ്ങളും ലഭിക്കുന്നു.
+  - /models <രഹസ്യനാമം>: രഹസ്യനാമം ഉപയോഗിച്ച് Android ഉപകരണ മോഡലുകൾക്കായി തിരയുക.
+  - /whatis <രഹസ്യനാമം>: ഏത് സ്മാർട്ട്‌ഫോണാണ് രഹസ്യനാമം ഉപയോഗിക്കുന്നതെന്ന് കണ്ടെത്തുക.
+  - /samspec <രഹസ്യനാമം>: സാംസങ് മാത്രം - സ്മാർട്ട്‌വെയർ / ഗിസ്‌മോഡോ ചൈനയിലൂടെ സ്മാർട്ട്‌ഫോൺ സവിശേഷതകൾ കണ്ടെത്തുക
 #Antiflood
 modname_antiflood: Antiflood
 flood_mute: I would like to leave the flooding to natural disasters. But you, you were just a disappointment. *Muted*!
