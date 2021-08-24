@@ -264,70 +264,70 @@ antispam_help: |
   നിങ്ങളുടെ ഗ്രൂപ്പിൽ നിന്ന് സ്പാമർമാരെ സ്വയമേവ നിരോധിക്കാൻ നിരന്തരം സഹായിക്കുക, അതിനാൽ നിങ്ങളുടെ ഗ്രൂപ്പിൽ സ്പാമർമാർ കടന്നുകയറുന്നതിനെക്കുറിച്ച് നിങ്ങൾ വിഷമിക്കേണ്ടതില്ല. \n
   * കുറിപ്പ്:* @SpamWatchSupport ൽ ഉപയോക്താക്കൾക്ക് സ്പാംവാച്ച് നിരോധനങ്ങൾക്ക് അപ്പീൽ ചെയ്യാം
 #Bans
-modname_bans: Bans
-bans_err_usr_not_found: I can't seem to find this user.
-bans_err_usr_is_bot: I'm not gonna BAN myself, are you crazy?
-bans_err_usr_is_admin: Why would I ban an admin? That sounds like a pretty dumb idea.
+modname_bans: നിയന്ത്രണങ്ങൾ ⛔
+bans_err_usr_not_found: എനിക്ക് ഈ ഉപയോക്താവിനെ കണ്ടെത്താൻ കഴിയുന്നില്ല.
+bans_err_usr_is_bot: ഞാൻ എന്നെത്തന്നെ നിരോധിക്കില്ല, നിങ്ങൾക്ക് ഭ്രാന്താണോ?
+bans_err_usr_is_admin: എന്തുകൊണ്ടാണ് ഞാൻ ഒരു അഡ്മിനെ നിരോധിക്കുന്നത്? അത് വളരെ മണ്ടൻ ആശയമായി തോന്നുന്നു.
 bans_logger: |
   <b>{}:</b>
-  #BANNED
-  <b>• Admin:</b> {}
-  <b>• User:</b> {}
-  <b>• ID:</b> <code>{}</code>
-bans_banned_success: Admin {} has successfully banned {} in <b>{}</b>!
-bans_logger_reason: \n<b>Reason:</b> {}
-bans_err_unknown: "Unknown error: {} failed."
-bans_err_tban_no_arg: You haven't specified a time to ban this user for!
+  #നിരോധിച്ചത്
+  <b>• അഡ്മിൻ:</b> {}
+  <b>• ഉപയോക്താവ്:</b> {}
+  <b>• ഐഡി:</b> <code>{}</code>
+bans_banned_success: അഡ്മിൻ {}  {}  ൽ {} വിജയകരമായി നിരോധിച്ചിരിക്കുന്നു!
+bans_logger_reason: \n<b>കാരണം:</b> {}
+bans_err_unknown: "അജ്ഞാതമായ പിശക്: {} പരാജയപ്പെട്ടു."
+bans_err_tban_no_arg: ഈ ഉപയോക്താവിനെ നിരോധിക്കാനുള്ള സമയം നിങ്ങൾ വ്യക്തമാക്കിയിട്ടില്ല!
 bans_tban_logger: |
   <b>{}:</b>
-  #TEMP_BANNED
-  <b>• Admin:</b> {}
-  <b>• User:</b> {}
-  <b>• ID:</b> <code>{}</code>
-  <b>• Time:</b> {}
-bans_tbanned_success: Admin {} has successfully banned {} in <b>{}</b> for {}!
-bans_kick_is_bot: I'm not kicking myself!
-bans_kick_is_admin: Why would I kick an admin? That sounds like a pretty dumb idea.
-bans_kick_success: Admin {} has successfully kicked {} in <b>{}</b>!
+  #താൽക്കാലിക_നിരോധനം
+  <b>• അഡ്മിൻ:</b> {}
+  <b>• ഉപയോക്താവ്:</b> {}
+  <b>• ഐഡി:</b> <code>{}</code>
+  <b>• സമയം:</b> {}
+bans_tbanned_success: അഡ്മിൻ {} വിജയകരമായി {}  {}  ൽ {} നിരോധിച്ചിരിക്കുന്നു!
+bans_kick_is_bot: ഞാൻ എന്നെത്തന്നെ ചവിട്ടുന്നില്ല!
+bans_kick_is_admin: ഞാൻ എന്തിനാണ് ഒരു അഡ്മിനെ ചവിട്ടുന്നത്? അത് വളരെ മണ്ടൻ ആശയമായി തോന്നുന്നു.
+bans_kick_success: അഡ്മിൻ {} വിജയകരമായി കിക്ക് ചെയ്തു
 bans_kick_logger: |
   <b>{}:</b>
-  #KICKED
-  <b>• Admin:</b> {}
-  <b>• User:</b> {}
-  <b>• ID:</b> <code>{}</code>
-bans_kickme_success: No problem.
-bans_kickme_failed: I cannot kick you! You're lucky today.
-bans_unban_user_in_chat: Why are you trying to unban someone that's already in the chat?
-bans_unban_success: Yep, this user can join!
+  #ചവിട്ടി
+  <b>• അഡ്മിൻ:</b> {}
+  <b>• ഉപയോക്താവ്:</b> {}
+  <b>• ഐഡി:</b> <code>{}</code>
+bans_kickme_success: ഒരു പ്രശ്നവുമില്ല.
+bans_kickme_failed: എനിക്ക് നിന്നെ ചവിട്ടാൻ കഴിയില്ല! നിങ്ങൾ ഇന്ന് ഭാഗ്യവാനാണ്.
+bans_unban_user_in_chat: ഇതിനകം ചാറ്റിൽ ഉള്ള ഒരാളെ നിരോധിക്കാൻ നിങ്ങൾ ശ്രമിക്കുന്നത് എന്തുകൊണ്ട്?
+bans_unban_success: അതെ, ഈ ഉപയോക്താവിന് ചേരാനാകും!
 bans_unban_logger: |
   <b>{}:</b>
-  #UNBANNED
+  #നിരോധിച്ചിട്ടില്ല
   <b>• Admin:</b> {}
   <b>• User:</b> {}
   <b>• ID:</b> <code>{}</code>
 bans_sban_logger: |
   <b>{}:</b>
   #UNBANNED
-  <b>• Admin:</b> {}
-  <b>• User:</b> {}
-  <b>• ID:</b> <code>{}</code>
+  <b>• അഡ്മിൻ:</b> {}
+  <b>• ഉപയോക്താവ്:</b> {}
+  <b>• ഐഡി:</b> <code>{}</code>
 bans_help: |
-  Some people need to be publicly banned; spammers, annoyances, or just trolls.\n
-  This module allows you to do that easily, by exposing some common actions, so everyone will see!\n
-  Available commands are:
-  - /ban: Bans a user in the chat.
-  - /banme: Ban yourself.
-  - /tban: Temporarily bans a user in the chat, set time using int<d/h/m> (days, hours or minutes)
-  - /unban: Unbans a user in the chat.
-  - /sban: Silently bans a user in the chat.
-  - /mute: Mute a user in the chat.
-  - /tmute: Temporarily mute a user in the chat. set time using int<d/h/m> (days, hours or minutes)
-  - /unmute: Unmutes a user in the chat.
-  - /kick: Kicks a user from the chat.
-  - /kickme: Kick yourself.\n
-  All commands work via handle or reply, except banme and kickme(which require no arguments).\n
-  An example of temporarily muting someone:
-  /tmute @username 2h; this mutes a user for 2 hours.
+  ചില ആളുകളെ പരസ്യമായി നിരോധിക്കേണ്ടതുണ്ട്; സ്പാമർമാർ, ശല്യപ്പെടുത്തലുകൾ, അല്ലെങ്കിൽ വെറും ട്രോളുകൾ. \n
+  ഈ മൊഡ്യൂൾ ചില സാധാരണ പ്രവർത്തനങ്ങൾ വെളിപ്പെടുത്തിക്കൊണ്ട് അത് എളുപ്പത്തിൽ ചെയ്യാൻ നിങ്ങളെ അനുവദിക്കുന്നു, അതിനാൽ എല്ലാവരും കാണും! \n
+  ലഭ്യമായ കമാൻഡുകൾ ഇവയാണ്:
+  - /ban: ചാറ്റിൽ ഒരു ഉപയോക്താവിനെ നിരോധിക്കുന്നു.
+  - /banme: സ്വയം നിരോധിക്കുക.
+  - /tban: ചാറ്റിൽ ഒരു ഉപയോക്താവിനെ താൽക്കാലികമായി നിരോധിക്കുന്നു, int  ഉപയോഗിച്ച് സമയം ക്രമീകരിക്കുക (ദിവസങ്ങൾ, മണിക്കൂറുകൾ അല്ലെങ്കിൽ മിനിറ്റ്)
+  - /unban: ചാറ്റിൽ ഒരു ഉപയോക്താവിനെ നിരോധിക്കുക.
+  - /sban: ചാറ്റിൽ ഒരു ഉപയോക്താവിനെ നിശബ്ദമായി നിരോധിക്കുന്നു.
+  - /mute: ചാറ്റിൽ ഒരു ഉപയോക്താവിനെ നിശബ്ദമാക്കുക.
+  - /tmute: ചാറ്റിൽ ഒരു ഉപയോക്താവിനെ താൽക്കാലികമായി നിശബ്ദമാക്കുക. int  (സമയം, മണിക്കൂർ അല്ലെങ്കിൽ മിനിറ്റ്) ഉപയോഗിച്ച് സമയം സജ്ജമാക്കുക
+  - /unmute: ചാറ്റിൽ ഒരു ഉപയോക്താവിനെ അൺമ്യൂട്ട് ചെയ്യുന്നു.
+  - /kick: ചാറ്റിൽ നിന്ന് ഒരു ഉപയോക്താവിനെ പുറത്താക്കുന്നു.
+  - /kickme: സ്വയം ചവിട്ടുക. \n
+  ബാൻമെയും കിക്ക്മെയും ഒഴികെയുള്ള എല്ലാ കമാൻഡുകളും ഹാൻഡിൽ അല്ലെങ്കിൽ മറുപടി വഴിയാണ് പ്രവർത്തിക്കുന്നത് (ഇതിന് ആർഗ്യുമെന്റുകൾ ആവശ്യമില്ല). \n
+  ആരെയെങ്കിലും താൽക്കാലികമായി മ്യൂട്ടുചെയ്യുന്നതിനുള്ള ഒരു ഉദാഹരണം:
+  /tmute @ഉപയോക്തൃനാമം 2h; ഇത് ഒരു ഉപയോക്താവിനെ 2 മണിക്കൂർ നിശബ്ദമാക്കുന്നു.
 #Blacklist
 modname_blacklist: Blacklists
 blacklist_active_list: Blacklist filters active in {}:\n
