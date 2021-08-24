@@ -264,30 +264,30 @@ antispam_help: |
   നിങ്ങളുടെ ഗ്രൂപ്പിൽ നിന്ന് സ്പാമർമാരെ സ്വയമേവ നിരോധിക്കാൻ നിരന്തരം സഹായിക്കുക, അതിനാൽ നിങ്ങളുടെ ഗ്രൂപ്പിൽ സ്പാമർമാർ കടന്നുകയറുന്നതിനെക്കുറിച്ച് നിങ്ങൾ വിഷമിക്കേണ്ടതില്ല. \n
   * കുറിപ്പ്:* @SpamWatchSupport ൽ ഉപയോക്താക്കൾക്ക് സ്പാംവാച്ച് നിരോധനങ്ങൾക്ക് അപ്പീൽ ചെയ്യാം
 #Bans
-modname_bans: നിയന്ത്രണങ്ങൾ ⛔
-bans_err_usr_not_found: എനിക്ക് ഈ ഉപയോക്താവിനെ കണ്ടെത്താൻ കഴിയുന്നില്ല.
-bans_err_usr_is_bot: ഞാൻ എന്നെത്തന്നെ നിരോധിക്കില്ല, നിങ്ങൾക്ക് ഭ്രാന്താണോ?
-bans_err_usr_is_admin: എന്തുകൊണ്ടാണ് ഞാൻ ഒരു അഡ്മിനെ നിരോധിക്കുന്നത്? അത് വളരെ മണ്ടൻ ആശയമായി തോന്നുന്നു.
+modname_bans: Bans
+bans_err_usr_not_found: I can't seem to find this user.
+bans_err_usr_is_bot: I'm not gonna BAN myself, are you crazy?
+bans_err_usr_is_admin: Why would I ban an admin? That sounds like a pretty dumb idea.
 bans_logger: |
   <b>{}:</b>
-  #നിരോധിച്ചത്
-  <b>• അഡ്മിൻ:</b> {}
-  <b>• ഉപയോക്താവ്:</b> {}
-  <b>• ഐഡി:</b> <code>{}</code>
-bans_banned_success: അഡ്മിൻ {} <b>{}</b> ൽ {} വിജയകരമായി നിരോധിച്ചിരിക്കുന്നു!
-bans_logger_reason: ഉപയോക്താവ്n<b>കാരണം:</b> {}
-bans_err_unknown: "അജ്ഞാതമായ പിശക്: {} പരാജയപ്പെട്ടു
-bans_err_tban_no_arg: ഈ ഉപയോക്താവിനെ നിരോധിക്കാനുള്ള സമയം നിങ്ങൾ വ്യക്തമാക്കിയിട്ടില്ല!
+  #BANNED
+  <b>• Admin:</b> {}
+  <b>• User:</b> {}
+  <b>• ID:</b> <code>{}</code>
+bans_banned_success: Admin {} has successfully banned {} in <b>{}</b>!
+bans_logger_reason: \n<b>Reason:</b> {}
+bans_err_unknown: "Unknown error: {} failed."
+bans_err_tban_no_arg: You haven't specified a time to ban this user for!
 bans_tban_logger: |
   <b>{}:</b>
   #TEMP_BANNED
-  <b>• അഡ്മിൻ:</b> {}
-  <b>• ഉപയോക്താവ്:</b> {}
-  <b>• ഐഡി:</b> <code>{}</code>
-  <b>• സമയം:</b> {}
-bans_tbanned_success: അഡ്മിൻ {} വിജയകരമായി {} <b>{}</b> ൽ {} നിരോധിച്ചിരിക്കുന്നു!
-bans_kick_is_bot: ഞാൻ എന്നെത്തന്നെ ചവിട്ടുന്നില്ല!
-bans_kick_is_admin: ഞാൻ എന്തിനാണ് ഒരു അഡ്മിനെ ചവിട്ടുന്നത്? അത് വളരെ മണ്ടൻ ആശയമായി തോന്നുന്നു.
+  <b>• Admin:</b> {}
+  <b>• User:</b> {}
+  <b>• ID:</b> <code>{}</code>
+  <b>• Time:</b> {}
+bans_tbanned_success: Admin {} has successfully banned {} in <b>{}</b> for {}!
+bans_kick_is_bot: I'm not kicking myself!
+bans_kick_is_admin: Why would I kick an admin? That sounds like a pretty dumb idea.
 bans_kick_success: Admin {} has successfully kicked {} in <b>{}</b>!
 bans_kick_logger: |
   <b>{}:</b>
