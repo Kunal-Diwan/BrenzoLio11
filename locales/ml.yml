@@ -351,9 +351,9 @@ blacklist_help: |
   - /addurl <urls>: Add a domain to the blacklist. The bot will automatically parse the url.
   - /delurl <urls>: Remove urls from the blacklist.\n
   Example:
-  /addblacklist "the admins suck" Respect your admins!
+  **/addblacklist "the admins suck" Respect your admins!**
   This would delete any message containing 'the admins suck'.\n
-  /addurl bit.ly
+  **/addurl bit.ly**
   This would delete any message containing url "bit.ly".
 
 #Connections
