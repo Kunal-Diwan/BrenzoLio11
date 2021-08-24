@@ -10,7 +10,7 @@ from telegram.utils.helpers import mention_html, mention_markdown
 
 from Brenzo import dispatcher, OWNER_ID, SUDO_USERS, WHITELIST_USERS, MESSAGE_DUMP, LOGGER
 from Brenzo.modules.helper_funcs.misc import send_to_list
-from Brenzo modules.helper_funcs.extraction import extract_user, extract_user_and_text
+from Brenzo.modules.helper_funcs.extraction import extract_user, extract_user_and_text
 from Brenzo.modules.helper_funcs.string_handling import markdown_parser
 from Brenzo.modules.disable import DisableAbleCommandHandler
 
