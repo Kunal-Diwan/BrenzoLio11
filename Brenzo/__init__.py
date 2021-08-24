@@ -39,7 +39,7 @@ if sys.version_info[0] < 3 or sys.version_info[1] < 6:
 ENV = bool(os.environ.get('ENV', False))
 
 if ENV:
-TOKEN = CONFIG['bot_token']
+TOKEN = CONFIG['TOKEN']
 API_KEY = CONFIG['api_key']
 API_HASH = CONFIG['api_hash']
 
