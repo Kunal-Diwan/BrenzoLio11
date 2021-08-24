@@ -31,29 +31,14 @@ LOGGER = logging.getLogger(__name__)
 
 LOGGER.info("Starting brenzo...")
 
-# If Python version is < 3.6, stops the bot.
-if sys.version_info[0] < 3 or sys.version_info[1] < 8:
-    LOGGER.error(
-        "You MUST have a python version of at least 3.8! Multiple features depend on this. Bot quitting."
-    )
+# if version < 3.6, stop bot.
+if sys.version_info[0] < 3 or sys.version_info[1] < 6:
+    LOGGER.error("You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting.")
     quit(1)
 
-# Load config
-try:
-    CONFIG = yaml.load(open('config.yml', 'r'), Loader=yaml.SafeLoader)
-except FileNotFoundError:
-    print("Are you dumb? C'mon start using your brain!")
-    quit(1)
-except Exception as eee:
-    print(
-        f"Ah, look like there's error(s) while trying to load your config. It is\n!!!! ERROR BELOW !!!!\n {eee} \n !!! ERROR END !!!"
-    )
-    quit(1)
+ENV = bool(os.environ.get('ENV', False))
 
-if not CONFIG['is_example_config_or_not'] == "not_sample_anymore":
-    print("Please, use your eyes and stop being blinded.")
-    quit(1)
-
+if ENV:
 TOKEN = CONFIG['bot_token']
 API_KEY = CONFIG['api_key']
 API_HASH = CONFIG['api_hash']
