@@ -354,7 +354,7 @@ blacklist_help: |
   **/addblacklist 'the admins suck' Respect your admins!**
   This would delete any message containing 'the admins suck'.\n
   **/addurl bit.ly**
-  This would delete any message containing url "bit.ly".
+  This would delete any message containing url 'bit.ly'.
 
 #Connections
 modname_connection: Connections
