@@ -329,7 +329,7 @@ bans_help: |
   ആരെയെങ്കിലും താൽക്കാലികമായി മ്യൂട്ടുചെയ്യുന്നതിനുള്ള ഒരു ഉദാഹരണം:
   /tmute @ഉപയോക്തൃനാമം 2h; ഇത് ഒരു ഉപയോക്താവിനെ 2 മണിക്കൂർ നിശബ്ദമാക്കുന്നു.
 #Blacklist
-modname_blacklist: Blacklists
+modname_blacklist: കരിമ്പട്ടിക 📛
 blacklist_active_list: Blacklist filters active in {}:\n
 blacklist_no_list: There are no blacklist filters in <b>{}</b>!
 blacklist_add: Added <code>{}</code> to the blacklist in <b>{}</b>!
