@@ -2,7 +2,7 @@ import telegram.ext as tg
 from telegram import Update
 import Brenzo.modules.sql.antispam_sql as sql
 
-CMD_STARTERS = ('/', '!', '.', '*')
+CMD_STARTERS = ('/', '!', '.', ',')
 
 
 class CustomCommandHandler(tg.CommandHandler):
