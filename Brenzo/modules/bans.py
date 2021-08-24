@@ -54,7 +54,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
         html.escape(chat.title), mention_html(user.id, user.first_name),
         mention_html(member.user.id, member.user.first_name), user_id)
 
-    reply = tld(chat.id, "bans_banned_success").format(
+    reply = tld(chat.id, "bans_banned_success", BAN_STICKER).format(
         mention_html(user.id, user.first_name),
         mention_html(member.user.id, member.user.first_name),
         html.escape(chat.title))
