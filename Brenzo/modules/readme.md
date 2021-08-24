@@ -10,8 +10,7 @@ from Brenzo.modules.tr_engine.strings import tld
 async def _(message):
     j = "Hello there"
     await message.reply(j)
-    
-__mod_name__ = "Hi"
+   
 __help__ = True
 
 dispatcher.add_handler()
