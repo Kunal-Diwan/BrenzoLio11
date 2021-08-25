@@ -134,7 +134,7 @@ def send_start(bot, update):
     ]]
     keyboard += [[
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_source'),
-                             callback_data="sample_data"),
+                             callback_data="alert"),
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_channel'),
                              url="https://t.me/BrenzoLio")
     ]]
