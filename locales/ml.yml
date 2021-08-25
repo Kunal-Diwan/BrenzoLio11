@@ -330,11 +330,11 @@ bans_help: |
   /tmute @ഉപയോക്തൃനാമം 2h; ഇത് ഒരു ഉപയോക്താവിനെ 2 മണിക്കൂർ നിശബ്ദമാക്കുന്നു.
 #Blacklist
 modname_blacklist: കരിമ്പട്ടിക
-blacklist_active_list: **{}** ൽ സജീവമായ ബ്ലാക്ക്‌ലിസ്റ്റ് ഫിൽട്ടറുകൾ:\n
-blacklist_no_list: **{}** ൽ ബ്ലാക്ക്‌ലിസ്റ്റ് ഫിൽട്ടറുകളൊന്നുമില്ല
-blacklist_add: **{}** ലെ കരിമ്പട്ടികയിൽ {} ചേർത്തു
-blacklist_del: **{}** ലെ കരിമ്പട്ടികയിൽ നിന്ന് {} നീക്കംചെയ്തു
-blacklist_multi_del: **{}** ൽ കരിമ്പട്ടികയിൽ നിന്ന് {} ട്രിഗറുകൾ നീക്കംചെയ്തു!
+blacklist_active_list: <b>{}</b> ൽ സജീവമായ ബ്ലാക്ക്‌ലിസ്റ്റ് ഫിൽട്ടറുകൾ:\n
+blacklist_no_list: <b>{}</b> ൽ ബ്ലാക്ക്‌ലിസ്റ്റ് ഫിൽട്ടറുകളൊന്നുമില്ല
+blacklist_add: <b>{}</b> ലെ കരിമ്പട്ടികയിൽ <b>{}</b> ചേർത്തു
+blacklist_del: <b>{}</b> ലെ കരിമ്പട്ടികയിൽ നിന്ന് <b>{}</b> നീക്കംചെയ്തു
+blacklist_multi_del: <b>{}</b> ൽ കരിമ്പട്ടികയിൽ നിന്ന് <b>{}</b> ട്രിഗറുകൾ നീക്കംചെയ്തു!
 blacklist_err_add_no_args: Tell me what words you would like to add to the blacklist.
 blacklist_err_del_no_args: Tell me what words you would like to remove from the blacklist.
 blacklist_err_not_trigger: This isn't a blacklisted trigger!
