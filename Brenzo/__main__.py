@@ -134,7 +134,7 @@ def send_start(bot, update):
     ]]
     keyboard += [[
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_source'),
-                             callback_data="alert"),
+                             callback_data="sample_data"),
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_channel'),
                              url="https://t.me/BrenzoLio")
     ]]
@@ -249,16 +249,9 @@ def help_button(bot: Bot, update: Update):
 
 
 @run_async
-def Brenzo_alert_callback(bot: Bot, update: Update):
-    chat = update.effective_chat
-    first_name = update.effective_user.first_name
-    query = update.callback_query
-    if query.data == "alert":
-        client.answer_callback_query(
-            callback_query.id,
-            text="Hello",
-            show_alert=True
-        )
+def cb_data(bot, update):
+    if update.data == "sample_data":
+        await update.answer("Sample Text", show_alert=True)
 
 @run_async
 def Brenzo_tut_callback(bot: Bot, update: Update):
