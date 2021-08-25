@@ -123,8 +123,7 @@ def send_start(bot, update):
     text = tld(chat.id, 'main_start_pm')
 
     keyboard = [[
-        InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_tut'),
-                             callback_data="tutmanu_")
+        InlineKeyboardButton(await update.answer("Sample Text", show_alert=True)
     ]]
     keyboard += [[
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_lang'),
