@@ -249,6 +249,18 @@ def help_button(bot: Bot, update: Update):
 
 
 @run_async
+def Brenzo_alert_callback(bot: Bot, update: Update):
+    chat = update.effective_chat
+    first_name = update.effective_user.first_name
+    query = update.callback_query
+    if query.data == "alert":
+        client.answer_callback_query(
+            callback_query.id,
+            text="Hello",
+            show_alert=True
+        )
+
+@run_async
 def Brenzo_tut_callback(bot: Bot, update: Update):
     chat = update.effective_chat
     first_name = update.effective_user.first_name
@@ -418,6 +430,10 @@ def main():
         Brenzo_tut_callback, pattern=r"tutmanu_"
     )
 
+    alert_callback_handler = CallbackQueryHandler(
+        Brenzo_alert_callback, pattern=r"alert"
+    )
+
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
 
     # dispatcher.add_handler(test_handler)
@@ -426,6 +442,7 @@ def main():
     dispatcher.add_handler(help_handler)
     dispatcher.add_handler(help_callback_handler)
     dispatcher.add_handler(tut_callback_handler)
+    dispatcher.add_handler(alert_callback_handler)
     dispatcher.add_handler(migrate_handler)
     # dispatcher.add_error_handler(error_callback)
 
