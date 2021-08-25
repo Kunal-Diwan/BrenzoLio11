@@ -123,7 +123,8 @@ def send_start(bot, update):
     text = tld(chat.id, 'main_start_pm')
 
     keyboard = [[
-        InlineKeyboardButton(await update.answer("Sample Text", show_alert=True)
+        InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_tut'),
+                             callback_data="tutmanu_")
     ]]
     keyboard += [[
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_lang'),
@@ -133,7 +134,7 @@ def send_start(bot, update):
     ]]
     keyboard += [[
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_source'),
-                             url="https://github.com/Kunal-Diwan/BrenzoLio"),
+                             callback_data="alert"),
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_channel'),
                              url="https://t.me/BrenzoLio")
     ]]
