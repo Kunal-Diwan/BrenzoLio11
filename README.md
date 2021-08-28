@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/license/Kunal-Diwan/BrenzoLio?style=for-the-badge&logo=appveyor" alt="LICENSE">
-    <img src="https://img.shields.io/github/contributors/Kunal-Diwan/BrenzoLio?style=for-the-badge&logo=appveyor" alt="Contributors">
-    <img src="https://img.shields.io/github/stars/Kunal-Diwan/BrenzoLio?style=for-the-badge&logo=appveyor" alt="Stars">
-    <img src="https://img.shields.io/github/forks/Kunal-Diwan/BrenzoLio?style=for-the-badge&logo=appveyor" alt="Forks">
+    <img src="https://img.shields.io/github/license/Brenzonetwork/BrenzoLio?style=for-the-badge&logo=appveyor" alt="LICENSE">
+    <img src="https://img.shields.io/github/contributors/Brenzonetwork/BrenzoLio?style=for-the-badge&logo=appveyor" alt="Contributors">
+    <img src="https://img.shields.io/github/stars/Brenzonetwork/BrenzoLio?style=for-the-badge&logo=appveyor" alt="Stars">
+    <img src="https://img.shields.io/github/forks/Brenzonetwork/BrenzoLio?style=for-the-badge&logo=appveyor" alt="Forks">
     <img src="https://img.shields.io/badge/python-3.9-green?style=for-the-badge&logo=appveyor" alt="Python Version">
 </p>
 
@@ -24,9 +24,9 @@
 
 ### <b>How to run this bot</b>
 
-> Install Git First (apt-instll git
+> Install Git First (apt-install git)
 
-```$ git clone https://github.com/Kunal-Diwan/BrenzoLio```
+```$ git clone https://github.com/BrenzoNetwork/BrenzoLio```
 
 `$ cd BrenzoLio`
 
@@ -45,7 +45,7 @@
 
 ### Deployment ⬇️
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kunal-Diwan/BrenzoLio.git) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Brenzonetwork/BrenzoLio.git) 
 
 ### <b><u>🎙️Support🎙️</u></b>
 
@@ -68,8 +68,7 @@ And to all other [contributors](https://github.com/Kunal-Diwan/BrenzoLio/graphs/
 
          Copyright (C) 2021 by Kunal-Diwan ❤️️
 
-    Licence under the terms of the Apache-2.0 Licence           
-
+    Licence under the terms of the Apache-2.0 Licence
 
 ### Developer 👨‍💻 
 
