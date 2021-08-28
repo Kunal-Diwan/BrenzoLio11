@@ -57,7 +57,6 @@
 * [PaulSonOfLars](https://github.com/PaulSonOfLars) - Marie and Rose creator, inspired me to do many things.
 * [RealAkito](https://github.com/RealAkito) - Creator of Brenzo Lio base, Haruka  .
 * [MrYacha](https://github.com/MrYacha) - For helping in the development of Haruka .
-* [Jimiooooo](https://github.com/Jimiooooo) - Helps in development of BrenzoLio .
 * [skittles9823](https://github.com/skittles9823) - For memes and sticker stuff.
 * [AyraHikari](https://github.com/AyraHikari) - Reworked welcome and other little things.
 * [nunopenim](https://github.com/nunopenim) - Creator of pyGithub_API / GitHub module .
@@ -68,7 +67,7 @@ And to all other [contributors](https://github.com/Kunal-Diwan/BrenzoLio/graphs/
 
          Copyright (C) 2021 by Kunal-Diwan ❤️️
 
-    Licence under the terms of the Apache-2.0 Licence
+    Licence under the terms of the AGPL-3.0 License
 
 ### Developer 👨‍💻 
 
