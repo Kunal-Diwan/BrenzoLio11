@@ -8,7 +8,7 @@ from telegram import (
 from telegram.ext import run_async, CommandHandler, CallbackQueryHandler
 from Brenzo.modules.tr_engine.strings import tld
 
-def fmt_md_help(bot: Bot, update: Update)::
+def fmt_md_help(bot: Bot, update: Update):
     update.effective_message.reply_text(
         gs(update.effective_chat.id, "md_help"),
         parse_mode=ParseMode.HTML,
