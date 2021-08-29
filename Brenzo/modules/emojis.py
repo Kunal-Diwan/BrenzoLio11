@@ -275,20 +275,7 @@ def love(bot: Bot, update: Update):
 
 
 
-__help__ = """
-
-- /love ❣️
-
-- /hack 👨‍💻
-
-- /bombs 💣
-
-- /moonanimation 🌚
-
-- /clockanimation 🕛
-
-- /earthanimation 🌍
-"""
+__help__ = True
 
 
 
