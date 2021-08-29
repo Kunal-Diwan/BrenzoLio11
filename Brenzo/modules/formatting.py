@@ -5,7 +5,7 @@ from telegram import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
 )
-from telegram.ext import CallbackContext
+from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryHandler
 from Brenzo.modules.tr_engine.strings import tld
 
 def fmt_md_help(bot: Bot, update: Update):
