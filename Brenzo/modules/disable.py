@@ -2,7 +2,7 @@ from typing import Union, List
 
 from future.utils import string_types
 from telegram import ParseMode, Update, Bot
-from telegram.ext import CommandHandler, RegexHandler, Filters
+from telegram.ext import CommandHandler, RegexHandler, Filters, MessageHandler
 from telegram.utils.helpers import escape_markdown
 
 from Brenzo import dispatcher
