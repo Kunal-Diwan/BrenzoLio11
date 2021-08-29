@@ -2,6 +2,7 @@ from Brenzo.modules.helper_funcs.decorators import kigcallback
 from telegram import (
     ParseMode,
     Update,
+    Bot,
     InlineKeyboardMarkup,
     InlineKeyboardButton,
 )
