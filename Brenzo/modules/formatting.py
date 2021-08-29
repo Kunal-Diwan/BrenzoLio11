@@ -9,15 +9,16 @@ from telegram.ext import run_async, CommandHandler, CallbackQueryHandler
 from Brenzo.modules.tr_engine.strings import tld
 
 def fmt_md_help(bot: Bot, update: Update):
+    bot = context.bot
     update.effective_message.reply_text(
-        gs(update.effective_chat.id, "md_help"),
+        tld(update.effective_chat.id, "md_help"),
         parse_mode=ParseMode.HTML,
     )
 
 
 def fmt_filling_help(bot: Bot, update: Update):
     update.effective_message.reply_text(
-        gs(update.effective_chat.id, "filling_help"),
+        tld(update.effective_chat.id, "filling_help"),
         parse_mode=ParseMode.HTML,
     )
 
@@ -29,9 +30,9 @@ def fmt_help(bot: Bot, update: Update):
     bot = context.bot
     help_info = query.data.split("fmt_help_")[1]
     if help_info == "md":
-        help_text = gs(update.effective_chat.id, "md_help")
+        help_text = tld(update.effective_chat.id, "md_help")
     elif help_info == "filling":
-        help_text = gs(update.effective_chat.id, "filling_help") 
+        help_text = tld(update.effective_chat.id, "filling_help") 
     query.message.edit_text(
         text=help_text,
         parse_mode=ParseMode.HTML,
