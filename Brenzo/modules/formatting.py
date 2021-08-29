@@ -8,14 +8,14 @@ from telegram import (
 from telegram.ext import run_async, CommandHandler, CallbackQueryHandler
 from Brenzo.modules.tr_engine.strings import tld
 
-def fmt_md_help(update: Update, context: CallbackContext):
+def fmt_md_help(bot: Bot, update: Update)::
     update.effective_message.reply_text(
         gs(update.effective_chat.id, "md_help"),
         parse_mode=ParseMode.HTML,
     )
 
 
-def fmt_filling_help(update: Update, context: CallbackContext):
+def fmt_filling_help(bot: Bot, update: Update):
     update.effective_message.reply_text(
         gs(update.effective_chat.id, "filling_help"),
         parse_mode=ParseMode.HTML,
@@ -24,7 +24,7 @@ def fmt_filling_help(update: Update, context: CallbackContext):
 
 
 @kigcallback(pattern=r"fmt_help_")
-def fmt_help(update: Update, context: CallbackContext):
+def fmt_help(bot: Bot, update: Update):
     query = update.callback_query
     bot = context.bot
     help_info = query.data.split("fmt_help_")[1]
