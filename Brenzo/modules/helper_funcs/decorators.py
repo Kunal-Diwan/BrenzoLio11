@@ -1,7 +1,7 @@
 from Brenzo.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
 from telegram.ext import CommandHandler, MessageHandler, CallbackQueryHandler, InlineQueryHandler
 from telegram.ext.filters import BaseFilter
-from Brenzo import dispatcher as d, log
+from Brenzo import dispatcher as d, LOGGER
 from typing import Optional, Union, List
 
 
