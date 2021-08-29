@@ -17,23 +17,24 @@ def fmt_md_help(bot: Bot, update: Update):
     )
 
 
-def fmt_filling_help(update: Update, context: CallbackContext):
+def fmt_filling_help(bot: Bot, update: Update):
+    chat = update.effective_chat
     update.effective_message.reply_text(
-        tld(update.effective_chat.id, "filling_help"),
+        tld(chat.id, 'filling_help'),
         parse_mode=ParseMode.HTML,
     )
 
 
 
 @kigcallback(pattern=r"fmt_help_")
-def fmt_help(update: Update, context: CallbackContext):
+def fmt_help(bot: Bot, update: Update):
     query = update.callback_query
     bot = context.bot
     help_info = query.data.split("fmt_help_")[1]
     if help_info == "md":
-        help_text = tld(update.effective_chat.id, "md_help")
+        help_text = tld(chat.id, 'md_help')
     elif help_info == "filling":
-        help_text = gs(update.effective_chat.id, "filling_help") 
+        help_text = tld(chat.id, 'filling_help')
     query.message.edit_text(
         text=help_text,
         parse_mode=ParseMode.HTML,
