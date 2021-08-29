@@ -56,6 +56,19 @@ if is_module_loaded(FILENAME):
 
             return False
 
+    class DisableAbleMessageHandler(MessageHandler):
+        def __init__(self, pattern, callback, run_async=True, friendly="", **kwargs):
+            super().__init__(pattern, callback, run_async=run_async, **kwargs)
+            DISABLE_OTHER.append(friendly or pattern)
+            self.friendly = friendly or pattern
+
+        def check_update(self, update):
+            if isinstance(update, Update) and update.effective_message:
+                chat = update.effective_chat
+                return self.filters(update) and not sql.is_command_disabled(
+                    chat.id, self.friendly
+                )
+
     class DisableAbleRegexHandler(RegexHandler):
         def __init__(self, pattern, callback, friendly="", **kwargs):
             super().__init__(pattern, callback, **kwargs)
