@@ -8,9 +8,10 @@ from telegram import (
 from telegram.ext import CallbackContext
 from Brenzo.modules.tr_engine.strings import tld
 
-def fmt_md_help(update: Update, context: CallbackContext):
+def fmt_md_help(bot: Bot, update: Update):
+    chat = update.effective_chat
     update.effective_message.reply_text(
-        tld(update.effective_chat.id, "md_help"),
+        tld(chat.id, 'md_help'),
         parse_mode=ParseMode.HTML,
     )
 
