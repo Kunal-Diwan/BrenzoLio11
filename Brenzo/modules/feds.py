@@ -891,8 +891,7 @@ def fed_user_help(bot: Bot, update: Update):
 @run_async
 def fed_help(bot: Bot, update: Update):
     query = update.callback_query
-    if query.data == "fed_help_":
-    help_info = query.data.split("_")[1]
+    help_info = query.data.split("fed_help_")[1]
     if help_info == "owner":
         help_text = tld(update.effective_chat.id, "FED_OWNER_HELP")
     elif help_info == "admin":
