@@ -888,17 +888,18 @@ def fed_user_help(bot: Bot, update: Update):
     )
 
 
-@run_async(pattern=r"fed_help_")
+@run_async
 def fed_help(bot: Bot, update: Update):
     query = update.callback_query
+    if query.data == "fed_help_":
     bot = context.bot
     help_info = query.data.split("fed_help_")[1]
     if help_info == "owner":
-        help_text = gs(update.effective_chat.id, "FED_OWNER_HELP")
+        help_text = tld(update.effective_chat.id, "FED_OWNER_HELP")
     elif help_info == "admin":
-        help_text = gs(update.effective_chat.id, "FED_ADMIN_HELP")
+        help_text = tld(update.effective_chat.id, "FED_ADMIN_HELP")
     elif help_info == "user":
-        help_text = gs(update.effective_chat.id, "FED_USER_HELP") 
+        help_text = tld(update.effective_chat.id, "FED_USER_HELP") 
     query.message.edit_text(
         text=help_text,
         parse_mode=ParseMode.MARKDOWN,
@@ -911,7 +912,7 @@ def fed_help(bot: Bot, update: Update):
 
 
 def get_help(chat):
-    return [gs(chat, "feds_help"),
+    return [tld(chat, "feds_help"),
     [
         InlineKeyboardButton(text="Fedadmins", callback_data="fed_help_admin"),
         InlineKeyboardButton(text="Fedowners", callback_data="fed_help_owner")
