@@ -248,12 +248,6 @@ def help_button(bot: Bot, update: Update):
         else:
             LOGGER.exception("Exception in help buttons. %s", str(query.data))
 
-@pbot.on_callback_query(filters.regex("stats_callback"))
-async def stats_callbacc(_, CallbackQuery):
-    text = await bot_sys_stats()
-    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
-    
-    
 @run_async
 def Brenzo_tut_callback(bot: Bot, update: Update):
     chat = update.effective_chat
