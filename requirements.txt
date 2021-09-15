@@ -29,5 +29,6 @@ tldextract
 PyYAML
 pyowm
 wikipedia
+coffeehouse
 bleach
 markdown2
