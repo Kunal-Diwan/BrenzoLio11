@@ -35,8 +35,9 @@ if ENV:
 
     try:
         SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
+        DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
     except ValueError:
-        raise Exception("Your sudo users list does not contain valid integers.")
+        raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
         SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "").split())
@@ -77,8 +78,9 @@ else:
 
     try:
         SUDO_USERS = set(int(x) for x in Config.SUDO_USERS or [])
+        DEV_USERS = set(int(x) for x in Config.DEV_USERS or [])
     except ValueError:
-        raise Exception("Your sudo users list does not contain valid integers.")
+        raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
         SUPPORT_USERS = set(int(x) for x in Config.SUPPORT_USERS or [])
@@ -112,7 +114,7 @@ except ValueError:
     raise Exception("Your 'WEATHER_API' variable is not a valid integer.")
 
 SUDO_USERS.add(OWNER_ID)
-SUDO_USERS.add(254318997) #paul's id
+DEV_USERS.add(OWNER_ID)
 
 # SpamWatch
 spamwatch_api = os.environ.get('sw_api', None)
@@ -131,7 +133,8 @@ pbot = Client("BrenzoPyro", api_id=API_KEY,
               api_hash=API_HASH,
               bot_token=TOKEN)
 
-SUDO_USERS = list(SUDO_USERS)
+SUDO_USERS = list(SUDO_USERS) + list(DEV_USERS)
+DEV_USERS = list(DEV_USERS)
 WHITELIST_USERS = list(WHITELIST_USERS)
 SUPPORT_USERS = list(SUPPORT_USERS)
 
