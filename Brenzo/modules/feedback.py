@@ -32,7 +32,7 @@ def feedback(bot: Bot, update: Update):
 
 
 
-__help__ = true
+__help__ = True
 
 feed_handle = DisableAbleCommandHandler("feedback", feedback)
 
