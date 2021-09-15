@@ -11,6 +11,8 @@ from telegram.ext import CallbackQueryHandler, run_async
 from Brenzo import dispatcher, OWNER_ID, SUDO_USERS
 from Brenzo.modules.disable import DisableAbleCommandHandler
 
+from Brenzo.modules.tr_engine.strings import tld
+
 info_btn = "More Information"
 kaizoku_btn = "Kaizoku ☠️"
 kayo_btn = "Kayo 🏴‍☠️"
@@ -404,7 +406,7 @@ def button(bot, update):
     query_type = data[0]
     original_user_id = int(data[1])
 
-    user_and_admin_list = [original_user_id, OWNER_ID] + SUDO_USERS + DEV_USERS
+    user_and_admin_list = [original_user_id, OWNER_ID] + SUDO_USERS
 
     bot.answer_callback_query(query.id)
     if query_type == "anime_close":
