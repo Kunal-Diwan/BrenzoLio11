@@ -135,7 +135,7 @@ def send_start(bot, update):
     ]]
     keyboard += [[
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_source'),
-                             callback_data="source_callback"),
+                             callback_data="stats_callback"),
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_channel'),
                              url="https://t.me/BrenzoLio")
     ]]
@@ -248,7 +248,7 @@ def help_button(bot: Bot, update: Update):
         else:
             LOGGER.exception("Exception in help buttons. %s", str(query.data))
 
-@pbot.on_callback_query(filters.regex("source_callback"))
+@pbot.on_callback_query(filters.regex("stats_callback"))
 async def stats_callbacc(_, CallbackQuery):
     text = await bot_sys_stats()
     await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
