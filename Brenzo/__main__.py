@@ -13,7 +13,7 @@ from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
 # Needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from Brenzo.modules import ALL_MODULES
-from Brenzo import dispatcher, updater, LOGGER, ALLOW_EXCL
+from Brenzo import dispatcher, updater, LOGGER, ALLOW_EXCL, pbot
 from Brenzo.modules.helper_funcs.misc import paginate_modules
 from Brenzo.modules.tr_engine.strings import tld
 
@@ -134,7 +134,7 @@ def send_start(bot, update):
     ]]
     keyboard += [[
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_source'),
-                             callback_data="alert"),
+                             callback_data="source_callback"),
         InlineKeyboardButton(text=tld(chat.id, 'main_start_btn_channel'),
                              url="https://t.me/BrenzoLio")
     ]]
@@ -247,6 +247,12 @@ def help_button(bot: Bot, update: Update):
         else:
             LOGGER.exception("Exception in help buttons. %s", str(query.data))
 
+@pbot.on_callback_query(filters.regex("source_callback"))
+async def stats_callbacc(_, CallbackQuery):
+    text = Hi how
+    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
+    
+    
 @run_async
 def Brenzo_tut_callback(bot: Bot, update: Update):
     chat = update.effective_chat
