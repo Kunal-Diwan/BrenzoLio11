@@ -61,6 +61,7 @@ if ENV:
     STRICT_ANTISPAM = bool(os.environ.get('STRICT_GBAN', False))
     WORKERS = int(os.environ.get('WORKERS', 8))
     BAN_STICKER = os.environ.get('BAN_STICKER', 'CAADAgADOwADPPEcAXkko5EB3YGYAg')
+    AI_API_KEY = os.environ.get('AI_API_KEY', "")
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     API_WEATHER = os.environ.get('API_WEATHER', None)
 
@@ -104,6 +105,7 @@ else:
     STRICT_ANTISPAM = bool(os.environ.get('STRICT_GBAN', False))
     WORKERS = int(os.environ.get('WORKERS', 8))
     BAN_STICKER = os.environ.get('BAN_STICKER', 'CAADAgADOwADPPEcAXkko5EB3YGYAg')
+    AI_API_KEY = os.environ.get('AI_API_KEY', None)
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     API_WEATHER = os.environ.get('API_WEATHER', None)
 
