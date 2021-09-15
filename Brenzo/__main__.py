@@ -249,7 +249,7 @@ def help_button(bot: Bot, update: Update):
 
 @pbot.on_callback_query(filters.regex("source_callback"))
 async def stats_callbacc(_, CallbackQuery):
-    text = Hi how
+    text = await bot_sys_stats()
     await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
     
     
