@@ -3,6 +3,7 @@ import wikipedia
 import re
 from datetime import datetime
 from typing import Optional, List
+from covid import Covid
 
 import requests
 from telegram import Message, Chat, Update, Bot, MessageEntity
@@ -11,7 +12,7 @@ from telegram.ext import CommandHandler, run_async, Filters
 from telegram.utils.helpers import escape_markdown, mention_html
 from telegram.error import BadRequest
 
-from Brenzo import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, WHITELIST_USERS
+from Brenzo import dispatcher, OWNER_ID, SUDO_USERS, WHITELIST_USERS
 from Brenzo.__main__ import GDPR
 from Brenzo.__main__ import STATS, USER_INFO
 from Brenzo.modules.disable import DisableAbleCommandHandler
@@ -21,11 +22,7 @@ from Brenzo.modules.tr_engine.strings import tld
 
 from requests import get
 
-
-@run_async
-def get_bot_ip(bot: Bot, update: Update):
-    res = requests.get("http://ipinfo.io/ip")
-    update.message.reply_text(res.text)
+cvid = Covid(source="worldometers")
 
 
 @run_async
@@ -107,9 +104,6 @@ def info(bot: Bot, update: Update, args: List[str]):
         if user.id in SUDO_USERS:
             text += tld(chat.id, "misc_info_is_sudo")
         else:
-            if user.id in SUPPORT_USERS:
-                text += tld(chat.id, "misc_info_is_support")
-
             if user.id in WHITELIST_USERS:
                 text += tld(chat.id, "misc_info_is_whitelisted")
 
@@ -119,17 +113,6 @@ def info(bot: Bot, update: Update, args: List[str]):
             text += "\n\n" + mod_info
 
     update.effective_message.reply_text(text, parse_mode=ParseMode.HTML)
-
-
-@run_async
-def echo(bot: Bot, update: Update):
-    message = update.effective_message
-    message.delete()
-    args = update.effective_message.text.split(None, 1)
-    if message.reply_to_message:
-        message.reply_to_message.reply_text(args[1])
-    else:
-        message.reply_text(args[1], quote=False)
 
 
 @run_async
@@ -153,8 +136,7 @@ def gdpr(bot: Bot, update: Update):
     for mod in GDPR:
         mod.__gdpr__(update.effective_user.id)
 
-    update.effective_message.reply_text(tld(update.effective_chat.id,
-                                            "send_gdpr"),
+    update.effective_message.reply_text("GDPR is done",
                                         parse_mode=ParseMode.MARKDOWN)
 
 
@@ -171,7 +153,8 @@ def markdown_help(bot: Bot, update: Update):
 def stats(bot: Bot, update: Update):
     update.effective_message.reply_text(
         # This text doesn't get translated as it is internal message.
-        "Current stats:\n" + "\n".join([mod.__stats__() for mod in STATS]))
+        "*Current Stats:*\n" + "\n".join([mod.__stats__() for mod in STATS]),
+        parse_mode=ParseMode.MARKDOWN)
 
 
 @run_async
@@ -281,7 +264,7 @@ def get_paste_content(bot: Bot, update: Update, args: List[str]):
     if len(args) >= 1:
         key = args[0]
     else:
-        message.reply_text(tld(chat.id, "misc_get_paste_invalid"))
+        message.reply_text(tld(chat.id, "misc_get_pasted_invalid"))
         return
 
     format_normal = f'{BURL}/'
@@ -321,7 +304,7 @@ def get_paste_stats(bot: Bot, update: Update, args: List[str]):
     if len(args) >= 1:
         key = args[0]
     else:
-        message.reply_text(tld(chat.id, "misc_get_paste_invalid"))
+        message.reply_text(tld(chat.id, "misc_get_pasted_invalid"))
         return
 
     format_normal = f'{BURL}/'
@@ -358,6 +341,8 @@ def get_paste_stats(bot: Bot, update: Update, args: List[str]):
 def ud(bot: Bot, update: Update):
     message = update.effective_message
     text = message.text[len('/ud '):]
+    if text == '':
+        text = "Cockblocked By Steve Jobs"
     results = get(
         f'http://api.urbandictionary.com/v0/define?term={text}').json()
     reply_text = f'Word: {text}\nDefinition: {results["list"][0]["definition"]}'
@@ -391,13 +376,66 @@ def wiki(bot: Bot, update: Update):
                 .format(eet))
 
 
+@run_async
+def covid(bot: Bot, update: Update):
+    message = update.effective_message
+    chat = update.effective_chat
+    country = str(message.text[len('/covid '):])
+    if country == '':
+        country = "world"
+    if country.lower() in ["south korea", "korea"]:
+        country = "s. korea"
+    try:
+        c_case = cvid.get_status_by_country_name(country)
+    except Exception:
+        message.reply_text(tld(chat.id, "misc_covid_error"))
+        return
+    active = format_integer(c_case["active"])
+    confirmed = format_integer(c_case["confirmed"])
+    country = c_case["country"]
+    critical = format_integer(c_case["critical"])
+    deaths = format_integer(c_case["deaths"])
+    new_cases = format_integer(c_case["new_cases"])
+    new_deaths = format_integer(c_case["new_deaths"])
+    recovered = format_integer(c_case["recovered"])
+    total_tests = c_case["total_tests"]
+    if total_tests == 0:
+        total_tests = "N/A"
+    else:
+        total_tests = format_integer(c_case["total_tests"])
+    reply = tld(chat.id,
+                "misc_covid").format(country, confirmed, new_cases, active,
+                                     critical, deaths, new_deaths, recovered,
+                                     total_tests)
+    message.reply_markdown(reply)
+
+
+def format_integer(number, thousand_separator=','):
+    def reverse(string):
+        string = "".join(reversed(string))
+        return string
+
+    s = reverse(str(number))
+    count = 0
+    result = ''
+    for char in s:
+        count = count + 1
+        if count % 3 == 0:
+            if len(s) == count:
+                result = char + result
+            else:
+                result = thousand_separator + char + result
+        else:
+            result = char + result
+    return result
+
+
 __help__ = True
 
 ID_HANDLER = DisableAbleCommandHandler("id",
                                        get_id,
                                        pass_args=True,
                                        admin_ok=True)
-IP_HANDLER = CommandHandler("ip", get_bot_ip, filters=Filters.chat(OWNER_ID))
 INFO_HANDLER = DisableAbleCommandHandler("info",
                                          info,
                                          pass_args=True,
@@ -407,8 +445,6 @@ REPO_HANDLER = DisableAbleCommandHandler("repo",
                                          repo,
                                          pass_args=True,
                                          admin_ok=True)
-
-ECHO_HANDLER = CommandHandler("echo", echo, filters=Filters.user(OWNER_ID))
 MD_HELP_HANDLER = CommandHandler("markdownhelp",
                                  markdown_help,
                                  filters=Filters.private)
@@ -424,15 +460,14 @@ PASTE_STATS_HANDLER = DisableAbleCommandHandler("pastestats",
                                                 pass_args=True)
 UD_HANDLER = DisableAbleCommandHandler("ud", ud)
 WIKI_HANDLER = DisableAbleCommandHandler("wiki", wiki)
+COVID_HANDLER = DisableAbleCommandHandler("covid", covid, admin_ok=True)
 
 dispatcher.add_handler(UD_HANDLER)
 dispatcher.add_handler(PASTE_HANDLER)
 dispatcher.add_handler(GET_PASTE_HANDLER)
 dispatcher.add_handler(PASTE_STATS_HANDLER)
 dispatcher.add_handler(ID_HANDLER)
-dispatcher.add_handler(IP_HANDLER)
 dispatcher.add_handler(INFO_HANDLER)
-dispatcher.add_handler(ECHO_HANDLER)
 dispatcher.add_handler(MD_HELP_HANDLER)
 dispatcher.add_handler(STATS_HANDLER)
 dispatcher.add_handler(GDPR_HANDLER)
@@ -441,3 +476,4 @@ dispatcher.add_handler(REPO_HANDLER)
 dispatcher.add_handler(
     DisableAbleCommandHandler("removebotkeyboard", reply_keyboard_remove))
 dispatcher.add_handler(WIKI_HANDLER)
+dispatcher.add_handler(COVID_HANDLER)
