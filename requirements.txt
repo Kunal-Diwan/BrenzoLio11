@@ -33,3 +33,4 @@ coffeehouse
 bleach
 markdown2
 covid
+speedtest-cli
