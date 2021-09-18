@@ -32,3 +32,4 @@ wikipedia
 coffeehouse
 bleach
 markdown2
+covid
