@@ -1,17 +1,32 @@
+#    Haruka Aya (A telegram bot project)
+#    Copyright (C) 2017-2019 Paul Larsen
+#    Copyright (C) 2019-2021 Akito Mizukito (Haruka Aita)
+
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 import html
 from typing import List, Optional
+from telegram import Message, Chat, Update, Bot, User, ParseMode, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.error import BadRequest, Unauthorized
+from telegram.ext import CommandHandler, RegexHandler, run_async, Filters, CallbackQueryHandler
+from telegram.utils.helpers import mention_html
 
-from Brenzo import LOGGER, dispatcher
-from Brenzo.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from Brenzo import dispatcher, LOGGER
+from Brenzo.modules.helper_funcs.chat_status import user_not_admin, user_admin
 from Brenzo.modules.log_channel import loggable
 from Brenzo.modules.sql import reporting_sql as sql
 from Brenzo.modules.tr_engine.strings import tld
-from telegram import (Bot, Chat, InlineKeyboardButton, InlineKeyboardMarkup,
-                      Message, ParseMode, Update, User)
-from telegram.error import BadRequest, Unauthorized
-from telegram.ext import (CallbackQueryHandler, CommandHandler, Filters,
-                          RegexHandler, run_async)
-from telegram.utils.helpers import mention_html
 
 REPORT_GROUP = 5
 
@@ -34,7 +49,7 @@ def report_setting(bot: Bot, update: Update, args: List[str]):
         else:
             msg.reply_text(tld(chat.id, "reports_pm_pref").format(
                 sql.user_should_report(chat.id)),
-                parse_mode=ParseMode.MARKDOWN)
+                           parse_mode=ParseMode.MARKDOWN)
 
     else:
         if len(args) >= 1:
@@ -48,7 +63,7 @@ def report_setting(bot: Bot, update: Update, args: List[str]):
         else:
             msg.reply_text(tld(chat.id, "reports_chat_pref").format(
                 sql.chat_should_report(chat.id)),
-                parse_mode=ParseMode.MARKDOWN)
+                           parse_mode=ParseMode.MARKDOWN)
 
 
 @run_async
@@ -60,28 +75,26 @@ def report(bot: Bot, update: Update) -> str:
     user = update.effective_user  # type: Optional[User]
 
     if chat and message.reply_to_message and sql.chat_should_report(chat.id):
-        # type: Optional[User]
-        reported_user = message.reply_to_message.from_user
+        reported_user = message.reply_to_message.from_user  # type: Optional[User]
         chat_name = chat.title or chat.first or chat.username
         admin_list = chat.get_administrators()
 
         if int(reported_user.id) == int(user.id):
-            return ""
+            return
 
         if chat.username and chat.type == Chat.SUPERGROUP:
             msg = "<b>{}:</b>" \
-                  "\n<b>• Reported user:</b> {} (<code>{}</code>)" \
-                  "\n<b>• Reported by:</b> {} (<code>{}</code>)".format(html.escape(chat.title),
-                                                                        mention_html(
-                      reported_user.id,
-                      reported_user.first_name),
-                      reported_user.id,
-                      mention_html(user.id,
-                                   user.first_name),
-                      user.id)
-            link = "\n\n<b>Link:</b> " \
-                   "<a href=\"http://telegram.me/{}/{}\">click here</a>".format(
-                       chat.username, message.message_id)
+                  "\n<b>Reported user:</b> {} (<code>{}</code>)" \
+                  "\n<b>Reported by:</b> {} (<code>{}</code>)".format(html.escape(chat.title),
+                                                                      mention_html(
+                                                                          reported_user.id,
+                                                                          reported_user.first_name),
+                                                                      reported_user.id,
+                                                                      mention_html(user.id,
+                                                                                   user.first_name),
+                                                                      user.id)
+            link = "\n<b>Link:</b> " \
+                   "<a href=\"http://telegram.me/{}/{}\">click here</a>".format(chat.username, message.message_id)
 
             should_forward = True
             keyboard = [[
@@ -91,25 +104,25 @@ def report(bot: Bot, update: Update) -> str:
                         chat.username,
                         str(message.reply_to_message.message_id)))
             ],
-                [
-                InlineKeyboardButton(
-                    u"⚠ Kick",
-                    callback_data="report_{}=kick={}={}".format(
-                        chat.id, reported_user.id,
-                        reported_user.first_name)),
-                InlineKeyboardButton(
-                    u"⛔️ Ban",
-                    callback_data="report_{}=banned={}={}".format(
-                        chat.id, reported_user.id,
-                        reported_user.first_name))
-            ],
-                [
-                InlineKeyboardButton(
-                    u"❎ Delete Message",
-                    callback_data="report_{}=delete={}={}".format(
-                        chat.id, reported_user.id,
-                        message.reply_to_message.message_id))
-            ]]
+                        [
+                            InlineKeyboardButton(
+                                u"⚠ Kick",
+                                callback_data="report_{}=kick={}={}".format(
+                                    chat.id, reported_user.id,
+                                    reported_user.first_name)),
+                            InlineKeyboardButton(
+                                u"⛔️ Ban",
+                                callback_data="report_{}=banned={}={}".format(
+                                    chat.id, reported_user.id,
+                                    reported_user.first_name))
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                u"❎ Delete Message",
+                                callback_data="report_{}=delete={}={}".format(
+                                    chat.id, reported_user.id,
+                                    message.reply_to_message.message_id))
+                        ]]
             reply_markup = InlineKeyboardMarkup(keyboard)
 
         else:
@@ -176,8 +189,8 @@ def report(bot: Bot, update: Update) -> str:
         message.reply_to_message.reply_text(tld(
             chat.id,
             "reports_success").format(mention_html(user.id, user.first_name)),
-            parse_mode=ParseMode.HTML,
-            disable_web_page_preview=True)
+                                            parse_mode=ParseMode.HTML,
+                                            disable_web_page_preview=True)
         return msg
 
     return ""
