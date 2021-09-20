@@ -5,8 +5,7 @@ from Brenzo.modules.disable import DisableAbleCommandHandler
 from Brenzo import dispatcher
 from requests import get
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
-
-
+from Brenzo.modules.tr_engine.strings import tld
 
 @run_async
 def feedback(bot: Bot, update: Update):
@@ -22,7 +21,7 @@ def feedback(bot: Bot, update: Update):
   bot.send_message(-1001513232985, feed_text, parse_mode=ParseMode.MARKDOWN)
  
   text = html.escape(text)
-  reply_text=f"Thankyou for giving us your feedback."
+  reply_text = tld(chat.id, 'thanks_feedback')
   message.reply_text(reply_text, reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="You can see your feedback here",url="https://t.me/BrenzoFeedback")]]))
                                                
