@@ -20,6 +20,7 @@ def feedback(bot: Bot, update: Update):
 
   bot.send_message(-1001513232985, feed_text, parse_mode=ParseMode.MARKDOWN)
  
+  chat = update.effective_chat
   text = html.escape(text)
   reply_text = tld(chat.id, 'thanks_feedback')
   message.reply_text(reply_text, reply_markup=InlineKeyboardMarkup(
