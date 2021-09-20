@@ -361,7 +361,7 @@ modname_connection: കണക്ഷനുകൾ
 connection_enable: ഉപയോക്താക്കൾക്കായി ഈ ചാറ്റിലേക്ക് കണക്ഷനുകൾ പ്രവർത്തനക്ഷമമാക്കി.
 connection_disable: ഉപയോക്താക്കൾക്കായി ഈ ചാറ്റിലേക്കുള്ള കണക്ഷനുകൾ പ്രവർത്തനരഹിതമാക്കി.
 connection_err_wrong_arg: ഒരു വാദം പോലെ on/yes/off/no നൽകുക!
-connection_success: *{}* എന്നതിലേക്ക് വിജയകരമായി കണക്റ്റുചെയ്‌തു
+connection_success: <b>{}</b> എന്നതിലേക്ക് വിജയകരമായി കണക്റ്റുചെയ്‌തു
 connection_fail: കണക്ഷൻ പരാജയപ്പെട്ടു!
 connection_err_not_allowed: ഈ ചാറ്റിലേക്കുള്ള കണക്ഷനുകൾ അനുവദനീയമല്ല!
 connection_err_no_chatid: ബന്ധിപ്പിക്കുന്നതിന് ചാറ്റ് ഐഡി നൽകുക!
