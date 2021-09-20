@@ -416,19 +416,19 @@ modname_cust_filters: ഫിൽട്ടറുകൾ
 cust_filters_list: "*{} ലെ ഫിൽട്ടറുകളുടെ ലിസ്റ്റ്:*\n"
 cust_filters_local: പ്രാദേശിക ഫിൽട്ടറുകൾ
 cust_filters_err_btn_only: ഫിൽട്ടർ മറുപടി ടെക്സ്റ്റ് കാണുന്നില്ല. നിങ്ങൾക്ക് മാത്രം ബട്ടണുകൾ ഉണ്ടായിരിക്കില്ല, അതിനൊപ്പം പോകാൻ നിങ്ങൾക്ക് ഒരു സന്ദേശം ആവശ്യമാണ്!
-cust_filters_err_empty: You didn't specify what to reply with!
-cust_filters_add_success: Handler '{}' added in *{}*!
-cust_filters_list_empty: There aren't any active filters in {}!
-cust_filters_stop_success: Yep, I'll stop replying to that in *{}*.
-cust_filters_err_wrong_filter: That's not an active filter - run /filters for all active filters.
-cust_filters_err_protocol: You seem to be trying to use an unsupported url protocol. Telegram doesn't support buttons for some protocols, such as tg://. Please try again.
-cust_filters_err_badformat: This filter could not be sent, as it is incorrectly formatted.
-cust_filters_chatsettings_stats: There are `{}` custom filters here.
-cust_filters_cleanup_success: "{} filters from this chat have been removed."
+cust_filters_err_empty: എന്ത് മറുപടി നൽകണമെന്ന് നിങ്ങൾ വ്യക്തമാക്കിയിട്ടില്ല!
+cust_filters_add_success: ഹാൻഡ്‌ലർ '{}' എന്നതിൽ *{}* ചേർത്തു!
+custom_filters_list_empty: {} ൽ സജീവമായ ഫിൽട്ടറുകളൊന്നുമില്ല!
+cust_filters_stop_success: അതെ, ഞാൻ *{}* ൽ മറുപടി നൽകുന്നത് നിർത്തും.
+cust_filters_err_wrong_filter: അത് ഒരു സജീവ ഫിൽട്ടറല്ല - എല്ലാ സജീവ ഫിൽട്ടറുകൾക്കും പ്രവർത്തിപ്പിക്കുക /filters ചെയ്യുക .
+cust_filters_err_protocol: നിങ്ങൾ പിന്തുണയ്ക്കാത്ത url പ്രോട്ടോക്കോൾ ഉപയോഗിക്കാൻ ശ്രമിക്കുന്നതായി തോന്നുന്നു. tg://. പോലുള്ള ചില പ്രോട്ടോക്കോളുകൾക്കുള്ള ടെലിഗ്രാം ബട്ടണുകളെ പിന്തുണയ്ക്കുന്നില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക
+cust_filters_err_badformat: തെറ്റായി ഫോർമാറ്റ് ചെയ്തതിനാൽ ഈ ഫിൽട്ടർ അയയ്‌ക്കാനായില്ല.
+cust_filters_chatsettings_stats: ഇവിടെ `{}` കസ്റ്റം ഫിൽട്ടറുകൾ ഉണ്ട്.
+cust_filters_cleanup_success: "{} ഈ ചാറ്റിൽ നിന്നുള്ള ഫിൽട്ടറുകൾ നീക്കം ചെയ്തു."
 cust_filters_help: |
-  Make your chat more lively with filters; The bot will reply to certain words!
-  Filters are case insensitive; every time someone says your trigger words, {} will reply something else! can be used to create your own commands, if desired.
-  - /filters: list all active filters in this chat.
+  ഫിൽട്ടറുകൾ ഉപയോഗിച്ച് നിങ്ങളുടെ ചാറ്റ് കൂടുതൽ സജീവമാക്കുക; ബോട്ട് ചില വാക്കുകൾക്ക് മറുപടി നൽകും!
+  ഫിൽട്ടറുകൾ കേസ് സെൻസിറ്റീവ് ആണ്; നിങ്ങളുടെ ട്രിഗർ വാക്കുകൾ ആരെങ്കിലും പറയുമ്പോഴെല്ലാം, {} മറ്റെന്തെങ്കിലും മറുപടി നൽകും! വേണമെങ്കിൽ നിങ്ങളുടെ സ്വന്തം കമാൻഡുകൾ സൃഷ്ടിക്കാൻ ഉപയോഗിക്കാം.
+  - /filters: ഈ ചാറ്റിൽ എല്ലാ സജീവ ഫിൽട്ടറുകളും പട്ടികപ്പെടുത്തുക.
   *Admin only:*
   - /filter <keyword> <reply message>: Every time someone says "word", the bot will reply with "sentence". For multiple word filters, quote the first word.
   - /stopall: Stop all filters, must be chat owner to do so. Only use this when you know what you're doing.
