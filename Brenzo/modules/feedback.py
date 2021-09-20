@@ -24,7 +24,7 @@ def feedback(bot: Bot, update: Update):
   text = html.escape(text)
   reply_text = tld(chat.id, 'thanks_feedback')
   message.reply_text(reply_text, reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="You can see your feedback here",url="https://t.me/BrenzoFeedback")]]))
+                                                [[InlineKeyboardButton(text=tld(chat.id, 'see_feedback'),url="https://t.me/BrenzoFeedback")]]))
                                                
   
 
