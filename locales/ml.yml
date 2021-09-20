@@ -412,10 +412,10 @@ github_help: |
  
   ഈ ഘടകം സാധ്യമായത് [pyGitHub_API](https://github.com/nunopenim/pyGitHub_API)
 #Filters
-modname_cust_filters: Filters
-cust_filters_list: "*List of filters in {}:*\n"
-cust_filters_local: local filters
-cust_filters_err_btn_only: Filter reply text is missing. You can't ONLY have buttons, you need a message to go with it!
+modname_cust_filters: ഫിൽട്ടറുകൾ
+cust_filters_list: "*{} ലെ ഫിൽട്ടറുകളുടെ ലിസ്റ്റ്:*\n"
+cust_filters_local: പ്രാദേശിക ഫിൽട്ടറുകൾ
+cust_filters_err_btn_only: ഫിൽട്ടർ മറുപടി ടെക്സ്റ്റ് കാണുന്നില്ല. നിങ്ങൾക്ക് മാത്രം ബട്ടണുകൾ ഉണ്ടായിരിക്കില്ല, അതിനൊപ്പം പോകാൻ നിങ്ങൾക്ക് ഒരു സന്ദേശം ആവശ്യമാണ്!
 cust_filters_err_empty: You didn't specify what to reply with!
 cust_filters_add_success: Handler '{}' added in *{}*!
 cust_filters_list_empty: There aren't any active filters in {}!
