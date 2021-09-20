@@ -387,30 +387,30 @@ connection_help: |
   - /allowconnect on/yes/off/no: ഉപയോക്താക്കളെ ഗ്രൂപ്പിലേക്ക് ബന്ധിപ്പിക്കാൻ അനുവദിക്കുക\n
   നിങ്ങളുടെ ചാറ്റിലെ /id കമാൻഡ് ഉപയോഗിച്ച് നിങ്ങൾക്ക് ചാറ്റ് ഐഡി വീണ്ടെടുക്കാനാകും. ഐഡി നെഗറ്റീവ് ആണെങ്കിൽ ആശ്ചര്യപ്പെടരുത്; എല്ലാ സൂപ്പർ ഗ്രൂപ്പുകൾക്കും നെഗറ്റീവ് ഐഡികളുണ്ട്.
 #GitHub
-modname_github: GitHub
+modname_github: Github
 github_help: |
-  *Need some GitHub release but don't want to have to go to GitHub and go to the repository? Here are some commands that can make your life easier with GitHub.*
+  *കുറച്ച് GitHub റിലീസ് വേണമെങ്കിലും GitHub- ൽ പോയി റിപ്പോസിറ്ററിയിലേക്ക് പോകേണ്ടതില്ലേ? GitHub ഉപയോഗിച്ച് നിങ്ങളുടെ ജീവിതം എളുപ്പമാക്കാൻ കഴിയുന്ന ചില കമാൻഡുകൾ ഇതാ.*
 
-  *Available commands are:*
-   - /gitr <user>/<repo> [optional: <number>: for fetch releases in past]: will fetch the most recent release from that repo.
-   - /git: Returns info about a GitHub user or organization.
-   - /repo: Return the GitHub user or organization repository list (Limited at 40).
-   - /fetch <word>: get the repo shortcut registered to that word.
-   - &<word>: same as /get word
-   - /changelog <word>: gets the changelog of a saved repo shortcut
-   - /listrepo: List all repo shortcuts in the current chat
+  *ലഭ്യമായ കമാൻഡുകൾ ഇവയാണ്:*
+   - /gitr <ഉപയോക്താവ്>/<റിപ്പോ> [ഓപ്ഷണൽ: : മുൻകാല റിലീസുകൾ ലഭ്യമാക്കുക]: ആ റിപ്പോയിൽ നിന്ന് ഏറ്റവും പുതിയ റിലീസ് ലഭ്യമാക്കും.
+   - /git: ഒരു GitHub ഉപയോക്താവിനെ അല്ലെങ്കിൽ ഓർഗനൈസേഷനെക്കുറിച്ചുള്ള വിവരങ്ങൾ നൽകുന്നു.
+   - /റിപ്പോ: GitHub ഉപയോക്താവ് അല്ലെങ്കിൽ ഓർഗനൈസേഷൻ റിപ്പോസിറ്ററി ലിസ്റ്റ് തിരികെ നൽകുക (40 ൽ പരിമിതപ്പെടുത്തിയിരിക്കുന്നു).
+   - /fetch <വാക്ക്>: get the repo shortcut registered to that word.
+   - &<വാക്ക്>: /get നേടുന്നതിന് സമാനമാണ്
+   - /changelog വാക്ക്: സംരക്ഷിച്ച റിപ്പോ കുറുക്കുവഴിയുടെ ചേഞ്ച്ലോഗ് ലഭിക്കുന്നു
+   - /listrepo: നിലവിലെ ചാറ്റിൽ എല്ലാ റിപ്പോ കുറുക്കുവഴികളും പട്ടികപ്പെടുത്തുക
 
-  *Admin only:*
-   - /saverepo <word> <user>/<repo> [optional: <number>]: Save that repo releases to the shortcut called "word".
-   - /delrepo <word>: delete the repo shortcut called "word"
+  *അഡ്മിൻ മാത്രം:*
+   - /saverepo <വാക്ക്> <ഉപയോക്താവ്>/<റിപ്പോ> [ഓപ്ഷണൽ: ]: ആ റിപ്പോ റിലീസുകൾ "വേഡ്" എന്ന കുറുക്കുവഴിയിലേക്ക് സംരക്ഷിക്കുക.
+   - /delrepo <വാക്ക്>: 'വേഡ്' എന്ന് വിളിക്കുന്ന റിപ്പോ കുറുക്കുവഴി ഇല്ലാതാക്കുക
 
-  An example of how to save a repo shortcut would be via:
+  ഒരു റിപ്പോ കുറുക്കുവഴി എങ്ങനെ സംരക്ഷിക്കാമെന്നതിന്റെ ഒരു ഉദാഹരണം ഇനിപ്പറയുന്നതായിരിക്കും:
   `/saverepo ptb python-telegram-bot/python-telegram-bot`
-  Now, anyone using "`/fetch ptb`", or "`&ptb`" will be answered with the releases of the given repository.
+  ഇപ്പോൾ, "`/fetch ptb`" അല്ലെങ്കിൽ "`& ptb`" ഉപയോഗിക്കുന്ന ആർക്കും തന്നിരിക്കുന്ന റിപ്പോസിറ്ററിയുടെ റിലീസുകൾ ഉപയോഗിച്ച് ഉത്തരം നൽകും.
 
-  *Note:* Note names are case-insensitive, and they are automatically converted to lowercase before getting saved.
+  *കുറിപ്പ്:* കുറിപ്പുകളുടെ പേരുകൾ കേസില്ലാത്തവയാണ്, അവ സംരക്ഷിക്കുന്നതിനുമുമ്പ് അവ യാന്ത്രികമായി ചെറിയക്ഷരത്തിലേക്ക് പരിവർത്തനം ചെയ്യപ്പെടും.
  
-  This module was only possible thanks to the [pyGitHub_API](https://github.com/nunopenim/pyGitHub_API)
+  ഈ ഘടകം സാധ്യമായത് [pyGitHub_API](https://github.com/nunopenim/pyGitHub_API)
 #Filters
 modname_cust_filters: Filters
 cust_filters_list: "*List of filters in {}:*\n"
