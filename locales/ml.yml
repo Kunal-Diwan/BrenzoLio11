@@ -369,23 +369,23 @@ connection_dis_success: ചാറ്റിൽ നിന്ന് വിജയക
 connection_dis_fail: വിച്ഛേദിക്കുന്നത് പരാജയപ്പെട്ടു!
 connection_err_unknown: ഗ്രൂപ്പ് കണക്ഷൻ അവകാശങ്ങൾ മാറ്റിയിരിക്കുന്നു അല്ലെങ്കിൽ നിങ്ങൾ ഇനി ഒരു അഡ്മിൻ അല്ല. \n ഞാൻ നിങ്ങളെ വിച്ഛേദിക്കും.
 connection_help: |
-  Sometimes, you just want to add some notes and filters to a group chat, but you don't want everyone to see; This is where connections come in...
-  This allows you to connect to a chat's database, and add things to it without the commands appearing in chat! For obvious reasons, you need to be an admin to add things; but any member in the group can view your data.\n
-  Actions are available with connected groups:
-  • View and edit notes
-  • View and edit filters
-  • View and edit blacklists
-  • Promote/demote users
-  • See adminlist, see invitelink
-  • Disable/enable commands in chat
-  • Mute/unmute users in chat
-  • Restrict/unrestrict users in chat
-  • More in the future!\n
-  - Type /connect or /connection in the group you want to connect to.
-  - /connection or /connect <chatid>: Connect to remote chat
-  - /disconnect: Disconnect from chat
-  - /allowconnect on/yes/off/no: Allow connect users to group\n
-  You can retrieve the chat id by using the /id command in your chat. Don't be surprised if the id is negative; all super groups have negative ids.
+  ചിലപ്പോൾ, നിങ്ങൾ ഒരു ഗ്രൂപ്പ് ചാറ്റിലേക്ക് ചില കുറിപ്പുകളും ഫിൽട്ടറുകളും ചേർക്കാൻ ആഗ്രഹിക്കുന്നു, പക്ഷേ എല്ലാവരും കാണണമെന്ന് നിങ്ങൾ ആഗ്രഹിക്കുന്നില്ല; ഇവിടെയാണ് കണക്ഷനുകൾ വരുന്നത് ...
+  ഒരു ചാറ്റിന്റെ ഡാറ്റാബേസിലേക്ക് കണക്റ്റുചെയ്യാനും ചാറ്റിൽ കമാൻഡുകൾ ദൃശ്യമാകാതെ അതിലേക്ക് കാര്യങ്ങൾ ചേർക്കാനും ഇത് നിങ്ങളെ അനുവദിക്കുന്നു! വ്യക്തമായ കാരണങ്ങളാൽ, കാര്യങ്ങൾ ചേർക്കാൻ നിങ്ങൾ ഒരു അഡ്മിൻ ആയിരിക്കണം; എന്നാൽ ഗ്രൂപ്പിലെ ഏത് അംഗത്തിനും നിങ്ങളുടെ ഡാറ്റ കാണാൻ കഴിയും. \n
+  കണക്റ്റുചെയ്‌ത ഗ്രൂപ്പുകളിൽ പ്രവർത്തനങ്ങൾ ലഭ്യമാണ്:
+  • കുറിപ്പുകൾ കാണുക, എഡിറ്റ് ചെയ്യുക
+  • ഫിൽട്ടറുകൾ കാണുക, എഡിറ്റ് ചെയ്യുക
+  • ബ്ലാക്ക്‌ലിസ്റ്റുകൾ കാണുക, എഡിറ്റ് ചെയ്യുക
+  • ഉപയോക്താക്കളെ പ്രോത്സാഹിപ്പിക്കുക/തരംതാഴ്ത്തുക
+  • അഡ്മിൻലിസ്റ്റ് കാണുക, ക്ഷണ ലിങ്ക് കാണുക
+  • ചാറ്റിൽ കമാൻഡുകൾ പ്രവർത്തനരഹിതമാക്കുക/പ്രവർത്തനക്ഷമമാക്കുക
+  • ചാറ്റിൽ ഉപയോക്താക്കളെ നിശബ്ദമാക്കുക/അൺമ്യൂട്ട് ചെയ്യുക
+  • ചാറ്റിൽ ഉപയോക്താക്കളെ നിയന്ത്രിക്കുക/നിയന്ത്രിക്കുക
+  • ഭാവിയിൽ കൂടുതൽ!\n
+  - നിങ്ങൾ ബന്ധിപ്പിക്കാൻ ആഗ്രഹിക്കുന്ന ഗ്രൂപ്പിൽ /connect അല്ലെങ്കിൽ /connection എന്ന് ടൈപ്പ് ചെയ്യുക.
+  - /connection അഥവാ /connect <ഐഡി>: വിദൂര ചാറ്റിലേക്ക് കണക്റ്റുചെയ്യുക
+  - /disconnect: ചാറ്റിൽ നിന്ന് വിച്ഛേദിക്കുക
+  - /allowconnect on/yes/off/no: ഉപയോക്താക്കളെ ഗ്രൂപ്പിലേക്ക് ബന്ധിപ്പിക്കാൻ അനുവദിക്കുക\n
+  നിങ്ങളുടെ ചാറ്റിലെ /id കമാൻഡ് ഉപയോഗിച്ച് നിങ്ങൾക്ക് ചാറ്റ് ഐഡി വീണ്ടെടുക്കാനാകും. ഐഡി നെഗറ്റീവ് ആണെങ്കിൽ ആശ്ചര്യപ്പെടരുത്; എല്ലാ സൂപ്പർ ഗ്രൂപ്പുകൾക്കും നെഗറ്റീവ് ഐഡികളുണ്ട്.
 #GitHub
 modname_github: GitHub
 github_help: |
