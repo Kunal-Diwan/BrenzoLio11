@@ -581,43 +581,30 @@ locks_help: |
   eg: ഉപയോഗിച്ച് സ്റ്റിക്കറുകൾ പൂട്ടുക:
   /lock sticker
 #Log channel
-modname_log_channel: Log Channel
-log_channel_link: \n<b>Link:</b> <a href=\"http://telegram.me/{}/{}\">click here</a>
-log_channel_deleted: This log channel has been deleted - unsetting.
-log_channel_err_format: \n\nFormatting has been disabled due to an unexpected error.
-log_channel_grp_curr_conf: "This group has all its logs sent to: {} (`{}`)"
-log_channel_none: No log channel has been set for this group!
-log_channel_fwd_cmd: Now, forward the /setlog command to the group you want to connect this channel to!
-log_channel_chn_curr_conf: This channel has been set as the log channel for {}.
-log_channel_link_success: Set the log channel successfully!
-log_channel_invalid_message: This isn't a forwarded message! Please read help(type /help in a PM with the bot) for more information about this command.
-log_channel_unlink_success: Channel has been unlinked from {}!
-log_channel_unlink_none: No log channel has been set yet!
+modname_log_channel: ചാനൽ ലോഗ് ചെയ്യുക
+log_channel_link: \n<b>ലിങ്ക്:</b> <a href=\"http://telegram.me/{}/{}\">ഇവിടെ ക്ലിക്ക് ചെയ്യുക</a>
+log_channel_deleted: ഈ ലോഗ് ചാനൽ ഇല്ലാതാക്കി - അൺസെറ്റിംഗ്.
+log_channel_err_format: \n\nഒരു അപ്രതീക്ഷിത പിശക് കാരണം ഫോർമാറ്റിംഗ് പ്രവർത്തനരഹിതമാക്കി.
+log_channel_grp_curr_conf: "ഈ ഗ്രൂപ്പിന്റെ എല്ലാ ലോഗുകളും ഇതിലേക്ക് അയച്ചിട്ടുണ്ട്: {} (`{}`)"
+log_channel_none: ഈ ഗ്രൂപ്പിനായി ഒരു ലോഗ് ചാനലും സജ്ജമാക്കിയിട്ടില്ല!
+log_channel_fwd_cmd: ഇപ്പോൾ, നിങ്ങൾക്ക് ഈ ചാനൽ ബന്ധിപ്പിക്കാൻ ആഗ്രഹിക്കുന്ന ഗ്രൂപ്പിലേക്ക് /setlog കമാൻഡ് ഫോർവേഡ് ചെയ്യുക!
+log_channel_chn_curr_conf: ഈ ചാനൽ ലോഗ് ചാനലായി സജ്ജമാക്കിയിരിക്കുന്നു {}.
+log_channel_link_success: ലോഗ് ചാനൽ വിജയകരമായി സജ്ജമാക്കുക!
+log_channel_invalid_message: ഇതൊരു ഫോർവേഡ് സന്ദേശമല്ല! ഈ കമാന്റിനെക്കുറിച്ചുള്ള കൂടുതൽ വിവരങ്ങൾക്ക് ദയവായി സഹായം (ബോട്ട് ഉപയോഗിച്ച് ഒരു PM- ൽ ടൈപ്പ് ചെയ്യുക /help) വായിക്കുക.
+log_channel_unlink_success: <b>{}</b> എന്നതിൽ നിന്ന് ചാനൽ അൺലിങ്ക് ചെയ്തു!
+log_channel_unlink_none: ഇതുവരെ ഒരു ലോഗ് ചാനലും സജ്ജമാക്കിയിട്ടില്ല!
 log_channel_help: |
- Recent actions are nice, but they don't help you log every action taken by the bot. This is why you need log channels!\n
- Log channels can help you keep track of exactly what the other admins are doing. Bans, Mutes, warns, notes - everything can be moderated.\n
- Setting a log channel is done by the following steps:
- - Add Brenzo to your channel, as an admin. This is done via the "add administrators" tab.
- - Send /setlog to your channel.
- - Forward the /setlog command to the group you wish to be logged.
- - Congrats! all done.\n
-  *Admin only:*
-  - /logchannel: get log channel info
-  - /setlog: set the log channel.
-  - /unsetlog: unset the log channel.
-#Weather
-modname_weather: Weather
-weather_no_info: "No weather information for this location!"
-weather_invalid: "Invalid country."
-weather_temp: "• **Temperature:** "
-weather_cond: "• **Condition:** "
-weather_hum: "• **Humidity:** "
-weather_wind: "• **Wind:** "
-weather_sunrise: "• **Sunrise**: "
-weather_sunset: "• **Sunset**: "
-weather_help: |
-  *Available commands:*
-  - /weather <name>: Returns the weather in a city, country or state.
+ സമീപകാല പ്രവർത്തനങ്ങൾ നല്ലതാണ്, പക്ഷേ ബോട്ട് ചെയ്യുന്ന എല്ലാ പ്രവർത്തനങ്ങളും ലോഗ് ചെയ്യാൻ അവർ നിങ്ങളെ സഹായിക്കുന്നില്ല. ഇതിനാലാണ് നിങ്ങൾക്ക് ലോഗ് ചാനലുകൾ വേണ്ടത്! \n
+ മറ്റ് അഡ്മിനുകൾ എന്താണ് ചെയ്യുന്നതെന്ന് കൃത്യമായി നിരീക്ഷിക്കാൻ ലോഗ് ചാനലുകൾ നിങ്ങളെ സഹായിക്കും. നിരോധനങ്ങൾ, നിശബ്ദതകൾ, മുന്നറിയിപ്പുകൾ, കുറിപ്പുകൾ - എല്ലാം മോഡറേറ്റ് ചെയ്യാം. \n
+ ഒരു ലോഗ് ചാനൽ സജ്ജീകരിക്കുന്നത് ഇനിപ്പറയുന്ന ഘട്ടങ്ങളിലൂടെയാണ്:
+ - ഒരു അഡ്മിൻ എന്ന നിലയിൽ നിങ്ങളുടെ ചാനലിൽ ബ്രെൻസോ ചേർക്കുക. "അഡ്മിനിസ്ട്രേറ്റർമാരെ ചേർക്കുക" ടാബ് വഴിയാണ് ഇത് ചെയ്യുന്നത്.
+ - നിങ്ങളുടെ ചാനലിന് അയയ്ക്കുക /setlog ചെയ്യുക.
+ - നിങ്ങൾ ലോഗിൻ ചെയ്യാൻ ആഗ്രഹിക്കുന്ന ഗ്രൂപ്പിന് /setlog കമാൻഡ് ഫോർവേഡ് ചെയ്യുക.
+ - അഭിനന്ദനങ്ങൾ! എല്ലാം കഴിഞ്ഞു. \n
+  *അഡ്മിൻ മാത്രം:*
+  - /logchannel: ലോഗ് ചാനൽ വിവരങ്ങൾ നേടുക
+  - /setlog: ലോഗ് ചാനൽ സജ്ജമാക്കുക.
+  - /unsetlog: ലോഗ് ചാനൽ അൺസെറ്റ് ചെയ്യുക.
 #AntiArabic
 modname_antiarabic: Anti Arabic
 antiarabic_enabled: "Turned on AntiArabic! Messages sent by any non-admin which contains arabic text will be deleted."
