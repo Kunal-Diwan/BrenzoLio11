@@ -690,35 +690,35 @@ jokes_slaps_templates_list:
   - "{user1} ties {user2} to a chair and {throws} a {item} at them."
   - "{user1} gave a friendly push to help {user2} learn to swim in lava."
 jokes_items_list:
-  - "cast iron skillet"
-  - "large trout"
-  - "baseball bat"
-  - "cricket bat"
-  - "wooden cane"
-  - "nail"
-  - "printer"
-  - "shovel"
-  - "CRT monitor"
-  - "physics textbook"
-  - "toaster"
-  - "portrait of Richard Stallman"
-  - "television"
-  - "five ton truck"
-  - "roll of duct tape"
-  - "book"
-  - "laptop"
-  - "old television"
-  - "sack of rocks"
-  - "rainbow trout"
-  - "rubber chicken"
-  - "spiked bat"
-  - "fire extinguisher"
-  - "heavy rock"
-  - "chunk of dirt"
-  - "beehive"
-  - "piece of rotten meat"
-  - "bear"
-  - "ton of bricks"
+  - "കാസ്റ്റ് ഇരുമ്പ് ചട്ടി"
+  - "വലിയ ട്രൗട്ട്"
+  - "ബേസ്ബോൾ ബാറ്റ്"
+  - "ക്രിക്കറ്റ് ബാറ്റ്"
+  - "മരം ചൂരൽ"
+  - "ആണി"
+  - "പ്രിന്റർ"
+  - "കോരിക"
+  - "CRT മോണിറ്റർ"
+  - "ഭൗതികശാസ്ത്ര പാഠപുസ്തകം"
+  - "ടോസ്റ്റർ"
+  - "റിച്ചാർഡ് സ്റ്റാൾമാന്റെ ഛായാചിത്രം"
+  - "ടെലിവിഷൻ"
+  - "അഞ്ച് ടൺ ട്രക്ക്"
+  - "റോൾ ഓഫ് ഡക്റ്റ് ടേപ്പ്"
+  - "പുസ്തകം"
+  - "ലാപ്ടോപ്പ്"
+  - "പഴയ ടെലിവിഷൻ"
+  - "പാറകളുടെ ചാക്ക്"
+  - "റെയിൻബോ ട്രൗട്ട്"
+  - "റബ്ബർ ചിക്കൻ"
+  - "സ്പൈക്ക്ഡ് ബാറ്റ്"
+  - "അഗ്നിശമന ഉപകരണം"
+  - "കനത്ത പാറ"
+  - "അഴുക്ക് ഭാഗം"
+  - "തേനീച്ചക്കൂട്"
+  - "ചീഞ്ഞ ഇറച്ചി കഷണം"
+  - "കരടി"
+  - "ടൺ ഇഷ്ടികകൾ"
 jokes_throw_list:
   - "throws"
   - "flings"
@@ -731,10 +731,10 @@ jokes_hit_list:
   - "smacks"
   - "bashes"
 jokes_help: |
-  Some jokes command
+  ചില തമാശകൾ
 
-  - /runs: reply a random string from an array of replies.
-  - /slap: slap a user, or get slapped if not a reply.
+  - /runs: ഒരു കൂട്ടം മറുപടികളിൽ നിന്ന് ക്രമരഹിതമായ ഒരു സ്ട്രിംഗിന് മറുപടി നൽകുക.
+  - /slap: ഒരു ഉപയോക്താവിനെ അടിക്കുക, അല്ലെങ്കിൽ മറുപടി ഇല്ലെങ്കിൽ അടിക്കുക.
 
 #Misc
 modname_misc: Misc
