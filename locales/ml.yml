@@ -447,7 +447,7 @@ disable_err_undisableable: ആ കമാൻഡ് പ്രവർത്തനര
 disable_err_no_cmd: ഒരു വാദം പോലെ ഒരു കമാൻഡ് നൽകുക.
 disable_enable_success: <code>{}</code> ഉപയോഗം പ്രാപ്തമാക്കി
 disable_already_enabled: ആ കമാൻഡ് ഇതിനകം പ്രവർത്തനക്ഷമമാക്കിയിരിക്കുന്നു.
-disable_able_commands: ഇനിപ്പറയുന്ന കമാൻഡുകൾ ടോഗിൾ ചെയ്യാവുന്നതാണ്: \n{}
+disable_able_commands: ഇനിപ്പറയുന്ന കമാൻഡുകൾ ടോഗിൾ ചെയ്യാവുന്നതാണ് \n{}
 disable_able_commands_none: ഒരു കമാൻഡും പ്രവർത്തനരഹിതമാക്കാൻ കഴിയില്ല.
 disable_chatsettings_none_disabled: കമാൻഡുകളൊന്നും പ്രവർത്തനരഹിതമാക്കിയിട്ടില്ല!
 disable_chatsettings_list_disabled: അഡ്മിൻ അല്ലാത്തവർക്കായി ഇനിപ്പറയുന്ന കമാൻഡുകൾ നിലവിൽ പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു: \ n{}
