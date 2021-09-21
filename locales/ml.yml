@@ -523,21 +523,21 @@ feds_help: |
 # - /fedchats: ഫെഡറേഷനിൽ ബന്ധിപ്പിച്ചിട്ടുള്ള എല്ലാ ചാറ്റുകളും നേടുക.
 #TODO: To be continued
 #Keyboard
-keyboard_disconnect: Disconnect from a chat
-keyboard_connect: Connect to a chat
-keyboard_updated: Keyboard Updated
-keyboard_bothelp: Bot Help
-keyboard_notes: Notes
+keyboard_disconnect: ഒരു ചാറ്റിൽ നിന്ന് വിച്ഛേദിക്കുക
+keyboard_connect: ഒരു ചാറ്റിലേക്ക് കണക്റ്റുചെയ്യുക
+keyboard_updated: കീബോർഡ് അപ്‌ഡേറ്റുചെയ്‌തു
+keyboard_bothelp: ബോട്ട് സഹായം
+keyboard_notes: കുറിപ്പുകൾ
 #Language
-language_switch_success: The language preference for {} has been updated to {}
-language_switch_success_pm: Your language preference has been updated to {}
-language_not_supported: "{} is not supported yet!"
-language_code_not_valid: That's not a valid lanuage code. Use an internationally accepted ISO code!
-language_current_locale: "Current locale for this chat is: *{}*"
-language_select_language: "*Select language* \n"
-language_user_language: "User language: `{}`"
-language_chat_language: "\nConnected chat language: `{}`"
-language_sel_user_lang: "*\n\nSelect a new user language:*"
+language_switch_success: ഭാഷാ മുൻഗണന {} എന്നതിലേക്ക് അപ്‌ഡേറ്റുചെയ്‌തു {}
+language_switch_success_pm: നിങ്ങളുടെ ഭാഷാ മുൻഗണന {} എന്നതിലേക്ക് അപ്‌ഡേറ്റുചെയ്‌തു
+language_not_supported: "{} ഇതുവരെ പിന്തുണയ്ക്കുന്നില്ല!"
+language_code_not_valid: അത് സാധുവായ ഭാഷാ കോഡ് അല്ല. ഒരു അന്താരാഷ്ട്ര അംഗീകൃത ISO കോഡ് ഉപയോഗിക്കുക!
+language_current_locale: "ഈ ചാറ്റിനുള്ള നിലവിലെ ഭാഷ ഇതാണ്: *{}*"
+language_select_language: "*ഭാഷ തിരഞ്ഞെടുക്കുക* \n"
+language_user_language: "ഉപയോക്തൃ ഭാഷ: `{}`"
+language_chat_language: "\nകണക്റ്റുചെയ്‌ത ചാറ്റ് ഭാഷ: `{}`"
+language_sel_user_lang: "*\n\nഒരു പുതിയ ഉപയോക്തൃ ഭാഷ തിരഞ്ഞെടുക്കുക:*"
 #Locks
 modname_locks: Locks
 locks_list_title: "Locks: "
