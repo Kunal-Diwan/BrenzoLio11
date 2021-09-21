@@ -539,19 +539,19 @@ language_user_language: "ഉപയോക്തൃ ഭാഷ: `{}`"
 language_chat_language: "\nകണക്റ്റുചെയ്‌ത ചാറ്റ് ഭാഷ: `{}`"
 language_sel_user_lang: "*\n\nഒരു പുതിയ ഉപയോക്തൃ ഭാഷ തിരഞ്ഞെടുക്കുക:*"
 #Locks
-modname_locks: Locks
-locks_list_title: "Locks: "
-locks_lock_success: Locked `{}` messages for all non-admins!
-locks_unlock_success: Unlocked `{}` messages for everyone!
-locks_type_invalid: What are you trying to lock...? Try /locktypes for the list of lockables.
-locks_bot_not_admin: Make sure I'm a group administrator and have permission to delete messages, then try again.
-locks_lock_no_type: You haven't specified a type to lock.
-lokcs_unlock_no_type: You haven't specified a type to unlock.
-locks_lock_bots_no_admin: I see a bot, and I've been told to stop them joining... but I'm not an admin!
-locks_lock_bots_kick: Only admins are allowed to add bots to this chat! Kicked!
-locks_list_empty: There are no current locks in *{}*.
+modname_locks: ലോക്കുകൾ
+locks_list_title: "ലോക്കുകൾ: "
+locks_lock_success: എല്ലാ അഡ്മിൻ അല്ലാത്തവർക്കുമായി `{}` സന്ദേശങ്ങൾ ലോക്കുചെയ്‌തു!
+locks_unlock_success: എല്ലാവർക്കുമുള്ള `{}` സന്ദേശങ്ങൾ അൺലോക്കുചെയ്‌തു!
+locks_type_invalid: നിങ്ങൾ എന്താണ് പൂട്ടാൻ ശ്രമിക്കുന്നത് ...? ലോക്ക് ചെയ്യാവുന്നവയുടെ പട്ടികയ്ക്കായി ശ്രമിക്കുക /locktypes.
+locks_bot_not_admin: ഞാൻ ഒരു ഗ്രൂപ്പ് അഡ്‌മിനിസ്‌ട്രേറ്ററാണെന്നും സന്ദേശങ്ങൾ ഇല്ലാതാക്കാൻ അനുമതിയുണ്ടെന്നും ഉറപ്പുവരുത്തുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.
+locks_lock_no_type: പൂട്ടാനുള്ള ഒരു തരം നിങ്ങൾ വ്യക്തമാക്കിയിട്ടില്ല.
+lokcs_unlock_no_type: അൺലോക്ക് ചെയ്യാൻ നിങ്ങൾ ഒരു തരം വ്യക്തമാക്കിയിട്ടില്ല.
+locks_lock_bots_no_admin: ഞാൻ ഒരു ബോട്ട് കാണുന്നു, അവർ ചേരുന്നത് നിർത്താൻ എന്നോട് പറഞ്ഞിട്ടുണ്ട് ... പക്ഷേ ഞാൻ ഒരു അഡ്മിൻ അല്ല!
+locks_lock_bots_kick: ഈ ചാറ്റിലേക്ക് ബോട്ടുകൾ ചേർക്കാൻ അഡ്മിൻമാരെ മാത്രമേ അനുവദിക്കൂ! ചവിട്ടി!
+locks_list_empty: <b>{}</b> ൽ നിലവിലെ ലോക്കുകളൊന്നുമില്ല.
 locks_list: |
-  These are the locks in *{}*:
+  ഇവയാണ് *{}* ലെ ലോക്കുകൾ:
    - `sticker` = *{}*
    - `audio` = *{}*
    - `voice` = *{}*
@@ -571,14 +571,14 @@ locks_list: |
    - `other` = *{}*
    - `all` = *{}*
 locks_help: |
-  Do stickers annoy you? or you want to avoid people sharing links? or pictures? You're in the right place!\n
-  The locks module allows you to lock away some common items in the telegram world; the bot will automatically delete them!\n
-  Available commands are:
-  - /lock <item(s)>: lock the usage of "item". Now, only admins will be able to use this type!
-  - /unlock <item(s)>: unlock "item". Everyone can use them again.
-  - /locks: list the lock status in the chat.
-  - /locktypes: gets a list of all things that can be locked. (have a look at this!)\n
-  eg: lock stickers with:
+  സ്റ്റിക്കറുകൾ നിങ്ങളെ ശല്യപ്പെടുത്തുന്നുണ്ടോ? അതോ ആളുകൾ ലിങ്കുകൾ പങ്കിടുന്നത് ഒഴിവാക്കണോ? അതോ ചിത്രങ്ങളോ? നിങ്ങൾ ശരിയായ സ്ഥലത്താണ്! \n
+  ലോക്ക് മൊഡ്യൂൾ ടെലിഗ്രാം ലോകത്തിലെ ചില സാധാരണ ഇനങ്ങൾ ലോക്ക് ചെയ്യാൻ നിങ്ങളെ അനുവദിക്കുന്നു; ബോട്ട് അവ യാന്ത്രികമായി ഇല്ലാതാക്കും! \n
+  ലഭ്യമായ കമാൻഡുകൾ ഇവയാണ്:
+  - /lock <ഇനങ്ങൾ>: "ഇനം" ഉപയോഗം ലോക്ക് ചെയ്യുക. ഇപ്പോൾ, അഡ്മിൻമാർക്ക് മാത്രമേ ഈ തരം ഉപയോഗിക്കാൻ കഴിയൂ!
+  - /unlock <ഇനങ്ങൾ>: "ഇനം" അൺലോക്ക് ചെയ്യുക. എല്ലാവർക്കും അവ വീണ്ടും ഉപയോഗിക്കാം.
+  - /locks: ചാറ്റിൽ ലോക്ക് സ്റ്റാറ്റസ് ലിസ്റ്റ് ചെയ്യുക.
+  - /locktypes: ലോക്ക് ചെയ്യാവുന്ന എല്ലാ കാര്യങ്ങളുടെയും ഒരു ലിസ്റ്റ് ലഭിക്കുന്നു. (ഇത് നോക്കൂ!)\n
+  eg: ഉപയോഗിച്ച് സ്റ്റിക്കറുകൾ പൂട്ടുക:
   /lock sticker
 #Log channel
 modname_log_channel: Log Channel
