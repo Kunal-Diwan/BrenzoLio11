@@ -430,16 +430,16 @@ cust_filters_help: |
   ഫിൽട്ടറുകൾ കേസ് സെൻസിറ്റീവ് ആണ്; നിങ്ങളുടെ ട്രിഗർ വാക്കുകൾ ആരെങ്കിലും പറയുമ്പോഴെല്ലാം, {} മറ്റെന്തെങ്കിലും മറുപടി നൽകും! വേണമെങ്കിൽ നിങ്ങളുടെ സ്വന്തം കമാൻഡുകൾ സൃഷ്ടിക്കാൻ ഉപയോഗിക്കാം.
   - /filters: ഈ ചാറ്റിൽ എല്ലാ സജീവ ഫിൽട്ടറുകളും പട്ടികപ്പെടുത്തുക.
   *Admin only:*
-  - /filter <keyword> <reply message>: Every time someone says "word", the bot will reply with "sentence". For multiple word filters, quote the first word.
-  - /stopall: Stop all filters, must be chat owner to do so. Only use this when you know what you're doing.
-  - /stop <filter keyword>: stop that filter.\n
-  An example of how to set a filter would be via:
-  `/filter hello Hello there! How are you?`
-  A multiword filter could be set via:
-  `/filter "hello friend" Hello back! Long time no see!`
-  If you want to save an image, gif, or sticker, or any other data, do the following:
-  `/filter word`, while replying to a sticker or whatever data you'd like. Now, every time someone mentions "word", that sticker will be sent as a reply.
-  Now, anyone saying "hello" will be replied to with "Hello there! How are you?".
+  - /filter <കീവേഡ്> <സന്ദേശം>: ഓരോ തവണയും ആരെങ്കിലും "വാക്ക്" പറയുമ്പോൾ, ബോട്ട് "വാചകം" എന്ന് മറുപടി നൽകും. ഒന്നിലധികം വേഡ് ഫിൽട്ടറുകൾക്ക്, ആദ്യ വാക്ക് ഉദ്ധരിക്കുക.
+  - /stopall: എല്ലാ ഫിൽട്ടറുകളും നിർത്തുക, അങ്ങനെ ചെയ്യുന്നതിന് ചാറ്റ് ഉടമ ആയിരിക്കണം. നിങ്ങൾ എന്താണ് ചെയ്യുന്നതെന്ന് അറിയുമ്പോൾ മാത്രം ഇത് ഉപയോഗിക്കുക.
+  - /stop <കീവേഡ്>: ആ ഫിൽട്ടർ നിർത്തുക.\n
+  ഒരു ഫിൽട്ടർ എങ്ങനെ ക്രമീകരിക്കാം എന്നതിന്റെ ഒരു ഉദാഹരണം ഇനിപ്പറയുന്നതായിരിക്കും:
+  `/filter ഹലോ ഹലോ അവിടെ! സുഖമാണോ?`
+  ഒരു മൾട്ടിവേഡ് ഫിൽട്ടർ ഇതിലൂടെ സജ്ജീകരിക്കാം:
+  `/filter "ഹലോ സുഹൃത്തേ" ഹലോ തിരികെ! വളരെക്കാലമായി കാണുന്നില്ല!`
+  നിങ്ങൾക്ക് ഒരു ചിത്രം, gif, അല്ലെങ്കിൽ സ്റ്റിക്കർ അല്ലെങ്കിൽ മറ്റേതെങ്കിലും ഡാറ്റ സംരക്ഷിക്കാൻ താൽപ്പര്യമുണ്ടെങ്കിൽ, ഇനിപ്പറയുന്നവ ചെയ്യുക:
+  `/filter വാക്ക്`, ഒരു സ്റ്റിക്കറിന് മറുപടി നൽകുമ്പോൾ അല്ലെങ്കിൽ നിങ്ങൾ ആഗ്രഹിക്കുന്ന ഏത് ഡാറ്റയും. ഇപ്പോൾ, ഓരോ തവണയും ആരെങ്കിലും "വാക്ക്" പരാമർശിക്കുമ്പോൾ, ആ സ്റ്റിക്കർ ഒരു മറുപടിയായി അയയ്ക്കും.
+  ഇപ്പോൾ, "ഹലോ" എന്ന് പറയുന്ന ആർക്കും "ഹലോ അവിടെ! സുഖമാണോ?" എന്ന് മറുപടി നൽകും.
 #Disable
 modname_disable: Disabling
 disable_success: Disabled the use of `{}`
