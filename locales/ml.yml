@@ -606,79 +606,79 @@ log_channel_help: |
   - /setlog: ലോഗ് ചാനൽ സജ്ജമാക്കുക.
   - /unsetlog: ലോഗ് ചാനൽ അൺസെറ്റ് ചെയ്യുക.
 #AntiArabic
-modname_antiarabic: Anti Arabic
-antiarabic_enabled: "Turned on AntiArabic! Messages sent by any non-admin which contains arabic text will be deleted."
-antiarabic_disabled: "Turned off AntiArabic! Messages containing arabic text won't be deleted."
-antiarabic_setting: "This chat's current setting is: `{}`"
+modname_antiarabic: ആന്റി അറബിക്
+antiarabic_enabled: "ആന്റി അറബിക് ഓണാക്കി! അറബിക് ടെക്സ്റ്റ് അടങ്ങിയ ഏതെങ്കിലും അഡ്മിൻ അല്ലാത്തയാൾ അയച്ച സന്ദേശങ്ങൾ ഇല്ലാതാക്കപ്പെടും."
+antiarabic_disabled: "ആന്റി അറബിക് ഓഫാക്കി! അറബിക് ടെക്സ്റ്റ് അടങ്ങിയ സന്ദേശങ്ങൾ ഇല്ലാതാക്കില്ല."
+antiarabic_setting: "ഈ ചാറ്റിന്റെ നിലവിലെ ക്രമീകരണം: `{}`"
 antiarabic_help: |
-  AntiArabicScript module is used to delete messages containing characters from one of the following automatically:
+  ഇനിപ്പറയുന്നവയിൽ നിന്ന് സ്വയമേവ പ്രതീകങ്ങൾ അടങ്ങിയ സന്ദേശങ്ങൾ ഇല്ലാതാക്കാൻ ആന്റി അറബിക് മൊഡ്യൂൾ ഉപയോഗിക്കുന്നു:
 
-  • Arabic
-  • Arabic Supplement
-  • Arabic Extended-A
-  • Arabic Presentation Forms-A
-  • Arabic Presentation Forms-B
-  • Rumi Numeral Symbols
-  • Arabic Mathematical Alphabetic Symbols
+  • അറബിക്
+  • അറബിക് സപ്ലിമെന്റ്
+  • അറബിക് എക്സ്റ്റെൻഡഡ്-എ
+  • അറബിക് അവതരണ ഫോമുകൾ-എ
+  • അറബിക് അവതരണ ഫോമുകൾ-ബി
+  • റൂമി സംഖ്യാ ചിഹ്നങ്ങൾ
+  • അറബിക് ഗണിതശാസ്ത്ര അക്ഷര ചിഹ്നങ്ങൾ
 
-  *NOTE:* AntiArabicScript module doesn't affect messages sent by admins.
+  * ശ്രദ്ധിക്കുക:* ആന്റി അറബിക് മൊഡ്യൂൾ അഡ്മിനുകൾ അയച്ച സന്ദേശങ്ങളെ ബാധിക്കില്ല.
 
-  *Admin only:*
-   - /antiarabic <on/off>: turn antiarabic module on/off ( off by default )
-   - /antiarabic: get status of AntiArabicScript module in chat
+  *അഡ്മിൻ മാത്രം:*
+   - /antiarabic <on/off>: ആന്റിഅറാബിക് മൊഡ്യൂൾ on/off (ഡിഫോൾട്ടായി ഓഫ് ചെയ്യുക)
+   - /antiarabic: ചാറ്റിൽ ആന്റി അറബിക് മൊഡ്യൂളിന്റെ സ്റ്റാറ്റസ് നേടുക
 #Jokes and etc.
-modname_jokes: Jokes
-jokes_not_doing_that: I'm not doing that!
+modname_jokes: തമാശകൾ
+jokes_not_doing_that: ഞാൻ അത് ചെയ്യുന്നില്ല!
 jokes_runs_list:
-  - "Where do you think you're going?"
-  - "Huh? what? did they get away?"
-  - "ZZzzZZzz... Huh? what? oh, just them again, nevermind."
-  - "Get back here!"
-  - "Not so fast..."
-  - "Look out for the wall!"
-  - "Don't leave me alone with them!!"
-  - "You run, you die."
-  - "Jokes on you, I'm everywhere"
-  - "You're gonna regret that..."
-  - "You could also try /kickme, I hear that's fun."
-  - "Go bother someone else, no-one here cares."
-  - "You can run, but you can't hide."
-  - "Is that all you've got?"
-  - "I'm behind you..."
-  - "You've got company!"
-  - "We can do this the easy way, or the hard way."
-  - "You just don't get it, do you?"
-  - "Yeah, you better run!"
-  - "Please, remind me how much I care?"
-  - "I'd run faster if I were you."
-  - "That's definitely the droid we're looking for."
-  - "May the odds be ever in your favour."
-  - "Famous last words."
-  - "And they disappeared forever, never to be seen again."
-  - "'Oh, look at me! I'm so cool, I can run from a bot!' - this person"
-  - "Yeah yeah, just tap /kickme already."
-  - "Here, take this ring and head to Mordor while you're at it."
-  - "Legend has it, they're still running..."
-  - "Unlike Harry Potter, your parents can't protect you from me."
-  - "Fear leads to anger. Anger leads to hate. Hate leads to suffering. If you keep running in fear, you might "
-  - "be the next Vader."
-  - "Multiple calculations later, I have decided my interest in your shenanigans is exactly 0."
-  - "Legend has it, they're still running."
-  - "Keep it up, not sure we want you here anyway."
-  - "You're a wiza- Oh. Wait. You're not Harry, keep moving."
-  - "NO RUNNING IN THE HALLWAYS!"
-  - "Hasta la vista, baby."
-  - "Who let the dogs out?"
-  - "It's funny, because no one cares."
-  - "Ah, what a waste. I liked that one."
-  - "Frankly, my dear, I don't give a damn."
-  - "My milkshake brings all the boys to yard... So run faster!"
-  - "You can't HANDLE the truth!"
-  - "A long time ago, in a galaxy far far away... Someone would've cared about that. Not anymore though."
-  - "Hey, look at them! They're running from the inevitable banhammer... Cute."
-  - "Han shot first. So will I."
-  - "What are you running after, a white rabbit?"
-  - "As The Doctor would say... RUN!"
+  - "നിങ്ങൾ എങ്ങോട്ടാണ് പോകുന്നതെന്ന് നിങ്ങൾ കരുതുന്നു?"
+  - "ഹാ? എന്താ? അവർ രക്ഷപെട്ടോ?"
+  - "ZZzzZZzz ... ഹു? എന്ത്? ഓ, വീണ്ടും അവർ മാത്രം, സാരമില്ല."
+  - "ഇവിടെ തിരിച്ചെത്തുക!"
+  - "അത്ര വേഗത്തിലല്ല ..."
+  - "മതിൽ നോക്കുക!"
+  - "എന്നെ അവരോടൊപ്പം വെറുതെ വിടരുത് !!"
+  - "നിങ്ങൾ ഓടുക, നിങ്ങൾ മരിക്കുക."
+  - "നിങ്ങളോട് തമാശ പറയുക, ഞാൻ എല്ലായിടത്തും ഉണ്ട്"
+  - "നിങ്ങൾ അതിൽ ഖേദിക്കുന്നു ..."
+  - "നിങ്ങൾക്കും ശ്രമിക്കാം /കിക്ക്മെ, അത് രസകരമാണെന്ന് ഞാൻ കേൾക്കുന്നു."
+  - "മറ്റൊരാളെ ശല്യപ്പെടുത്താൻ പോകൂ, ഇവിടെ ആരും ശ്രദ്ധിക്കുന്നില്ല."
+  - "നിങ്ങൾക്ക് ഓടാൻ കഴിയും, പക്ഷേ നിങ്ങൾക്ക് ഒളിക്കാൻ കഴിയില്ല."
+  - "നിങ്ങൾക്ക് ഇത്രയേ ഉള്ളോ?"
+  - "ഞാൻ നിങ്ങളുടെ പിന്നിലുണ്ട് ..."
+  - "നിങ്ങൾക്ക് കമ്പനി ഉണ്ട്!"
+  - "നമുക്ക് ഇത് എളുപ്പമുള്ള വഴിയോ കഠിനമായ വഴിയോ ചെയ്യാം."
+  - "നിങ്ങൾക്ക് അത് മനസ്സിലായില്ല, അല്ലേ?"
+  - "അതെ, നിങ്ങൾ ഓടുന്നതാണ് നല്ലത്!"
+  - "ദയവായി, ഞാൻ എത്രമാത്രം ശ്രദ്ധിക്കുന്നുവെന്ന് എന്നെ ഓർമ്മിപ്പിക്കൂ?"
+  - "ഞാൻ നിങ്ങളാണെങ്കിൽ ഞാൻ വേഗത്തിൽ ഓടും."
+  - "തീർച്ചയായും ഞങ്ങൾ തിരയുന്നത് ഡ്രോയിഡാണ്."
+  - "സാധ്യതകൾ എപ്പോഴും നിങ്ങൾക്ക് അനുകൂലമായിരിക്കട്ടെ."
+  - "പ്രശസ്തമായ അവസാന വാക്കുകൾ."
+  - "അവ എന്നെന്നേക്കുമായി അപ്രത്യക്ഷമായി, ഇനി ഒരിക്കലും കാണാനാകില്ല."
+  - "ഓ, എന്നെ നോക്കൂ! ഞാൻ വളരെ രസകരമാണ്, എനിക്ക് ഒരു ബോട്ടിൽ നിന്ന് ഓടാൻ കഴിയും! ' - ഇയാൾ"
+  - അതെ, അതെ, ഇതിനകം ടാപ്പുചെയ്യുക /കിക്ക്മെ ചെയ്യുക. "
+  - "ഇവിടെ, ഈ മോതിരം എടുത്ത് നിങ്ങൾ മൊർഡോറിലേക്ക് പോകുമ്പോൾ."
+  - "ഐതിഹ്യമുണ്ട്, അവർ ഇപ്പോഴും ഓടുകയാണ് ..."
+  - "ഹാരി പോട്ടറിൽ നിന്ന് വ്യത്യസ്തമായി, നിങ്ങളുടെ മാതാപിതാക്കൾക്ക് എന്നിൽ നിന്ന് നിങ്ങളെ സംരക്ഷിക്കാൻ കഴിയില്ല."
+  - "ഭയം കോപത്തിലേക്ക് നയിക്കുന്നു. കോപം വിദ്വേഷത്തിലേക്ക് നയിക്കുന്നു. വിദ്വേഷം കഷ്ടപ്പാടിലേക്ക് നയിക്കുന്നു. നിങ്ങൾ ഭയത്തോടെ ഓടിക്കൊണ്ടിരിക്കുകയാണെങ്കിൽ, നിങ്ങൾക്ക് കഴിയും"
+  - "അടുത്ത വാഡർ ആകുക."
+  - "ഒന്നിലധികം കണക്കുകൂട്ടലുകൾക്ക് ശേഷം, നിങ്ങളുടെ ഷേണിഗാനുകളിലുള്ള എന്റെ താൽപര്യം കൃത്യമായി 0. ആണെന്ന് ഞാൻ തീരുമാനിച്ചു."
+  - "ഐതിഹ്യമുണ്ട്, അവർ ഇപ്പോഴും ഓടിക്കൊണ്ടിരിക്കുന്നു."
+  - "ഇത് തുടരുക, എന്തായാലും ഞങ്ങൾ നിങ്ങളെ ഇവിടെ ആഗ്രഹിക്കുന്നുവെന്ന് ഉറപ്പില്ല."
+  - "നിങ്ങൾ ഒരു വിസയാണ്- ഓ. കാത്തിരിക്കൂ. നിങ്ങൾ ഹരിയല്ല, നീങ്ങിക്കൊണ്ടിരിക്കുക."
+  - "ഹൽവേകളിൽ ഓടുന്നില്ല!"
+  - "ഹസ്ത ലാ വിസ്റ്റ, ബേബി."
+  - "ആരാണ് നായ്ക്കളെ പുറത്താക്കിയത്?"
+  - "ഇത് രസകരമാണ്, കാരണം ആരും ശ്രദ്ധിക്കുന്നില്ല."
+  - "ആഹാ, എന്തൊരു പാഴ്ച്ചെലവ്. എനിക്ക് അത് ഇഷ്ടപ്പെട്ടു."
+  "തുറന്നുപറയുക, എന്റെ പ്രിയേ, ഞാൻ ഒന്നും നൽകുന്നില്ല."
+  - "എന്റെ മിൽക്ക് ഷേക്ക് എല്ലാ ആൺകുട്ടികളെയും മുറ്റത്തേക്ക് കൊണ്ടുവരുന്നു ... അതിനാൽ വേഗത്തിൽ ഓടുക!"
+  - "നിങ്ങൾക്ക് സത്യം കൈകാര്യം ചെയ്യാൻ കഴിയില്ല!"
+  - "വളരെക്കാലം മുമ്പ്, വളരെ ദൂരെയുള്ള ഒരു താരാപഥത്തിൽ ... ആരെങ്കിലും അതിനെക്കുറിച്ച് ചിന്തിക്കുമായിരുന്നു. ഇനിയില്ലെങ്കിലും."
+  - "ഹേയ്, അവരെ നോക്കൂ! അവർ അനിവാര്യമായ ബാൻഹാമറിൽ നിന്ന് ഓടുകയാണ് ... മനോഹരം
+  - "ഹാൻ ആദ്യം വെടിവെച്ചു. ഞാനും ചെയ്യും."
+  - "നിങ്ങൾ എന്താണ് പിന്തുടരുന്നത്, ഒരു വെളുത്ത മുയൽ?"
+  - "ഡോക്ടർ പറയും പോലെ ... റൺ!"
 jokes_slaps_templates_list:
   - "{user1} {hits} {user2} with a {item}."
   - "{user1} {hits} {user2} in the face with a {item}."
