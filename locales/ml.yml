@@ -441,24 +441,24 @@ cust_filters_help: |
   `/filter വാക്ക്`, ഒരു സ്റ്റിക്കറിന് മറുപടി നൽകുമ്പോൾ അല്ലെങ്കിൽ നിങ്ങൾ ആഗ്രഹിക്കുന്ന ഏത് ഡാറ്റയും. ഇപ്പോൾ, ഓരോ തവണയും ആരെങ്കിലും "വാക്ക്" പരാമർശിക്കുമ്പോൾ, ആ സ്റ്റിക്കർ ഒരു മറുപടിയായി അയയ്ക്കും.
   ഇപ്പോൾ, "ഹലോ" എന്ന് പറയുന്ന ആർക്കും "ഹലോ അവിടെ! സുഖമാണോ?" എന്ന് മറുപടി നൽകും.
 #Disable
-modname_disable: Disabling
-disable_success: Disabled the use of `{}`
-disable_err_undisableable: That command can't be disabled
-disable_err_no_cmd: Pass a command as an argument.
-disable_enable_success: Enabled the use of `{}`
-disable_already_enabled: That command is already enabled.
-disable_able_commands: The following commands are toggleable:\n{}
-disable_able_commands_none: No commands can be disabled.
-disable_chatsettings_none_disabled: No commands are disabled!
-disable_chatsettings_list_disabled: The following commands are currently disabled for non-admins:\n{}
+modname_disable: അപ്രാപ്തമാക്കുക
+disable_success: <code>{}</code> ഉപയോഗം പ്രവർത്തനരഹിതമാക്കി
+disable_err_undisableable: ആ കമാൻഡ് പ്രവർത്തനരഹിതമാക്കാൻ കഴിയില്ല
+disable_err_no_cmd: ഒരു വാദം പോലെ ഒരു കമാൻഡ് നൽകുക.
+disable_enable_success: <code>{}</code> ഉപയോഗം പ്രാപ്തമാക്കി
+disable_already_enabled: ആ കമാൻഡ് ഇതിനകം പ്രവർത്തനക്ഷമമാക്കിയിരിക്കുന്നു.
+disable_able_commands: ഇനിപ്പറയുന്ന കമാൻഡുകൾ ടോഗിൾ ചെയ്യാവുന്നതാണ്: \n{}
+disable_able_commands_none: ഒരു കമാൻഡും പ്രവർത്തനരഹിതമാക്കാൻ കഴിയില്ല.
+disable_chatsettings_none_disabled: കമാൻഡുകളൊന്നും പ്രവർത്തനരഹിതമാക്കിയിട്ടില്ല!
+disable_chatsettings_list_disabled: അഡ്മിൻ അല്ലാത്തവർക്കായി ഇനിപ്പറയുന്ന കമാൻഡുകൾ നിലവിൽ പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു: \ n{}
 disable_help: |
-  Not everyone wants every feature that the bot offers. Some commands are best when left unused to avoid spam and abuse.\n
-  This allows you to disable some commonly used commands, so non-admins can't use them.
-  It'll also allow you to autodelete them, stopping people from bluetexting.\n
-  - /cmds: check the current status of disabled commands\n
-  *Admin only:*
-  - /enable <cmd name>: Enable a command
-  - /disable <cmd name>: Disable a command
+  ബോട്ട് വാഗ്ദാനം ചെയ്യുന്ന എല്ലാ സവിശേഷതകളും എല്ലാവർക്കും ആവശ്യമില്ല. സ്പാമും ദുരുപയോഗവും ഒഴിവാക്കാൻ ചില കമാൻഡുകൾ ഉപയോഗിക്കാതിരിക്കുന്നതാണ് നല്ലത്. \n
+  സാധാരണയായി ഉപയോഗിക്കുന്ന ചില കമാൻഡുകൾ പ്രവർത്തനരഹിതമാക്കാൻ ഇത് നിങ്ങളെ അനുവദിക്കുന്നു, അതിനാൽ അഡ്മിനിസ്ട്രേറ്റർ അല്ലാത്തവർക്ക് അവ ഉപയോഗിക്കാൻ കഴിയില്ല.
+  ബ്ലൂടെക്സ്റ്റിംഗിൽ നിന്ന് ആളുകളെ തടഞ്ഞ് അവയെ ഓട്ടോഡെലിറ്റ് ചെയ്യാനും ഇത് നിങ്ങളെ അനുവദിക്കും.\n
+  - /cmds: അപ്രാപ്തമാക്കിയ കമാൻഡുകളുടെ നിലവിലെ അവസ്ഥ പരിശോധിക്കുക\n
+  *അഡ്മിൻ മാത്രം:*
+  - /enable <cmd name>: ഒരു കമാൻഡ് പ്രവർത്തനക്ഷമമാക്കുക
+  - /disable <cmd name>: ഒരു കമാൻഡ് പ്രവർത്തനരഹിതമാക്കുക
 #Feds
 modname_feds: Federations
 feds_create_fail: Federation creation failed! Ask in @BrenzoLioGroup for help.
