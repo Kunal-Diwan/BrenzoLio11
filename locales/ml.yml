@@ -463,7 +463,7 @@ disable_help: |
 modname_feds: ഫെഡറേഷനുകൾ
 feds_create_fail: ഫെഡറേഷൻ സൃഷ്ടിക്കൽ പരാജയപ്പെട്ടു! സഹായത്തിനായി @BrenzoLioGroup - ൽ ചോദിക്കുക.
 feds_create_success: "*നിങ്ങൾ വിജയകരമായി ഒരു പുതിയ ഫെഡറേഷൻ സൃഷ്ടിച്ചു!*\nപേര്: `{}`\nഐഡി: `{}`\n\nഫെഡറേഷനിൽ ചേർക്കാൻ താഴെ പറയുന്ന കമാൻഡ് ഗ്രൂപ്പുകളിൽ പ്രവർത്തിപ്പിക്കുക: \n`/joinfed {}`"
-feds_create_success_logger: "Federation <b>{}</b> has been created with ID: <pre>{}</pre>"
+feds_create_success_logger: "ഐഡി ഉപയോഗിച്ച് ഫെഡറേഷൻ <b>{}</b> സൃഷ്ടിച്ചു: <pre>{}</pre>"
 feds_err_no_args: ദയവായി ഫെഡറേഷന്റെ പേര് എഴുതുക.
 feds_delete_not_found: ഈ ഫെഡറേഷൻ കണ്ടെത്തിയില്ല!
 feds_owner_only: ഫെഡറേഷൻ ഉടമകൾക്ക് മാത്രമേ ഇത് ചെയ്യാൻ കഴിയൂ!
@@ -486,41 +486,41 @@ feds_demote_target_not_admin: ഫെഡറേഷൻ അഡ്മിൻ അല്
 feds_demote_success: ഇവിടെ നിന്ന് പോകൂ!
 feds_demote_failed: തരംതാഴ്ത്തൽ പരാജയപ്പെട്ടു!
 feds_info: |
-  <b>ℹ️ Federation Information:</b>
-  FedID: <code>{}</code>
-  Name: {}
-  Creator: {}
-  All Admins: <code>{}</code>
-  Total banned users: <code>{}</code>
-  Number of groups in this federation: <code>{}</code>
+  <b>ℹ️ ഫെഡറേഷൻ വിവരങ്ങൾ:</b>
+  ഫെഡ് ഐഡി: <code>{}</code>
+  പേര്: {}
+  സ്രഷ്ടാവ്: {}
+  എല്ലാ അഡ്മിൻമാരും: <code>{}</code>
+  മൊത്തം നിരോധിച്ച ഉപയോക്താക്കൾ: <code>{}</code>
+  ഈ ഫെഡറേഷനിലെ ഗ്രൂപ്പുകളുടെ എണ്ണം: <code>{}</code>
 feds_admins: |
-  <b>Admins in federation '{}':</b>
+  <b>ഫെഡറേഷനിലെ അഡ്മിനുകൾ '{}':</b>
 feds_help: |
-  Ah, group management. Everything is fun, until the spammer starts entering your group, and you have to block it. Then you need to start banning more, and more, and it hurts.
-  But then you have many groups, and you don't want this spammer to be in one of your groups - how can you deal with it? Do you have to manually block it, in all your groups?
+  ഓ, ഗ്രൂപ്പ് മാനേജ്മെന്റ്. സ്പാമർ നിങ്ങളുടെ ഗ്രൂപ്പിൽ പ്രവേശിക്കാൻ തുടങ്ങുന്നതുവരെ എല്ലാം രസകരമാണ്, നിങ്ങൾ അത് തടയണം. അപ്പോൾ നിങ്ങൾ കൂടുതൽ കൂടുതൽ നിരോധിക്കാൻ തുടങ്ങണം, അത് വേദനിപ്പിക്കുന്നു.
+  എന്നാൽ നിങ്ങൾക്ക് നിരവധി ഗ്രൂപ്പുകളുണ്ട്, ഈ സ്പാമർ നിങ്ങളുടെ ഗ്രൂപ്പുകളിലൊന്നിൽ ആയിരിക്കണമെന്ന് നിങ്ങൾ ആഗ്രഹിക്കുന്നില്ല - നിങ്ങൾക്ക് ഇത് എങ്ങനെ കൈകാര്യം ചെയ്യാൻ കഴിയും? നിങ്ങളുടെ എല്ലാ ഗ്രൂപ്പുകളിലും നിങ്ങൾ ഇത് സ്വമേധയാ തടയേണ്ടതുണ്ടോ?
 
-  No longer! With Federation, you can make a ban in one chat overlap with all other chats.
-  You can even designate admin federations, so your trusted admin can ban all the chats you want to protect.
+  മേലിൽ ഇല്ല! ഫെഡറേഷനിൽ, മറ്റെല്ലാ ചാറ്റുകളുമായും ഒരു ചാറ്റ് ഓവർലാപ്പിൽ നിങ്ങൾക്ക് ഒരു നിരോധനം ഉണ്ടാക്കാം.
+  നിങ്ങൾക്ക് അഡ്മിൻ ഫെഡറേഷനുകളെ നിയമിക്കാനും കഴിയും, അതിനാൽ നിങ്ങളുടെ വിശ്വസനീയമായ അഡ്മിൻ നിങ്ങൾക്ക് സംരക്ഷിക്കാൻ ആഗ്രഹിക്കുന്ന എല്ലാ ചാറ്റുകളും നിരോധിക്കാൻ കഴിയും.
 
-  Still the experimental stage, creating a Federation can only be done by my maker
+  ഇപ്പോഴും പരീക്ഷണാത്മക ഘട്ടത്തിൽ, ഒരു ഫെഡറേഷൻ സൃഷ്ടിക്കുന്നത് എന്റെ നിർമ്മാതാവിന് മാത്രമേ ചെയ്യാൻ കഴിയൂ
 
   Command:
-  - /newfed <fedname>: create a new Federation with the name given. Users are only allowed to have one Federation. This method can also be used to rename the Federation. (max. 64 characters)
-  - /delfed: delete your Federation, and any information related to it. Will not cancel blocked users.
-  - /fedinfo <FedID>: information about the specified Federation.
-  - /joinfed <FedID>: join the current chat to the Federation. Only chat owners can do this. Every chat can only be in one Federation.
-  - /leavefed <FedID>: leave the Federation given. Only chat owners can do this.
-  - /fpromote <user>: promote Users to give fed admin. Fed owner only.
-  - /fdemote <user>: drops the User from the admin Federation to a normal User. Fed owner only.
-  - /fban <user>: ban users from all federations where this chat takes place, and executors have control over.
-  - /unfban <user>: cancel User from all federations where this chat takes place, and that the executor has control over.
-  - /setfrules: Arrange Federation rules.
-  - /frules: See Federation regulations.
-  - /chatfed: See the Federation in the current chat.
-  - /fedadmins: Show Federation admin.
-  - /fbanlist: Displays all users who are victimized at the Federation at this time.
-  - /importfbans: Reply to the Federation backup message file to import the banned list to the Federation now.
-# - /fedchats: Get all the chats that are connected in the Federation.
+  - /newfed <ഫെഡ്നാമം>: നൽകിയിരിക്കുന്ന പേര് ഉപയോഗിച്ച് ഒരു പുതിയ ഫെഡറേഷൻ സൃഷ്ടിക്കുക. ഉപയോക്താക്കൾക്ക് ഒരു ഫെഡറേഷൻ മാത്രമേ അനുവദിക്കൂ. ഫെഡറേഷന്റെ പേരുമാറ്റാനും ഈ രീതി ഉപയോഗിക്കാം. (പരമാവധി 64 പ്രതീകങ്ങൾ)
+  - /delfed: നിങ്ങളുടെ ഫെഡറേഷനും അതുമായി ബന്ധപ്പെട്ട ഏതെങ്കിലും വിവരങ്ങളും ഇല്ലാതാക്കുക. തടഞ്ഞ ഉപയോക്താക്കളെ റദ്ദാക്കില്ല.
+  - /fedinfo <ഐഡി>: നിർദ്ദിഷ്ട ഫെഡറേഷനെക്കുറിച്ചുള്ള വിവരങ്ങൾ.
+  - /joinfed <ഐഡി>: ഫെഡറേഷനിലേക്കുള്ള നിലവിലെ ചാറ്റിൽ ചേരുക. ചാറ്റ് ഉടമകൾക്ക് മാത്രമേ ഇത് ചെയ്യാൻ കഴിയൂ. ഓരോ ചാറ്റും ഒരു ഫെഡറേഷനിൽ മാത്രമായിരിക്കും.
+  - /leavefed <ഐഡി>: നൽകിയ ഫെഡറേഷൻ വിടുക. ചാറ്റ് ഉടമകൾക്ക് മാത്രമേ ഇത് ചെയ്യാൻ കഴിയൂ.
+  - /fpromote <ഉപയോക്താവ്>: ഫീഡ് അഡ്മിൻ നൽകാൻ ഉപയോക്താക്കളെ പ്രോത്സാഹിപ്പിക്കുക. ഫെഡ് ഉടമ മാത്രം.
+  - /fdemote <ഉപയോക്താവ്>: അഡ്മിൻ ഫെഡറേഷനിൽ നിന്ന് ഒരു സാധാരണ ഉപയോക്താവിലേക്ക് ഉപയോക്താവിനെ ഉപേക്ഷിക്കുന്നു. ഫെഡ് ഉടമ മാത്രം.
+  - /fban <ഉപയോക്താവ്>: ഈ ചാറ്റ് നടക്കുന്ന എല്ലാ ഫെഡറേഷനുകളിൽ നിന്നും ഉപയോക്താക്കളെ നിരോധിക്കുക, നിർവ്വഹണക്കാർക്ക് നിയന്ത്രണമുണ്ട്.
+  - /unfban <ഉപയോക്താവ്>: ഈ ചാറ്റ് നടക്കുന്ന എല്ലാ ഫെഡറേഷനുകളിൽ നിന്നും ഉപയോക്താവിനെ റദ്ദാക്കുക, കൂടാതെ എക്സിക്യൂട്ടീവിന് നിയന്ത്രണം ഉണ്ട്.
+  - /setfrules: ഫെഡറേഷൻ നിയമങ്ങൾ ക്രമീകരിക്കുക.
+  - /frules: ഫെഡറേഷൻ നിയന്ത്രണങ്ങൾ കാണുക.
+  - /chatfed: നിലവിലെ ചാറ്റിൽ ഫെഡറേഷൻ കാണുക.
+  - /fedadmins: ഫെഡറേഷൻ അഡ്മിനെ കാണിക്കുക.
+  - /fbanlist: ഈ സമയത്ത് ഫെഡറേഷനിൽ ഇരകളാകുന്ന എല്ലാ ഉപയോക്താക്കളെയും പ്രദർശിപ്പിക്കുന്നു.
+  - /importfbans: നിരോധിത പട്ടിക ഇപ്പോൾ ഫെഡറേഷനിലേക്ക് ഇറക്കുമതി ചെയ്യുന്നതിന് ഫെഡറേഷൻ ബാക്കപ്പ് സന്ദേശ ഫയലിന് മറുപടി നൽകുക.
+# - /fedchats: ഫെഡറേഷനിൽ ബന്ധിപ്പിച്ചിട്ടുള്ള എല്ലാ ചാറ്റുകളും നേടുക.
 #TODO: To be continued
 #Keyboard
 keyboard_disconnect: Disconnect from a chat
