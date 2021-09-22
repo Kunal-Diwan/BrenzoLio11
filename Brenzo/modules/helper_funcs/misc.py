@@ -1,7 +1,7 @@
 from functools import wraps
 from typing import List, Dict
 
-from telegram import MAX_MESSAGE_LENGTH, InlineKeyboardButton, Bot, ParseMode, Update
+from telegram import MAX_MESSAGE_LENGTH, InlineKeyboardButton, InlineQueryResultArticle, Bot, ParseMode, Update
 from telegram.error import TelegramError
 
 from Brenzo import LOAD, NO_LOAD, OWNER_ID
@@ -96,6 +96,28 @@ def paginate_modules(chat_id,
     #     ]]
 
     return pairs
+
+
+def article(
+    title: str = "",
+    description: str = "",
+    message_text: str = "",
+    thumb_url: str = None,
+    reply_markup: InlineKeyboardMarkup = None,
+    disable_web_page_preview: bool = False,
+) -> InlineQueryResultArticle:
+
+    return InlineQueryResultArticle(
+        id=uuid4(),
+        title=title,
+        description=description,
+        thumb_url=thumb_url,
+        input_message_content=InputTextMessageContent(
+            message_text=message_text,
+            disable_web_page_preview=disable_web_page_preview,
+        ),
+        reply_markup=reply_markup,
+    )
 
 
 def send_to_list(bot: Bot,
