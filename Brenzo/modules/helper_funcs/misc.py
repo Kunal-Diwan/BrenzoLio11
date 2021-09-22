@@ -1,7 +1,7 @@
 from functools import wraps
 from typing import List, Dict
 
-from telegram import MAX_MESSAGE_LENGTH, InlineKeyboardButton, InlineQueryResultArticle, Bot, ParseMode, Update
+from telegram import MAX_MESSAGE_LENGTH, InlineKeyboardButton, InlineKeyboardMarkup,, InlineQueryResultArticle, Bot, ParseMode, Update
 from telegram.error import TelegramError
 
 from Brenzo import LOAD, NO_LOAD, OWNER_ID
