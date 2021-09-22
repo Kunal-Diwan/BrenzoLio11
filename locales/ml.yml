@@ -737,29 +737,25 @@ jokes_help: |
   - /slap: ഒരു ഉപയോക്താവിനെ അടിക്കുക, അല്ലെങ്കിൽ മറുപടി ഇല്ലെങ്കിൽ അടിക്കുക.
 
 #Misc
-modname_misc: Misc
-misc_get_id_1: The original sender, {}, has an ID of `{}`.\nThe forwarder, {}, has an ID of `{}`.
-misc_get_id_2: "{}'s id is `{}`."
-misc_info_extract_error: "I can't extract a user from this."
-misc_id_1: Your id is `{}`.
-misc_id_2: This group's id is `{}`.
-misc_info_1: "<b>User info</b>:"
-misc_info_id: "\nID: <code>{}</code>"
-misc_info_first: "\nFirst Name: {}"
-misc_info_name: "\nLast Name: {}"
-misc_info_username: "\nUsername: @{}"
-misc_info_user_link: "\nUser link: {}\n"
-misc_info_is_owner: "\nThis person is my owner! They have total power over me."
-misc_info_is_original_owner: "\nThis person is my creator, beginning of me, though he abandoned my original, sister Marie, already :("
-misc_info_is_sudo: "\nThis person is one of my sudo users!"
-misc_info_is_support: "\nThis person is one of my support users!"
-misc_info_is_whitelisted: "\nThis person is one of my whitelisted user, one rarely gets this role, you can't ban or kick him."
-misc_info_swban1: "\n\n<b>This person is banned in SpamWatch!</b>"
-misc_info_swban2: "\nReason: <pre>{}</pre>"
-misc_info_swban3: "\nAppeal at @SpamWatchSupport"
-misc_gdpr: Deleting identifiable data...
+modname_misc: അധിക
+misc_get_id_1: യഥാർത്ഥ അയച്ചയാൾക്ക്, `{}` എന്നതിന് `{}`. എന്ന ഐഡി ഉണ്ട്. \n ഫോർവേഡർ, `{}`, `{}` എന്ന ഐഡി ഉണ്ട്.
+misc_get_id_2: "{} ന്റെ ഐഡി ആണ് `{}`."
+misc_id_1: നിങ്ങളുടെ ഐഡി `{}` ആണ്.
+misc_id_2: ഈ ഗ്രൂപ്പിന്റെ ഐഡി `{}` ആണ്.
+misc_info_1: "<b>ഉപയോക്തൃ വിവരങ്ങൾ</b>:"
+misc_info_id: "\nഐഡി: <code>{}</code>"
+misc_info_first: "\nപേരിന്റെ ആദ്യഭാഗം: {}"
+misc_info_name: "\nപേരിന്റെ അവസാന ഭാഗം: {}"
+misc_info_username: "\nഉപയോക്തൃനാമം: @{}"
+misc_info_user_link: "\nഉപയോക്തൃ ലിങ്ക്: {}\n"
+misc_info_is_owner: "\nഈ വ്യക്തി എന്റെ ഉടമയാണ്! അവർക്ക് എന്റെ മേൽ പൂർണ്ണ അധികാരമുണ്ട്."
+misc_info_is_original_owner: "\nഈ വ്യക്തി എന്റെ സ്രഷ്ടാവാണ്, എന്റെ തുടക്കം, അവൻ എന്റെ ഒറിജിനൽ, സഹോദരി മേരി ഉപേക്ഷിച്ചെങ്കിലും :("
+misc_info_is_sudo: "\nഈ വ്യക്തി എന്റെ സുഡോ ഉപയോക്താക്കളിൽ ഒരാളാണ്!"
+misc_info_is_support: "\nഈ വ്യക്തി എന്റെ പിന്തുണ ഉപയോക്താക്കളിൽ ഒരാളാണ്!"
+misc_info_is_whitelisted: "\nഈ വ്യക്തി എന്റെ വൈറ്റ്‌ലിസ്റ്റുചെയ്‌ത ഉപയോക്താക്കളിൽ ഒരാളാണ്, ഒരാൾക്ക് ഈ റോൾ ലഭിക്കുന്നത് അപൂർവ്വമാണ്, നിങ്ങൾക്ക് അവനെ നിരോധിക്കാനോ ചവിട്ടാനോ കഴിയില്ല."
+misc_gdpr: തിരിച്ചറിയാവുന്ന ഡാറ്റ ഇല്ലാതാക്കുന്നു ...
 misc_md_list: |
-  Markdown is a very powerful formatting tool supported by telegram. Brenzo has some enhancements, to make sure that \
+  Markdown is a very powerful formatting tool supported by telegram. Brenzo Lio has some enhancements, to make sure that \
   saved messages are correctly parsed, and to allow you to create buttons.
   - <code>_italic_</code>: wrapping text with '_' will produce italic text
   - <code>*bold*</code>: wrapping text with '*' will produce bold text
@@ -794,29 +790,23 @@ misc_covid: |
   *Total tests*: {}
 misc_help: |
   - /id: get the current group id. If used by replying to a message, gets that user's id.
-  - /pyroid: Similar to /id but using @pyrogram's method.
   - /info: get information about a user.
-  - /whois: get information about a user using @pyrogram's methods.
+  - /gdpr: deletes your information from the bot's database. Private chats only.
+  - /stickerid: reply to a sticker to me to tell you its file ID.
+  - /getsticker: reply to a sticker to me to upload its raw PNG file.
   - /markdownhelp: quick summary of how markdown works in telegram - can only be called in private chats.
+  - /git: Returns info about a GitHub user or organization.
+  - /repo: Return the GitHub user or organization repository list (Limited at 40)
   - /paste: Create a paste or a shortened url using [dogbin](https://del.dog)
   - /getpaste: Get the content of a paste or shortened url from [dogbin](https://del.dog)
   - /pastestats: Get stats of a paste or shortened url from [dogbin](https://del.dog)
   - /ud: Type the word or expression you want to search. For example /ud Gay
   - /removebotkeyboard: Got a nasty bot keyboard stuck in your group?
-  - /wiki <keywords>: Get wikipedia articles just using this bot!
-  - /ip: Displays information about an IP / domain.
-  - /dice: Send a dice.\n
+  - /exec <language> <code> [/stdin <stdin>]: Execute a code in a specified language. Send an empty command to get the supported languages.
+  - /wiki <keywords>: Get wikipedia articles just using this bot!\n
   *Special | COVID-19*
   - /covid: Powered by Worldometers, Give stats about overall stats of COVID-19.
   - /covid <country name>: Powered by Worldometers, Give stats about COVID-19.\n
-  *Special | Sed/Regex*
-  `s/<text1>/<text2>(/<flag>)`*:* Reply to a message with this to perform a sed operation on that message, replacing all \
-   occurrences of 'text1' with 'text2'. Flags are optional, and currently include 'i' for ignore case, 'g' for global, \
-   or nothing. Delimiters include `/`, `_`, `|`, and `:`. Text grouping is supported. The resulting message cannot be \
-   larger than 4096.
-   *Reminder:* Sed uses some special characters to make matching easier, such as these: `+*.?\\`
-   If you want to use these characters, make sure you escape them!
-   *Example:* \\?.
 #Anime
 modname_anime: Anime
 anime_no_arg: 'Provide anime name!'
@@ -837,7 +827,6 @@ downloading_whatanime: "Downloading..."
 uploading_whatanime: "Uploading..."
 anime_help: |
    Get information about anime, manga or characters from AniList.
-
    *Available commands:*
    - /anime <anime>: returns information about the anime.
    - /character <character>: returns information about the character.
@@ -866,7 +855,6 @@ misc_lastfm_np: "{} was listening to:\n"
 misc_lastfm_inp: "{} is currently listening to:\n"
 last_fm_help: |
    Share what you're listening to with the help of this module!
-
    *Available commands:*
    - /setuser <username>: sets your last.fm username.
    - /clearuser: removes your last.fm username from the bot's database.
