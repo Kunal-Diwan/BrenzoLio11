@@ -771,15 +771,15 @@ misc_md_list: |
   <code>[one](buttonurl://example.com)
   [two](buttonurl://google.com:same)</code>
   This will create two buttons on a single line, instead of one button per line.
-misc_md_try: Try forwarding the following message to me, and you'll see!
-misc_md_help: "/save test This is a markdown test. _italics_, *bold*, `code`, [URL](example.com) [button](buttonurl://github.com) [button2](buttonurl://google.com:same)"
+misc_md_try: ഇനിപ്പറയുന്ന സന്ദേശം എനിക്ക് കൈമാറാൻ ശ്രമിക്കുക, നിങ്ങൾ കാണും!
+misc_md_help: "/save test ഇതൊരു മാർക്ക്ഡൗൺ പരീക്ഷയാണ്. _italics_, *bold*, `code`, [ടെക്സ്റ്റ്](example.com) [ബട്ടൺ](buttonurl://github.com) [ബട്ടൺ 2](buttonurl://google.com:same)"
 misc_paste_invalid: What am I supposed to do with this?!
-misc_paste_404: Failed to reach dogbin
-misc_paste_success: "Shortened URL: {}/{}\nYou can view stats, etc. [here]({}/v/{})"
-misc_get_pasted_invalid: Please supply a dogbin url!
-misc_get_pasted_unknown: Unknown error occured
-misc_covid_error: An error have occured!, Are you sure the country name is correct?
-misc_covid_total_tests: "*Total Tests*: {}"
+misc_paste_404: എത്തിച്ചേരാനായില്ല
+misc_paste_success: "ചുരുക്കിയ ലിങ്ക്: {}/{}\nനിങ്ങൾക്ക് സ്ഥിതിവിവരക്കണക്കുകൾ മുതലായവ കാണാൻ കഴിയും [ഇവിടെ]({}/v/{})"
+misc_get_pasted_invalid: ദയവായി ഒരു നായയെ url ൽ നൽകുക!
+misc_get_pasted_unknown: അജ്ഞാതമായ പിശക് സംഭവിച്ചു
+misc_covid_error: ഒരു പിശക് സംഭവിച്ചു !, രാജ്യത്തിന്റെ പേര് ശരിയാണെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?
+misc_covid_total_tests: "*മൊത്തം ടെസ്റ്റുകൾ*: {}"
 misc_covid: |
   *COVID-19 Statistics for {}*\n
   *Confirmed Cases*: {} _(+{})_
