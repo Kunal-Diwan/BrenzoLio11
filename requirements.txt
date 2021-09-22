@@ -27,6 +27,7 @@ telegraph>=1.4.1
 jikanpy
 tldextract
 PyYAML
+Intellivoid-SPB
 pyowm
 wikipedia
 coffeehouse
