@@ -1,7 +1,24 @@
+#    Haruka Aya (A telegram bot project)
+#    Copyright (C) 2017-2019 Paul Larsen
+#    Copyright (C) 2019-2021 Akito Mizukito (Haruka Aita)
+
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 from functools import wraps
 from typing import List, Dict
 
-from telegram import MAX_MESSAGE_LENGTH, InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultArticle, Bot, ParseMode, Update
+from telegram import MAX_MESSAGE_LENGTH, InlineKeyboardButton, Bot, ParseMode, Update
 from telegram.error import TelegramError
 
 from Brenzo import LOAD, NO_LOAD, OWNER_ID
@@ -96,28 +113,6 @@ def paginate_modules(chat_id,
     #     ]]
 
     return pairs
-
-
-def article(
-    title: str = "",
-    description: str = "",
-    message_text: str = "",
-    thumb_url: str = None,
-    reply_markup: InlineKeyboardMarkup = None,
-    disable_web_page_preview: bool = False,
-) -> InlineQueryResultArticle:
-
-    return InlineQueryResultArticle(
-        id=uuid4(),
-        title=title,
-        description=description,
-        thumb_url=thumb_url,
-        input_message_content=InputTextMessageContent(
-            message_text=message_text,
-            disable_web_page_preview=disable_web_page_preview,
-        ),
-        reply_markup=reply_markup,
-    )
 
 
 def send_to_list(bot: Bot,
