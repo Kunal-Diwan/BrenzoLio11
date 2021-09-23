@@ -12,6 +12,7 @@ from Brenzo.modules.helper_funcs.chat_status import sudo_plus, dev_plus
 
 USERS_GROUP = 4
 DEV_AND_MORE = DEV_USERS.append(int(OWNER_ID))
+CHAT_GROUP = 10
 
 
 def get_user_id(username):
