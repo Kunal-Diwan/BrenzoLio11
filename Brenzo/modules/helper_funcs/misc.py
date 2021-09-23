@@ -108,7 +108,7 @@ def send_to_list(bot: Bot,
             pass  # ignore users who fail
 
 
-def build_keyboard_parser(bot, chat_id, buttons):
+def build_keyboard(bot, chat_id, buttons):
     keyb = []
     for btn in buttons:
         if btn.url == "{rules}":
