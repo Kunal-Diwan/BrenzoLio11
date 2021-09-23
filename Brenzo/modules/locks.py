@@ -15,7 +15,6 @@ from Brenzo.modules.disable import DisableAbleCommandHandler
 from Brenzo.modules.helper_funcs.chat_status import can_delete, is_user_admin, user_not_admin, user_admin, \
     bot_can_delete, is_bot_admin
 from Brenzo.modules.log_channel import loggable
-from Brenzo.modules.sql import users_sql
 
 from Brenzo.modules.tr_engine.strings import tld
 
@@ -55,13 +54,11 @@ GIF = Filters.animation
 OTHER = Filters.game | Filters.sticker | GIF
 MEDIA = Filters.audio | Filters.document | Filters.video | Filters.voice | Filters.photo
 MESSAGES = Filters.text | Filters.contact | Filters.location | Filters.venue | Filters.command | MEDIA | OTHER
-PREVIEWS = Filters.entity("url")
 
 RESTRICTION_TYPES = {
     'messages': MESSAGES,
     'media': MEDIA,
     'other': OTHER,
-    # 'previews': PREVIEWS, # NOTE: this has been removed cos its useless atm.
     'all': Filters.all
 }
 
@@ -127,9 +124,9 @@ def unrestr_members(bot,
 @run_async
 def locktypes(bot: Bot, update: Update):
     chat = update.effective_chat
-    update.effective_message.reply_text("\n - ".join(
-        tld(chat.id, "locks_list_title") + list(LOCK_TYPES) +
-        list(RESTRICTION_TYPES)))
+    update.effective_message.reply_text(
+        "\n - ".join([tld(chat.id, "locks_list_title")] +
+                     sorted(list(LOCK_TYPES) + list(RESTRICTION_TYPES))))
 
 
 @user_admin
@@ -155,15 +152,6 @@ def lock(bot: Bot, update: Update, args: List[str]) -> str:
 
             elif args[0] in RESTRICTION_TYPES:
                 sql.update_restriction(chat.id, args[0], locked=True)
-                if args[0] == "previews":
-                    members = users_sql.get_chat_members(str(chat.id))
-                    restr_members(bot,
-                                  chat.id,
-                                  members,
-                                  messages=True,
-                                  media=True,
-                                  other=True)
-
                 message.reply_text(tld(chat.id,
                                        "locks_lock_success").format(args[0]),
                                    parse_mode=ParseMode.MARKDOWN)
