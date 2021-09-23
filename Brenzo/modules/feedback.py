@@ -32,8 +32,6 @@ def feedback(bot: Bot, update: Update):
 
 
 
-__help__ = True
-
 feed_handle = DisableAbleCommandHandler("feedback", feedback)
 
 dispatcher.add_handler(feed_handle)
