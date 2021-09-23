@@ -9,6 +9,7 @@ help_not_found: String bantuan untuk <code>{}</code> tidak ditemukan!
 help_pm_only: Hubungi saya di pesan pribadi untuk mendapatkan daftar perintah yang tersedia.
 btn_help: '❔ Bantuan'
 btn_go_back: '⬅️ Kembali'
+btn_return_home: '⬅️ Kembali ke rumah'
 main_start_group: Halo, saya *Brenzo Lio*
 main_start_pm: |
   Hai! Nama saya *Brenzo Lio* 
