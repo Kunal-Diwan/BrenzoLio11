@@ -89,6 +89,98 @@ def log_user(bot: Bot, update: Update):
 
 
 @run_async
+def snipe(bot: Bot, update: Update, args: List[str]):
+    try:
+        chat_id = str(args[0])
+        del args[0]
+    except TypeError as excp:
+        update.effective_message.reply_text(
+            "Please give me a chat to echo to!")
+    to_send = " ".join(args)
+    if len(to_send) >= 2:
+        try:
+            bot.sendMessage(int(chat_id), str(to_send))
+        except TelegramError:
+            LOGGER.warning("Couldn't send to group %s", str(chat_id))
+            update.effective_message.reply_text(
+                "Couldn't send the message. Perhaps I'm not part of that group?"
+            )
+
+
+@run_async
+@bot_admin
+def getlink(bot: Bot, update: Update, args: List[int]):
+    message = update.effective_message
+    if args:
+        pattern = re.compile(r'-\d+')
+    else:
+        message.reply_text("You don't seem to be referring to any chats.")
+    links = "Invite link(s):\n"
+    for chat_id in pattern.findall(message.text):
+        try:
+            chat = bot.getChat(chat_id)
+            bot_member = chat.get_member(bot.id)
+            if bot_member.can_invite_users:
+                invitelink = bot.exportChatInviteLink(chat_id)
+                links += str(chat_id) + ":\n" + invitelink + "\n"
+            else:
+                links += str(
+                    chat_id
+                ) + ":\nI don't have access to the invite link." + "\n"
+        except BadRequest as excp:
+            links += str(chat_id) + ":\n" + excp.message + "\n"
+        except TelegramError as excp:
+            links += str(chat_id) + ":\n" + excp.message + "\n"
+
+    message.reply_text(links)
+
+
+@bot_admin
+def leavechat(bot: Bot, update: Update, args: List[int]):
+    if args:
+        chat_id = int(args[0])
+    else:
+        try:
+            chat = update.effective_chat
+            if chat.type == "private":
+                update.effective_message.reply_text(
+                    "You do not seem to be referring to a chat!")
+                return
+            chat_id = chat.id
+            reply_text = "`I'll leave this group`"
+            bot.send_message(chat_id,
+                             reply_text,
+                             parse_mode='Markdown',
+                             disable_web_page_preview=True)
+            bot.leaveChat(chat_id)
+        except BadRequest as excp:
+            if excp.message == "Chat not found":
+                update.effective_message.reply_text(
+                    "It looks like I've been kicked out of the group :p")
+            else:
+                return
+
+    try:
+        chat = bot.getChat(chat_id)
+        titlechat = bot.get_chat(chat_id).title
+        reply_text = "`I'll Go Away!`"
+        bot.send_message(chat_id,
+                         reply_text,
+                         parse_mode='Markdown',
+                         disable_web_page_preview=True)
+        bot.leaveChat(chat_id)
+        update.effective_message.reply_text(
+            "I'll left group {}".format(titlechat))
+
+    except BadRequest as excp:
+        if excp.message == "Chat not found":
+            update.effective_message.reply_text(
+                "It looks like I've been kicked out of the group :p")
+        else:
+            return
+
+
+@run_async
 @sudo_plus
 def chats(bot: Bot, update: Update):
 
@@ -103,15 +195,20 @@ def chats(bot: Bot, update: Update):
                                                 caption="Here is the list of chats in my Hit List.")
 
 
-def __user_info__(user_id):
+def __user_info__(user_id, chat_id):
     if user_id == dispatcher.bot.id:
-        return """I've seen them in... Wow. Are they stalking me? They're in all the same places I am... oh. It's me."""
+        return tld(chat_id, "users_seen_is_bot")
     num_chats = sql.get_user_num_chats(user_id)
-    return f"""I've seen them in <code>{num_chats}</code> chats in total."""
+    return tld(chat_id, "users_seen").format(num_chats)
 
 
 def __stats__():
-    return f"{sql.num_users()} users, across {sql.num_chats()} chats"
+    return "`{}` users, across `{}` chats".format(sql.num_users(),
+                                                    sql.num_chats())
+
+
+def __gdpr__(user_id):
+    sql.del_user(user_id)
 
 
 def __migrate__(old_chat_id, new_chat_id):
@@ -122,6 +219,18 @@ __help__ = ""  # no help string
 
 BROADCAST_HANDLER = CommandHandler("broadcast", broadcast)
 USER_HANDLER = MessageHandler(Filters.all & Filters.group, log_user)
+SNIPE_HANDLER = CommandHandler("snipe",
+                               snipe,
+                               pass_args=True,
+                               filters=Filters.user(OWNER_ID))
+GETLINK_HANDLER = CommandHandler("getlink",
+                                 getlink,
+                                 pass_args=True,
+                                 filters=Filters.user(OWNER_ID))
+LEAVECHAT_HANDLER = CommandHandler("leavechat",
+                                   leavechat,
+                                   pass_args=True,
+                                   filters=Filters.user(OWNER_ID))
 CHATLIST_HANDLER = CommandHandler("chatlist", chats)
 
 dispatcher.add_handler(USER_HANDLER, USERS_GROUP)
