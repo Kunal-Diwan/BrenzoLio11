@@ -275,8 +275,6 @@ def love(bot: Bot, update: Update):
 
 
 
-__help__ = True
-
 
 
 LOVE_HANDLER = DisableAbleCommandHandler("love", love)
