@@ -82,7 +82,7 @@ def paginate_modules(chat_id, page_n: int, module_dict: Dict, prefix, chat=None)
         pairs.append((modules[-1], ))
 
     else:
-        pairs += [[EqInlineKeyboardButton(text=tld(chat_id, 'btn_go_back'), callback_data="bot_start")]]
+        pairs += [[EqInlineKeyboardButton(text=tld(chat_id, 'btn_return_home'), callback_data="bot_start")]]
 
 
     return pairs
