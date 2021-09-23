@@ -12,7 +12,10 @@ from Brenzo import dispatcher, OWNER_ID, LOGGER, DEV_USERS
 from Brenzo.modules.helper_funcs.chat_status import sudo_plus, dev_plus
 from Brenzo.modules.helper_funcs.chat_status import bot_admin
 
+from Brenzo.modules.tr_engine.strings import tld
+
 USERS_GROUP = 4
+
 DEV_AND_MORE = DEV_USERS.append(int(OWNER_ID))
 CHAT_GROUP = 10
 
