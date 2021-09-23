@@ -59,10 +59,11 @@ def split_message(msg: str) -> List[str]:
 
 def paginate_modules(chat_id, page_n: int, module_dict: Dict, prefix, chat=None) -> List:
     if not chat:
-        modules = sorted(
-            [EqInlineKeyboardButton(tld(chat_id, x.__mod_name__),
-                                    callback_data="{}_module({})".format(prefix, x.__mod_name__.lower())) for x
-             in module_dict.values()])
+        modules = sorted([
+            EqInlineKeyboardButton(tld(chat_id, "modname_" + x),
+                                   callback_data="{}_module({})".format(
+                                       prefix, x)) for x in module_dict.keys()
+        ])
     else:
         modules = sorted(
             [EqInlineKeyboardButton(tld(chat_id, x.__mod_name__),
