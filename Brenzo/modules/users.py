@@ -15,7 +15,6 @@ from Brenzo.modules.helper_funcs.chat_status import bot_admin
 from Brenzo.modules.tr_engine.strings import tld
 
 USERS_GROUP = 4
-
 DEV_AND_MORE = DEV_USERS.append(int(OWNER_ID))
 CHAT_GROUP = 10
 
@@ -208,7 +207,7 @@ def __user_info__(user_id, chat_id):
 
 
 def __stats__():
-    return "`{}` users, across `{}` chats".format(sql.num_users(),
+    return "{} users, across {} chats".format(sql.num_users(),
                                                     sql.num_chats())
 
 
