@@ -8,6 +8,7 @@ help_not_found: Help string for <code>{}</code> not found!
 help_pm_only: Contact me in PM to get the list of possible commands.
 btn_help: '❔ Help'
 btn_go_back: ⬅️ Back
+btn_return_home: ⬅️ Return Home
 main_start_group: Hey there! My name is Brenzo Lio . 
 
 main_start_pm: |
