@@ -107,7 +107,6 @@ def snipe(bot: Bot, update: Update, args: List[str]):
                 "Couldn't send the message. Perhaps I'm not part of that group?"
             )
 
-
 @run_async
 @bot_admin
 def getlink(bot: Bot, update: Update, args: List[int]):
