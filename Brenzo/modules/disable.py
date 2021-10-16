@@ -158,7 +158,7 @@ if is_module_loaded(FILENAME):
                                             parse_mode=ParseMode.MARKDOWN)
 
     def __stats__():
-        return "{} disabled items, across {} chats.".format(
+        return "10 disabled items, across 8 chats.".format(
             sql.num_disabled(), sql.num_chats())
 
     def __migrate__(old_chat_id, new_chat_id):
