@@ -18,6 +18,7 @@ psutil
 aiohttp>=2.2.5
 Pillow>=4.2.0
 #Cool stuff by Peak
+python-rapidjson>=0.9.3
 PyLyrics
 #AEX
 hurry.filesize
