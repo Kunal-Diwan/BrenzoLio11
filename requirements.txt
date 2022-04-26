@@ -28,7 +28,7 @@ python-rapidjson>=0.9.3
 telegraph>=1.4.1
 tldextract
 PyYAML
-Intellivoid-SPB
+Intellivoid-SPB>=0.1.1
 pyowm
 wikipedia
 coffeehouse
