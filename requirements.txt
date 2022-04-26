@@ -24,7 +24,7 @@ PyLyrics
 hurry.filesize
 #translator
 googletrans==3.1.0a0
-python-rapidjson>=0.9.3
+python-rapidjson>=1.6
 telegraph>=1.4.1
 tldextract>=3.2.1
 PyYAML
