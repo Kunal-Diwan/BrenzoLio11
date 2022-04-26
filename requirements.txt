@@ -26,7 +26,7 @@ hurry.filesize
 googletrans==3.1.0a0
 python-rapidjson>=0.9.3
 telegraph>=1.4.1
-tldextract
+tldextract>=3.2.1
 PyYAML
 Intellivoid-SPB>=0.1.1
 pyowm
