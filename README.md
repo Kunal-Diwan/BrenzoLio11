@@ -45,7 +45,7 @@
 
 ### Deployment ⬇️
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kunal-Diwan/BrenzoLio11.git) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kunal-Diwan/BrenzoLio11) 
 
 ### <b><u>🎙️Support🎙️</u></b>
 
