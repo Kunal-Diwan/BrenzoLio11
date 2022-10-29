@@ -28,4 +28,4 @@ wikipedia
 bleach
 markdown2
 Pyrogram==0.10.3
-PySocks 1.7.1
+PySocks>=1.7.1
