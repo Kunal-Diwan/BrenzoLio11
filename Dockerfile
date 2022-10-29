@@ -10,4 +10,4 @@ COPY . /app
 
 #set a default command
 
-CMD python3 Brenzo
+CMD python3 -m Brenzo
