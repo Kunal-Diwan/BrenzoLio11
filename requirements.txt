@@ -1,9 +1,9 @@
 pip-tools
 future
-emoji==0.6.0
+emoji>=0.6.0
 requests
-sqlalchemy==1.3.23
-python-telegram-bot==11.1.0
+sqlalchemy>=1.3.23
+python-telegram-bot>=11.1.0
 telethon>=1.17.5
 pyrogram>=1.0.7
 psycopg2
