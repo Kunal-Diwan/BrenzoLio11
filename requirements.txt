@@ -27,5 +27,5 @@ pyowm
 wikipedia
 bleach
 markdown2
-Pyrogram==0.10.3
-pysocks
+Pyrogram==2.0.59
+Telethon 1.25.4
