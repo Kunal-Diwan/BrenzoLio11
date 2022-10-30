@@ -2,6 +2,7 @@ class Config(object):
     LOGGER = True
 
     # REQUIRED
+    DB_URI = "postgresql://username:password@host:port/database"
     TOKEN = "1917122183:AAE1pwjrWDEKpQmcK1D2YYNXCGiBmyQQN28"
     API_KEY = "3201985"
     API_HASH = "41ae80228bc4eff613d987a2953cb139"
