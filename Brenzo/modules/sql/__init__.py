@@ -6,7 +6,7 @@ from Brenzo import DB_URI
 
 
 def start() -> scoped_session:
-    engine = create_engine("postgresql://scott:tiger@localhost/mydatabase")
+    engine = create_engine("mysql://u:p@host/db", pool_size=10, max_overflow=20)
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
     return scoped_session(sessionmaker(bind=engine, autoflush=False))
