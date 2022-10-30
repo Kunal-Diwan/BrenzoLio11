@@ -129,7 +129,7 @@ dispatcher = updater.dispatcher
 
 trl = Translator()
 
-tbot = TelegramClient("Brenzo", API_KEY, API_HASH)
+# tbot = TelegramClient("Brenzo", API_KEY, API_HASH)
 
 pbot = Client("BrenzoPyro", api_id=API_KEY,
               api_hash=API_HASH,
