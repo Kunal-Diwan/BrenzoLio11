@@ -6,7 +6,7 @@ from Brenzo import DB_URI
 
 
 def start() -> scoped_session:
-    engine = create_engine(DB_URI, client_encoding="utf8")
+    engine = create_engine("postgresql://username:password@host:port/database", client_encoding="utf8")
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
     return scoped_session(sessionmaker(bind=engine, autoflush=False))
