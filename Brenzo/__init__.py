@@ -4,7 +4,7 @@ import sys
 
 import telegram.ext as tg
 from googletrans import Translator
-# from pyrogram import Client
+from pyrogram import Client
 from telethon import TelegramClient
 
 # enable logging
