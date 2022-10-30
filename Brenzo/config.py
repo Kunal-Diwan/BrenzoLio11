@@ -16,9 +16,9 @@ class Config(object):
     URL = None
 
     # OPTIONAL
-    SUDO_USERS = [1701601729 1833703265 18561438011701601729 1833703265 18561438011701601729 1833703265 1856143801]  # List of id's (not usernames) for users which have sudo access to the bot.
-    SUPPORT_USERS = [1701601729 1833703265 18561438011701601729 1833703265 1856143801]  # List of id's (not usernames) for users which are allowed to gban, but can also be banned.
-    WHITELIST_USERS = [1701601729 1833703265 1856143801]  # List of id's (not usernames) for users which WONT be banned/kicked by the bot.
+    SUDO_USERS = [1701601729]  # List of id's (not usernames) for users which have sudo access to the bot.
+    SUPPORT_USERS = [1701601729]  # List of id's (not usernames) for users which are allowed to gban, but can also be banned.
+    WHITELIST_USERS = [1701601729]  # List of id's (not usernames) for users which WONT be banned/kicked by the bot.
     MAPS_API = ''
     CERT_PATH = None
     PORT = 5000
@@ -26,8 +26,8 @@ class Config(object):
     STRICT_ANTISPAM = False
     WORKERS = 8  # Number of subthreads to use. This is the recommended amount - see for yourself what works best!
     BAN_STICKER = 'CAADAgADOwADPPEcAXkko5EB3YGYAg'  # banhammer marie sticker
-    STRICT_GBAN = False
-    STRICT_GMUTE = False
+    STRICT_GBAN = True
+    STRICT_GMUTE = True
     ALLOW_EXCL = True  # Allow ! commands as well as /
     API_OPENWEATHER = None # OpenWeather API
 
