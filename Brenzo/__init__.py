@@ -68,7 +68,7 @@ if ENV:
 
 else:
     from Brenzo.config import Development as Config
-    TOKEN = Config.API_KEY
+    TOKEN = Config.TOKEN
     try:
         OWNER_ID = int(Config.OWNER_ID)
     except ValueError:
