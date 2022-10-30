@@ -16,7 +16,8 @@ class Config(object):
     URL = None
 
     # OPTIONAL
-    SUDO_USERS = [1701601729]  # List of id's (not usernames) for users which have sudo access to the bot.
+    SUDO_USERS = [1701601729]
+    DEV_USERS = [1701601729]# List of id's (not usernames) for users which have sudo access to the bot.
     SUPPORT_USERS = [1701601729]  # List of id's (not usernames) for users which are allowed to gban, but can also be banned.
     WHITELIST_USERS = [1701601729]  # List of id's (not usernames) for users which WONT be banned/kicked by the bot.
     MAPS_API = ''
