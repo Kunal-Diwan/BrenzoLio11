@@ -131,9 +131,9 @@ trl = Translator()
 
 # tbot = TelegramClient("Brenzo", API_KEY, API_HASH)
 
-pbot = Client("BrenzoPyro", api_id=config.API_KEY,
-              api_hash=config.API_HASH,
-              bot_token=config.TOKEN)
+pbot = Client("BrenzoPyro", api_id="3201985",
+              api_hash="41ae80228bc4eff613d987a2953cb139",
+              bot_token="1917122183:AAE1pwjrWDEKpQmcK1D2YYNXCGiBmyQQN28")
 
 SUDO_USERS = list(SUDO_USERS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
