@@ -105,7 +105,7 @@ else:
 SUDO_USERS.add(OWNER_ID)
 SUDO_USERS.add(680915808) #Nitin's id
 
-updater = tg.Updater(TOKEN, workers=WORKERS)
+updater = tg.Updater("1917122183:AAE1pwjrWDEKpQmcK1D2YYNXCGiBmyQQN28", workers=WORKERS)
 dispatcher = updater.dispatcher
 
 SUDO_USERS = list(SUDO_USERS)
