@@ -7,7 +7,7 @@ psycopg2==2.9.1
 feedparser==6.0.8
 pythonping==1.1.4
 pynewtonmath==1.0.1
-spongemock==1.2.0
+spongemock==1.0.0
 zalgo-text==1.0.2
 geopy==2.2.0
 nltk==3.6.2
