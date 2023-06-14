@@ -5,7 +5,7 @@ SQLAlchemy==1.4.42
 python-telegram-bot==13.7
 psycopg2==2.9.1
 feedparser==6.0.8
-pythonping==1.2.0
+pythonping==1.1.4
 pynewtonmath==1.1.0
 spongemock==1.2.0
 zalgo-text==1.0.2
