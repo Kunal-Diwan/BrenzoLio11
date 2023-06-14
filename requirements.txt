@@ -8,7 +8,7 @@ feedparser==6.0.8
 pythonping==1.1.4
 pynewtonmath==1.0.1
 spongemock==1.0.0
-zalgo-text==1.0.2
+zalgo-text==0.6
 geopy==2.2.0
 nltk==3.6.2
 aiohttp>=2.2.5
